@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Homeherosection from "@/components/Homesection/Homherosection";
 import TrustedBy from "@/components/sections/TrustedBy";
-import Features from "@/components/sections/Features";
+import HomeCta from "@/components/Homesection/HomeCta";
 import Card from "@/components/sections/Card";
 import TestimonialHero from "@/components/sections/TestimonialHero";
 import FounderNote from "@/components/sections/FounderNote";
@@ -15,7 +15,7 @@ export default function HomePage() {
       <Homeherosection />
      
       <TrustedBy />
-      <Features />
+      <HomeCta/>
       <Card />
       <TestimonialHero />
       
