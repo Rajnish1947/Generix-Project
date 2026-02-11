@@ -1,12 +1,12 @@
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/layouts/Navbar";
 import Homeherosection from "@/components/Homesection/Homherosection";
-import TrustedBy from "@/components/sections/TrustedBy";
+import TrustedBy from "@/components/Mainsection/TrustedBy";
 import HomeCta from "@/components/Homesection/HomeCta";
-import Card from "@/components/sections/Card";
-import TestimonialHero from "@/components/sections/TestimonialHero";
-import FounderNote from "@/components/sections/FounderNote";
-import FooterLinks from "@/components/sections/FooterLinks";
-import HelpCTA from "@/components/sections/HelpCTA";
+import Card from "@/components/Mainsection/Card";
+import TestimonialHero from "@/components/Mainsection/TestimonialHero";
+import FounderNote from "@/components/Mainsection/FounderNote";
+import FooterLinks from "@/layouts/FooterLinks";
+import HelpCTA from "@/components/Mainsection/HelpCTA";
 
 export default function HomePage() {
   return (
