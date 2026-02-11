@@ -1,9 +1,9 @@
 import React from 'react'
-import MainPages from './(marketing)/page'
+import MainPage from '../pages/Mainpage/page'
 const page = () => {
   return (
     <>
-     < MainPages/>
+    <MainPage />
     </>
   )
 }

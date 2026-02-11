@@ -1,11 +1,11 @@
 import React from 'react'
 
-const layout = () => {
+const paje = () => {
   return (
     <div>
-      
+      hello
     </div>
   )
 }
 
-export default layout
+export default paje
