@@ -31,10 +31,10 @@ const HomeCta = () => {
       {/* Content */}
       <div className="flex gap-4 mt-10">
         {/* Left */}
-        <div className="w-1/2 border rounded-lg  border-gray-200 p-4">
+        <div className="w-1/2 border rounded-2xl  border-gray-200 p-4">
           {/* Text */}
           <div className="space-y-3 max-w-sm px-2 py-4">
-            <div className="font-medium text-green-400">LLMs.txt & MCP</div>
+            <div className="font-medium text-green-900">LLMs.txt & MCP</div>
             <div className="font-semibold text-2xl">
               Built for both people and AI
             </div>
@@ -57,7 +57,7 @@ const HomeCta = () => {
             {/* Middle layer */}
             <div
               className="absolute top-6 left-1/2 -translate-x-1/2 w-[70%]
-    rounded-xl p-4 bg-green-600 z-[20]"
+    rounded-xl p-4 bg-green-900 z-[20]"
             ></div>
 
             {/* Front layer */}
@@ -78,7 +78,7 @@ const HomeCta = () => {
         </div>
 
         {/* Right */}
-        <div className="w-1/2 border border-gray-200 p-4">
+        <div className="w-1/2 border rounded-2xl border-gray-200 p-4">
           <div className="space-y-3 max-w-sm px-2 py-4">
             <div className="font-medium text-green-800">agent</div>
             <div className="font-semibold text-2xl">
@@ -92,10 +92,10 @@ const HomeCta = () => {
 
           <div className="relative px-2 mt-7 py-5">
             {/* Line (centered) */}
-            <div className="absolute top-1/2  mx-5 w-sm h-[1px] bg-gray-400" />
+            <div className="absolute top-1/2  mx-8 w-[320px] h-[1px] bg-gray-200" />
 
             {/* Circles */}
-            <div className="relative z-10 flex mx-5 justify-between">
+            <div className="relative z-10 flex mx-8 justify-between">
               {[0, 1, 2, 3].map((_, i) => {
                 const isLast = i === 3;
                 const isCompleted = !isLast || done;
@@ -103,10 +103,10 @@ const HomeCta = () => {
                 return (
                   <div
                     key={i}
-                    className={`w-15 h-15 flex items-center justify-center rounded-full border transition-all duration-500
+                    className={`w-14 h-14 shadow-lg shadow-gray-500 flex items-center justify-center rounded-full border transition-all duration-500
             ${
               isCompleted
-                ? "bg-green-600 border-green-600 text-white"
+                ? "bg-green-900 border-gray-600 text-white"
                 : "bg-white border-gray-300"
             }`}
                   >
