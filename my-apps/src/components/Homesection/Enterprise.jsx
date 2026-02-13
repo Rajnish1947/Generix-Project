@@ -3,7 +3,7 @@ import React from "react";
 
 const Enterprise = () => {
   return (
-    <section className="bg-gray-100 my-5 py-16">
+    <section className="bg-gray-100 mt-5 py-16">
       <div className="max-w-5xl mx-auto px-3">
         {/* TOP SECTION */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-10">

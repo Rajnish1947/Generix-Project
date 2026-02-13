@@ -53,7 +53,7 @@ const FounderNote = () => {
 
         {/* Signature */}
         <div className=" items-center gap-3 py-1 text-gray-500 ">
-          <div class="relative  text-[20px]/[150%] font-sans font-normal my-2 tracking-[-0.24px]">
+          <div className="relative  text-[20px]/[150%] font-sans font-normal my-2 tracking-[-0.24px]">
             Han & Hahnbee
           </div>
 

@@ -5,9 +5,9 @@ import HomeCta from "@/components/Homesection/HomeCta";
 
 import EnterprisePage from "@/components/Homesection/Enterprise";
 import TestimonialHomeHero from "@/components/Homesection/TestimonialHomeHero";
-import FounderNote from "@/components/Mainsection/FounderNote";
+import CustomerStories from "@/components/Homesection/CustomerStories";
 import FooterLinks from "@/layouts/FooterLinks";
-import HelpCTA from "@/components/Mainsection/HelpCTA";
+import Help from "@/components/Homesection/Help";
 import StepperPage from "@/components/Homesection/StepperPage";
 export default function HomePage() {
   return (
@@ -23,8 +23,8 @@ export default function HomePage() {
       <TestimonialHomeHero />
       
 
-      <FounderNote/>
-      <HelpCTA />
+      <CustomerStories/>
+      <Help />
       <FooterLinks />
        
     </>
