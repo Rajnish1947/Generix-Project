@@ -1,3 +1,6 @@
+
+
+"use client";
 import Navbar from "@/layouts/Navbar";
 import Hero from "@/components//Mainsection/Hero";
 import TrustedBy from "@/components/Mainsection/TrustedBy";
@@ -7,21 +10,24 @@ import TestimonialHero from "@/components/Mainsection/TestimonialHero";
 import FounderNote from "@/components/Mainsection/FounderNote";
 import FooterLinks from "@/layouts/FooterLinks";
 import HelpCTA from "@/components//Mainsection/HelpCTA";
+import { useTheme } from "@/Context/ThemeContext/page";
+const { use } = require("react");
 
-export default function MainPage() {
+ export default function MainPage() {
+ const { dark } = useTheme();
   return (
-    <>
-      <Navbar />
+<div className={dark ? "bg-black text-white" : "bg-white text-black"}>
+     <Navbar />
       <Hero />
 
       <TrustedBy />
       <Features />
-      <Card />
+       <Card />
       <TestimonialHero />
 
       <FounderNote />
-      <HelpCTA />
+    <HelpCTA />
       <FooterLinks />
-    </>
+     </div>
   );
 }

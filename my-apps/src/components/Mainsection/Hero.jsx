@@ -1,14 +1,19 @@
-
+"use client";
 import React from "react";
-
+import { useTheme } from "@/Context/ThemeContext/page";
 const Hero = () => {
+  const { dark, setDark } = useTheme();
   return (
     <section
       className="relative bg-white min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('https://www.mintlify.com/startups/hero-light.svg')" }}
+       style={{
+        backgroundImage: dark
+          ? "url('https://www.mintlify.com/startups/hero-dark.svg')"
+          : "url('https://www.mintlify.com/startups/hero-light.svg')",
+      }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent"></div>
+      <div className={`absolute inset-0 bg-gradient-to-t ${dark ? 'from-black/95 via-gray-900/10 to-transparent' : 'from-white/90 via-white/10 to-transparent'}`}></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-10  pt-32 pb-28 flex flex-col lg:flex-row items-start lg:items-center gap-12">
