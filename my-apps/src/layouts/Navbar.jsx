@@ -148,7 +148,7 @@ export default function Navbar() {
 
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-// this is evening 
+// this 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 400);
