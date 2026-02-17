@@ -16,7 +16,7 @@ const { use } = require("react");
  export default function MainPage() {
  const { dark } = useTheme();
   return (
-<div className={dark ? "bg-black text-white" : "bg-white text-black"}>
+<div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
      <Navbar />
       <Hero />
 
