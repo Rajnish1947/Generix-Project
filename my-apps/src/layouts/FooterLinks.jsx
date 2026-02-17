@@ -26,11 +26,7 @@ const FooterLinks = () => {
             {/* LEFT SIDE (Logo) */}
             <div>
               <Link href="/" className="flex items-center gap-2">
-                {/* <img
-                  src="/mintlify-wordmark.svg"
-                  alt="Mintlify"
-                  className="h-6 w-auto dark:text-black text-white"
-                /> */}
+             
                 <svg
                   width="104"
                   height="24"
