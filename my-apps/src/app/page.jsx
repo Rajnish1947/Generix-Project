@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import MainPage from '../pages/Mainpage/page';
+import MainPage from './Main/page';
 import { useTheme } from '@/Context/ThemeContext/page';
 const page = () => {
   const { dark, setDark } = useTheme();
