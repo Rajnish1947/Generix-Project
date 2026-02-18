@@ -1,6 +1,8 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { useTheme } from "@/Context/ThemeContext/page";
 const Help = () => {
+  const { dark } = useTheme();
   const items = [
     {
       title: "Pricing on your terms",
@@ -61,75 +63,78 @@ const Help = () => {
   ];
 
   return (
-   <section className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6">
-  <div className="max-w-6xl mx-auto">
+    <section className="relative py-16  sm:py-20 lg:py-28 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto">
+          <h3
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl  ${dark ? "text-white" : "text-black"} font-bold leading-tight`}
+          >
+            Make documentation <br className="hidden sm:block" />
+            your winning advantage
+          </h3>
 
-    {/* Heading */}
-    <div className="text-center max-w-3xl mx-auto">
-      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
-        Make documentation <br className="hidden sm:block" />
-        your winning advantage
-      </h3>
+          <p
+            className={`mt-4 text-sm sm:text-base ${dark ? "text-white/70" : "text-gray-600"} md:text-lg`}
+          >
+            Join the leaders of tomorrow to future proof your documentation
+            today.
+          </p>
+        </div>
 
-      <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-600">
-        Join the leaders of tomorrow to future proof your documentation today.
-      </p>
-    </div>
-
-    {/* Grid */}
-    <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 rounded-3xl overflow-hidden  bg-white">
-
-      {items.map((item, i) => (
+        {/* Grid */}
         <div
-          key={i}
-          className={`
+          className={`mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 rounded-3xl overflow-hidden ${dark ? "bg-black" : "bg-white"}`}
+        >
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className={`
             flex flex-col items-center text-center
             gap-5 sm:gap-6
             p-8 sm:p-10
-            transition hover:bg-gray-50
+            
 
             /* horizontal divider */
-            ${i < 2 ? "sm:border-b border-gray-200" : ""}
+       ${i < 2 ? `sm:border-b ${dark ? "border-gray-900" : "border-gray-800"}` : ""}
 
-            /* vertical divider */
-            ${i % 2 === 0 ? "sm:border-r border-gray-200" : ""}
-          `}
-        >
+${i % 2 === 0 ? `sm:border-r ${dark ? "border-gray-900" : "border-gray-800"}` : ""}`}
+            >
+              {/* Icon */}
+              <div
+                className={`p-3 sm:p-4 rounded-2xl border ${dark ? "border-gray-900" : "border-gray-200"} ${dark ? "bg-black" : "bg-white"} shadow-sm`}
+              >
+                <div className="w-6 h-6 sm:w-8 sm:h-8">{item.icon}</div>
+              </div>
 
-          {/* Icon */}
-          <div className="p-3 sm:p-4 rounded-2xl border border-gray-200 bg-white shadow-sm">
-            <div className="w-6 h-6 sm:w-8 sm:h-8">
-              {item.icon}
+              {/* Text */}
+              <div>
+                <h4
+                  className={`text-lg sm:text-xl font-semibold ${dark ? "text-white" : "text-gray-900"}`}
+                >
+                  {item.title}
+                </h4>
+
+                <p
+                  className={`mt-2 text-sm sm:text-base ${dark ? "text-white/70" : "text-gray-600"} max-w-xs mx-auto`}
+                >
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* Link */}
+              <a
+                href={item.link}
+                className="flex items-center gap-2 text-sm sm:text-base text-green-700 font-medium "
+              >
+                {item.linkText}
+                <ChevronRight size={16} />
+              </a>
             </div>
-          </div>
-
-          {/* Text */}
-          <div>
-            <h4 className="text-lg sm:text-xl font-semibold text-gray-900">
-              {item.title}
-            </h4>
-
-            <p className="mt-2 text-sm sm:text-base text-gray-600 max-w-xs mx-auto">
-              {item.desc}
-            </p>
-          </div>
-
-          {/* Link */}
-          <a
-            href={item.link}
-            className="flex items-center gap-2 text-sm sm:text-base text-green-700 font-medium hover:translate-x-1 transition"
-          >
-            {item.linkText}
-            <ChevronRight size={16} />
-          </a>
-
+          ))}
         </div>
-      ))}
-
-    </div>
-  </div>
-</section>
-
+      </div>
+    </section>
   );
 };
 

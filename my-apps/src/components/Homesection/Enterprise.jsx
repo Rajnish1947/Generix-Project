@@ -1,9 +1,10 @@
-
+"use client";
 import React from "react";
-
+import { useTheme } from "@/Context/ThemeContext/page";
 const Enterprise = () => {
+    const { dark } = useTheme();
   return (
-    <section className="bg-gray-100 mt-5 py-16">
+    <section className={` ${dark ? "bg-black" : "bg-gray-100"} mt-5 py-16`}>
       <div className="max-w-5xl mx-auto px-3">
         {/* TOP SECTION */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-10">
@@ -13,11 +14,11 @@ const Enterprise = () => {
               Enterprise-reinvention
             </p>
 
-            <h1 className="text-5xl font-semibold text-black leading-tight">
+            <h1 className={`text-5xl font-semibold ${dark ? "text-white" : "text-black"} leading-tight`}>
               Bring intelligence to <br /> enterprise knowledge
             </h1>
 
-            <p className="text-gray-700 text-md">
+            <p className={`text-gray-700 ${dark ? "text-white/80" : "text-gray-700"} text-md`}>
               Modernize without the rebuild with enterprise-grade professional
               service & security.
             </p>
@@ -25,7 +26,7 @@ const Enterprise = () => {
 
           {/* Right Button */}
           <div className="flex md:justify-end">
-            <button className="px-6 py-2 mt-9 rounded-2xl bg-black text-white font-semibold">
+            <button className={`px-6 py-2 mt-9 rounded-2xl ${dark ? "bg-white text-black" : "bg-black text-white"} font-semibold`}>
               Explore for enterprise
             </button>
           </div>
@@ -83,9 +84,11 @@ const Enterprise = () => {
               </svg>
             </div>
 
-            <h3 className="text-2xl font-semibold">Build with partnership</h3>
+            <h3 className={`text-2xl font-semibold ${dark ? "text-white" : "text-gray-900"}`}>
+              Build with partnership
+            </h3>
 
-            <p className="text-gray-700">
+            <p className={`text-gray-700 ${dark ? "text-white/80" : "text-gray-700"}`}>
               Direct, white-glove access to our documentation experts. Dedicated
               migration support and guidance tailored to your setup, and
               elevated support SLAs.
@@ -121,7 +124,7 @@ const Enterprise = () => {
               Compliance and access control
             </h3>
 
-            <p className="text-gray-700">
+            <p className={`text-gray-700 ${dark ? "text-white/80" : "text-gray-700"}`}>
               Compliant with SOC 2, and in the process for ISO/27001 and GDPR
               compliance to meet your internal and external data requirements.
               Secure access and provisioning with SAML-based SSO.

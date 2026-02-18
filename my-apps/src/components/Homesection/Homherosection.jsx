@@ -1,17 +1,20 @@
 
 import React from "react";
 import { ChevronRight } from "lucide-react";
-
+import { useTheme } from "@/Context/ThemeContext/page";
 const Homeherosection = () => {
+  const { dark } = useTheme();
   return (
     <section
       className="relative min-h-screen bg-cover bg-center py-20"
       style={{
-        backgroundImage: "url('https://www.mintlify.com/hero/bg-light.svg')",
+        backgroundImage: dark
+          ? "url('https://www.mintlify.com/hero/bg-dark.svg')"
+          : "url('https://www.mintlify.com/hero/bg-light.svg')",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b  to-white/20" />
+      <div className={`absolute inset-0 bg-gradient-to-t ${dark ? 'from-black/95 via-gray-900/10 to-transparent' : 'from-white/90 via-white/10 to-transparent'}`}/>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto py-10 px-4 sm:px-6 text-center flex flex-col items-center gap-8">
@@ -74,7 +77,7 @@ const Homeherosection = () => {
       {/* Image */}
       <div className="max-w-5xl border-none mx-auto px-4 sm:px-6 mt-10">
         <img
-          src="https://www.mintlify.com/hero/hero-image-light.svg"
+          src={dark ? "https://www.mintlify.com/hero/hero-image-dark.svg" : "https://www.mintlify.com/hero/hero-image-light.svg"}
           alt="Hero"
           className="w-full rounded-lg"
         />

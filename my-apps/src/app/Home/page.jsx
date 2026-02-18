@@ -11,7 +11,7 @@
 import { useTheme } from "@/Context/ThemeContext/page";
 import Navbar from "@/layouts/Navbar";
 import Homeherosection from "@/components/Homesection/Homherosection";
-import TrustedBy from "@/components/Mainsection/TrustedBy";
+import TrustedByHome from "@/components/Homesection/TrustedByHome";
 import HomeCta from "@/components/Homesection/HomeCta";
 import EnterprisePage from "@/components/Homesection/Enterprise";
 import TestimonialHomeHero from "@/components/Homesection/TestimonialHomeHero";
@@ -28,7 +28,7 @@ export default function HomePage() {
     <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
       <Navbar />
       <Homeherosection />
-      <TrustedBy />
+      <TrustedByHome/>
       <HomeCta />
       <StepperPage />
       <EnterprisePage />
