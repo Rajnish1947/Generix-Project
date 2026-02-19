@@ -1,43 +1,85 @@
+
 "use client";
 import React from "react";
 import { useTheme } from "@/Context/ThemeContext/page";
+
 const Enterprise = () => {
-    const { dark } = useTheme();
+  const { dark } = useTheme();
+
   return (
-    <section className={` ${dark ? "bg-black" : "bg-gray-100"} mt-5 py-16`}>
-      <div className="max-w-5xl mx-auto px-3">
+    <section
+      className={`
+        w-full
+        mt-10 sm:mt-12 md:mt-16
+        py-12 sm:py-14 md:py-16 lg:py-20
+        ${dark ? "bg-black" : "bg-gray-100"}
+      `}
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+        
         {/* TOP SECTION */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-10">
-          {/* Left */}
-          <div className="space-y-4 max-w-2xl">
-            <p className="text-green-700 font-semibold ">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-10">
+          
+          {/* LEFT */}
+          <div className="space-y-3 sm:space-y-4 max-w-2xl text-center md:text-left">
+            
+            <p className="text-green-700 font-semibold text-sm sm:text-base">
               Enterprise-reinvention
             </p>
 
-            <h1 className={`text-5xl font-semibold ${dark ? "text-white" : "text-black"} leading-tight`}>
-              Bring intelligence to <br /> enterprise knowledge
+            <h1
+              className={`
+                font-semibold leading-tight
+                text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                ${dark ? "text-white" : "text-black"}
+              `}
+            >
+              Bring intelligence to <br className="hidden sm:block" />
+              enterprise knowledge
             </h1>
 
-            <p className={`text-gray-700 ${dark ? "text-white/80" : "text-gray-700"} text-md`}>
+            <p
+              className={`
+                text-sm sm:text-base md:text-lg
+                ${dark ? "text-white/80" : "text-gray-700"}
+              `}
+            >
               Modernize without the rebuild with enterprise-grade professional
               service & security.
             </p>
           </div>
 
-          {/* Right Button */}
-          <div className="flex md:justify-end">
-            <button className={`px-6 py-2 mt-9 rounded-2xl ${dark ? "bg-white text-black" : "bg-black text-white"} font-semibold`}>
+          {/* RIGHT BUTTON */}
+          <div className="flex justify-center md:justify-end">
+            <button
+              className={`
+                px-5 sm:px-6
+                py-2.5 sm:py-3
+                rounded-xl sm:rounded-2xl
+                font-semibold
+                text-sm sm:text-base
+                transition-all duration-200
+                hover:scale-105
+                ${dark ? "bg-white text-black" : "bg-black text-white"}
+              `}
+            >
               Explore for enterprise
             </button>
           </div>
         </div>
 
         {/* BOTTOM SECTION */}
-        <div className="grid md:grid-cols-2 gap-10 mt-16">
-          {/* Left Card */}
-          <div className="space-y-4">
-            <div className="text-2xl">
-              <svg
+        <div
+          className="
+            grid grid-cols-1 sm:grid-cols-2
+            gap-8 sm:gap-10 md:gap-12
+            mt-12 sm:mt-14 md:mt-16
+          "
+        >
+          
+          {/* CARD 1 */}
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+                   <svg
                 viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,23 +124,32 @@ const Enterprise = () => {
                   fill="currentColor"
                 />
               </svg>
-            </div>
 
-            <h3 className={`text-2xl font-semibold ${dark ? "text-white" : "text-gray-900"}`}>
+            <h3
+              className={`
+                font-semibold
+                text-lg sm:text-xl md:text-2xl
+                ${dark ? "text-white" : "text-gray-900"}
+              `}
+            >
               Build with partnership
             </h3>
 
-            <p className={`text-gray-700 ${dark ? "text-white/80" : "text-gray-700"}`}>
+            <p
+              className={`
+                text-sm sm:text-base
+                ${dark ? "text-white/80" : "text-gray-700"}
+              `}
+            >
               Direct, white-glove access to our documentation experts. Dedicated
-              migration support and guidance tailored to your setup, and
-              elevated support SLAs.
+              migration support and guidance tailored to your setup.
             </p>
           </div>
 
-          {/* Right Card */}
-          <div className="space-y-4">
-            <div className="text-2xl">
-              <svg
+          {/* CARD 2 */}
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+            
+                      <svg
                 viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,18 +169,28 @@ const Enterprise = () => {
                   fill="currentColor"
                 />
               </svg>
-            </div>
 
-            <h3 className="text-2xl font-semibold">
+            <h3
+              className={`
+                font-semibold
+                text-lg sm:text-xl md:text-2xl
+                ${dark ? "text-white" : "text-gray-900"}
+              `}
+            >
               Compliance and access control
             </h3>
 
-            <p className={`text-gray-700 ${dark ? "text-white/80" : "text-gray-700"}`}>
-              Compliant with SOC 2, and in the process for ISO/27001 and GDPR
-              compliance to meet your internal and external data requirements.
-              Secure access and provisioning with SAML-based SSO.
+            <p
+              className={`
+                text-sm sm:text-base
+                ${dark ? "text-white/80" : "text-gray-700"}
+              `}
+            >
+              Compliant with SOC 2, ISO/27001, and GDPR. Secure access and
+              provisioning with SAML-based SSO.
             </p>
           </div>
+
         </div>
       </div>
     </section>

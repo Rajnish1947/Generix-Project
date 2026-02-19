@@ -15,7 +15,9 @@ const TestimonialHomeHero = () => {
           height="20"
           viewBox="0 0 126 15"
           fill="currentColor"
-          className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}
+            className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+              ${dark ? "text-white" : "text-black"}
+              transition-colors`}
         >
           <g clip-path="url(#clip0_8659_7026)">
             <mask
@@ -270,7 +272,9 @@ const TestimonialHomeHero = () => {
           height="25"
           viewBox="0 0 102 19"
           fill="currentColor"
-          className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}
+          className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+              ${dark ? "text-white" : "text-black"}
+              transition-colors`}
           aria-hidden="true"
         >
           <g clip-path="url(#clip0_8659_7106)">
@@ -319,7 +323,9 @@ const TestimonialHomeHero = () => {
           viewBox="0 0 86 26"
           aria-hidden="true"
           fill="currentColor"
-          className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}
+            className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+              ${dark ? "text-white" : "text-black"}
+              transition-colors`}
         >
           <g clip-path="url(#clip0_12517_107173)">
             <path
@@ -353,7 +359,9 @@ const TestimonialHomeHero = () => {
           height="33"
           viewBox="0 0 120 33"
           fill="currentColor"
-          className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}
+           className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+              ${dark ? "text-white" : "text-black"}
+              transition-colors`}
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
@@ -416,7 +424,9 @@ const TestimonialHomeHero = () => {
         
           aria-hidden="true"
             fill="currentColor"
-          className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}
+            className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+              ${dark ? "text-white" : "text-black"}
+              transition-colors`}
        >
           <path
             d="M62.8872 19.5977C62.7054 19.5977 62.5802 19.4717 62.5802 19.2905V10.2888H59.5223C59.3405 10.2888 59.2151 10.1633 59.2151 9.98192V8.74023C59.2151 8.5584 59.3406 8.43261 59.5223 8.43261H67.662C67.8436 8.43261 67.9689 8.55854 67.9689 8.74023V9.98185C67.9689 10.1631 67.8436 10.2888 67.662 10.2888H64.6043V19.2903C64.6043 19.4717 64.4785 19.5977 64.2973 19.5977H62.8872ZM39.463 15.1035L37.8578 10.4984L36.2382 15.1035H39.463ZM43.0232 19.2339C43.0934 19.4158 42.9814 19.5977 42.7859 19.5977H41.3342C41.1247 19.5977 40.9989 19.5003 40.9289 19.304L40.1055 16.9323H35.5965L34.7717 19.304C34.7024 19.5003 34.5763 19.5977 34.3673 19.5977H32.9995C32.8178 19.5977 32.6919 19.4158 32.7618 19.2339L36.5452 8.71232C36.6152 8.51629 36.7408 8.43309 36.9498 8.43309H38.8207C39.0303 8.43309 39.1699 8.51636 39.2397 8.71232L43.0232 19.2339ZM53.8679 18.0901C54.761 18.0901 55.3617 17.6582 55.8504 16.9182L53.5891 14.4896C52.7231 14.9784 52.1644 15.4662 52.1644 16.4434C52.1645 17.4066 52.946 18.0901 53.8679 18.0901ZM54.4961 9.91189C53.7703 9.91189 53.3515 10.3729 53.3515 10.9868C53.3515 11.4613 53.6023 11.88 54.1749 12.4942C55.1661 11.9216 55.5851 11.5729 55.5851 10.959C55.5851 10.3864 55.2223 9.91189 54.4961 9.91189ZM60.6814 19.2068C60.8627 19.4024 60.7512 19.5977 60.5272 19.5977H58.7542C58.5169 19.5977 58.3913 19.5416 58.2378 19.3599L57.1768 18.1881C56.4649 19.1372 55.4728 19.8488 53.8258 19.8488C51.7875 19.8488 50.1815 18.6207 50.1815 16.5138C50.1815 14.8944 51.0476 14.0289 52.3601 13.3034C51.7174 12.5638 51.4248 11.7822 51.4248 11.0987C51.4248 9.3677 52.6393 8.18164 54.4679 8.18164C56.3387 8.18164 57.4838 9.28456 57.4838 10.9171C57.4838 12.3127 56.4788 13.0935 55.4174 13.6801L56.9813 15.3693L57.8607 13.8336C57.9723 13.6524 58.098 13.5824 58.321 13.5824H59.675C59.8987 13.5824 60.0244 13.7363 59.8852 13.9734L58.3212 16.6526L60.6814 19.2068ZM46.7485 19.5977C46.9299 19.5977 47.0562 19.4717 47.0562 19.2905V10.2888H50.1133C50.2947 10.2888 50.4203 10.1633 50.4203 9.98192V8.74023C50.4203 8.5584 50.2947 8.43261 50.1133 8.43261H41.9736C41.7918 8.43261 41.6665 8.55854 41.6665 8.74023V9.98185C41.6665 10.1631 41.7919 10.2888 41.9736 10.2888H45.0306V19.2903C45.0306 19.4717 45.1567 19.5977 45.338 19.5977H46.7485Z"
@@ -447,59 +457,61 @@ const TestimonialHomeHero = () => {
         <div className="absolute inset-0 bg-black/20 hover:bg-black/25 transition-colors" />
 
         {/* CONTENT WRAPPER (padding moved here) */}
-        <div className="relative z-10 h-full p-6 lg:p-16">
-          <div className="h-7 font-semibold space-y-5 text-white lg:h-8">
-            <div className="font-semibold"> CUSTOMER STORY</div>
-            <div className="text-2xl">
-              SEE how Anthropic accelerates <br /> Ai Developnent With Minitlify
-            </div>
-            <div className="flex gap-2">
-              <div>Read Story</div>
-              <span>
-                <ChevronRight className="mt-2" size={18} />
-              </span>
-            </div>
-          </div>
+        {/* CONTENT WRAPPER */}
+<div className="relative z-10 h-full p-4 sm:p-6 md:p-10 lg:p-16">
+  
+  {/* Header */}
+  <div className="space-y-3 sm:space-y-4 text-center lg:text-left">
+    <div className="font-semibold text-sm sm:text-base text-white">
+      CUSTOMER STORY
+    </div>
+    
+    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug">
+      SEE how Anthropic accelerates <br className="hidden sm:block" /> AI Development With Minitlify
+    </div>
+    
+    <div className="flex flex-col justify-center lg:justify-start items-center gap-2 text-white text-sm sm:text-base">
+      <div>Read Story</div>
+      <ChevronRight className="mt-1 sm:mt-0" size={18} />
+    </div>
+  </div>
 
-          <div className="flex items-center h-full">
-            <div
-              className="
-            max-w-md
-            text-center
-            lg:text-start
-            mt-0
-            lg:mt-19
-            py-0
-            lg:py-18
-            font-semibold
-          "
-            >
-              <div className="text-white flex gap-10 mt-30 tracking-widest">
-                <div>
-                  <div className="text-3xl font-semibold">2M+</div>
-                  <div className="text-[14px] text-white/80">
-                    Montheley Active developer
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-semibold">3+</div>
-                  <div className="text-sm text-white/80">
-                    Montheley Active developer api code
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* Stats */}
+  <div className="flex justify-center lg:justify-start mt-6 lg:mt-10 w-full">
+    <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 text-center lg:text-left tracking-wide">
+
+      <div>
+        <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">2M+</div>
+        <div className="text-xs sm:text-sm md:text-base text-white/80 mt-1">
+          Monthly Active Developers
         </div>
       </div>
 
+      <div>
+        <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">3+</div>
+        <div className="text-xs sm:text-sm md:text-base text-white/80 mt-1">
+          Monthly Active Developer API Code
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+
       {/* Bottom Logos (unchanged) */}
-      <div className="md:mx-4 mx-2 my-2 md:my-5 flex mt-3 justify-between md:px-6 px-4 md:py-9 gap-10">
+      <div
+        className="relative flex justify-center items-center
+                px-2 mt-6 lg:mt-10
+                gap-4 sm:gap-6 md:gap-8 lg:gap-10
+                overflow-x-auto scrollbar-hide"
+      >
         {items.map((item, index) => (
           <div
             key={index}
             onClick={() => setActiveIndex(index)}
-            className="flex cursor-pointer items-center gap-1"
+            className="flex-shrink-0 cursor-pointer flex items-center justify-center"
           >
             {item.icon}
           </div>

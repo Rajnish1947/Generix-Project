@@ -1,67 +1,4 @@
 
-// import React from "react";
-// import {  Flame , Wallpaper ,Trophy,LampDesk} from "lucide-react";
-
-// const Card = () => {
-//   const items = [
-//     {
-//       icon: <Wallpaper size={28} />,
-//       title: "Discounts and credits",
-//       desc: "Unlock Pro plan features for free for the first six months and extended AI credits.",
-//     },
-//     {
-//       icon: <Trophy size={28} />,
-//       title: "Priority support",
-//       desc: "Get fast support from our team, with a dedicated channel for startup founders.",
-//     },
-//     {
-//       icon: <LampDesk size={28} />,
-//       title: "Startup pack",
-//       desc: "Access discounts and perks from popular products for startups.",
-//     },
-//     {
-//       icon: <Flame  size={28} />,
-//       title: "Startup survival kit",
-//       desc: "Get access to our startup survival kit sent to your doorstep.",
-//     },
-//   ];
-
-//   return (
-//     <section className="max-w-5xl relative mx-auto px-6 py-20">
-//       <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 items-stretch">
-//         {items.map((item, index) => (
-//           <div
-//             key={index}
-//             className="h-full w-full rounded-2xl  bg-gray-100 p-8
-//                        flex flex-col items-center justify-between text-center"
-//           >
-//             {/* Icon */}
-//             <div className="text-black mb-3">
-//               {item.icon}
-//             </div>
-
-//             {/* Content */}
-//             <div className="flex-1 flex flex-col justify-center">
-//               <h3 className="mb-4 text-xl font-semibold text-gray-900">
-//                 {item.title}
-//               </h3>
-
-//               <p className="text-[15px] leading-relaxed text-gray-500">
-//                 {item.desc}
-//               </p>
-//             </div>
-//             <div className="flex items-center gap-2">
-
-// </div>
-
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Card;
 'use client';
 import React from "react";
 import { Flame, Wallpaper, Trophy, LampDesk } from "lucide-react";
@@ -72,62 +9,81 @@ const Card = () => {
 
   const items = [
     {
-      icon: <Wallpaper size={28} />,
+      icon: <Wallpaper className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Discounts and credits",
       desc: "Unlock Pro plan features for free for the first six months and extended AI credits.",
     },
     {
-      icon: <Trophy size={28} />,
+      icon: <Trophy className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Priority support",
       desc: "Get fast support from our team, with a dedicated channel for startup founders.",
     },
     {
-      icon: <LampDesk size={28} />,
+      icon: <LampDesk className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Startup pack",
       desc: "Access discounts and perks from popular products for startups.",
     },
     {
-      icon: <Flame size={28} />,
+      icon: <Flame className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Startup survival kit",
       desc: "Get access to our startup survival kit sent to your doorstep.",
     },
   ];
 
   return (
-    <section className="max-w-5xl relative mx-auto px-6 py-20">
-      <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 items-stretch">
+    <section
+      className="
+      max-w-6xl mx-auto
+      px-4 sm:px-6 lg:px-8
+      py-12 sm:py-16 lg:py-20
+      "
+    >
+      <div
+        className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        gap-4 sm:gap-6 lg:gap-8
+        "
+      >
         {items.map((item, index) => (
           <div
             key={index}
-            className={`h-full w-full rounded-2xl p-8
-              flex flex-col items-center justify-between text-center
-              ${dark ? "bg-neutral-900" : "bg-gray-100"}`}
+            className={`
+            rounded-2xl
+            p-5 sm:p-6 lg:p-8
+            flex flex-col items-center text-center
+            min-h-[220px] sm:min-h-[240px]
+            transition duration-300 hover:scale-[1.02]
+            ${dark ? "bg-neutral-900 text-white" : "bg-gray-100 text-black"}
+            `}
           >
             {/* Icon */}
-            <div className={`mb-3 ${dark ? "text-white" : "text-black"}`}>
+            <div className="mb-3 sm:mb-4">
               {item.icon}
             </div>
 
-            {/* Content */}
-            <div className="flex-1 flex flex-col justify-center">
-              <h3
-                className={`mb-4 text-xl font-semibold ${
-                  dark ? "text-white" : "text-gray-900"
-                }`}
-              >
-                {item.title}
-              </h3>
+            {/* Title */}
+            <h3
+              className="
+              mb-2 sm:mb-3
+              text-base sm:text-lg lg:text-xl
+              font-semibold
+              "
+            >
+              {item.title}
+            </h3>
 
-              <p
-                className={`text-[15px] leading-relaxed ${
-                  dark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                {item.desc}
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2"></div>
+            {/* Description */}
+            <p
+              className={`
+              text-sm sm:text-[15px] lg:text-base
+              leading-relaxed
+              ${dark ? "text-gray-400" : "text-gray-600"}
+              `}
+            >
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>

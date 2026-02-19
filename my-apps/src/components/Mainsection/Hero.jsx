@@ -6,19 +6,25 @@ const Hero = () => {
   return (
     <section
       className="relative bg-white min-h-screen bg-cover bg-center"
-       style={{
+      style={{
         backgroundImage: dark
           ? "url('https://www.mintlify.com/startups/hero-dark.svg')"
           : "url('https://www.mintlify.com/startups/hero-light.svg')",
       }}
     >
       {/* Overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-t ${dark ? 'from-black/95 via-gray-900/10 to-transparent' : 'from-white/90 via-white/10 to-transparent'}`}></div>
+      <div
+        className={`absolute inset-0 bg-gradient-to-t ${dark ? "from-black/95 via-gray-900/10 to-transparent" : "from-white/90 via-white/10 to-transparent"}`}
+      ></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-10  pt-32 pb-28 flex flex-col lg:flex-row items-start lg:items-center gap-12">
+      <div
+        className="relative z-10 max-w-6xl mx-auto  flex flex-col px-4 sm:px-6 lg:px-10
+pt-20 sm:pt-24 md:pt-32
+pb-16 md:pb-28 lg:flex-row items-start lg:items-center gap-12"
+      >
         <div className="lg:w-1/2 ">
-          <h1 className="text-5xl font-bold leading-tight text-white">
+          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-bold leading-tight text-white">
             Built for startups <br /> and scaleups
           </h1>
 

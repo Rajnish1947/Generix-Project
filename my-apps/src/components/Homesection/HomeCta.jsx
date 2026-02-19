@@ -1,30 +1,40 @@
+
 "use client";
 import { useTheme } from "@/Context/ThemeContext/page";
 import React, { useEffect, useState } from "react";
-import { Copy, Check, ArrowRight } from "lucide-react";
+import { Copy, Check } from "lucide-react";
+
 const HomeCta = () => {
   const [done, setDone] = useState(false);
   const { dark } = useTheme();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setDone(true);
-    }, 8000); // 8 sec delay only for last circle
-
+    }, 8000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="relative max-w-5xl mx-auto py-8 mt-10 px-6">
+    <section className="relative max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16 mt-10">
+      
       {/* Heading */}
-      <div className="flex flex-col space-y-3 items-center justify-center gap-4 text-center">
+      <div className="text-center max-w-2xl mx-auto space-y-4">
         <h3
-          className={` ${dark ? "font-bold text-white text-[38px] " : "font-semibold text-black text-[38px]"} leading-[110%] tracking-[-0.8px]`}
+          className={`
+            font-bold tracking-tight leading-tight
+            text-2xl sm:text-3xl md:text-4xl lg:text-[38px]
+            ${dark ? "text-white" : "text-black"}
+          `}
         >
           Built for the intelligence age
         </h3>
 
         <p
-          className={` text-base leading-[150%] ${dark ? "font-bold text-white  " : "font-semibold text-gray-500"} max-w-[640px]`}
+          className={`
+            text-sm sm:text-base md:text-lg
+            ${dark ? "text-white/80" : "text-gray-600"}
+          `}
         >
           Integrate AI into every part of your docs lifecycle. Woven into how
           your knowledge is written, maintained, and understood by both users
@@ -32,78 +42,104 @@ const HomeCta = () => {
         </p>
       </div>
 
-      {/* Content */}
-      <div className="flex gap-4 mt-10">
-        {/* Left */}
+      {/* Cards container */}
+      <div className="flex flex-col md:flex-row gap-6 mt-10">
+        
+        {/* LEFT CARD */}
         <div
-          className={`w-1/2 border rounded-2xl  ${dark ? "border-gray-900 " : "border-gray-200 "} p-3`}
+          className={`
+            w-full md:w-1/2 border rounded-2xl p-4 md:p-6
+            ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}
+          `}
         >
-          {/* Text */}
-          <div className="space-y-3  px-2 py-4">
-            <div className="font-medium text-green-900">LLMs.txt & MCP</div>
-            <div className="font-semibold text-2xl">
+          <div className="space-y-3">
+            <div className="text-green-700 font-medium text-sm">
+              LLMs.txt & MCP
+            </div>
+
+            <div className="font-semibold text-xl md:text-2xl">
               Built for both people and AI
             </div>
-            <div className={`text-md  ${dark ? "text-white/80" : "text-gray-800"}`}>
+
+            <div className={`${dark ? "text-white/80" : "text-gray-600"}`}>
               Ensure your product shows up in the AI workflows users already
-              rely on. We support llms.txt, MCP, and whatever comes next.
+              rely on.
             </div>
           </div>
 
-          {/* Stacked UI */}
-          <div className="relative px-2 py-5 mt-19 h-[300px]">
-            {/* Back layer */}
+          {/* Stacked cards */}
+          <div className="relative mt-8 h-[200px] sm:h-[240px] md:h-[280px]">
+            
+            {/* back */}
             <div
-              className={`absolute top-0 left-1/2 -translate-x-1/2 w-[50%] ${dark ? "border-gray-700 bg-black" : "border-gray-300 bg-white"} border rounded-xl p-4 z-[10]`}
-            >
-              <div className={`bg-gray-100 ${dark ? "bg-gray-900" : "bg-gray-100"} justify-start items-start px-2 py-2`}></div>
-            </div>
+              className={`
+                absolute top-0 left-1/2 -translate-x-1/2
+                w-[60%] sm:w-[55%]
+                border rounded-xl p-4
+                ${dark ? "border-gray-700 bg-black" : "border-gray-300 bg-white"}
+              `}
+            />
 
-            {/* Middle layer */}
-            <div
-              className="absolute top-6 left-1/2 -translate-x-1/2 w-[70%]
-    rounded-xl p-4 bg-green-900 z-[20]"
-            ></div>
+            {/* middle */}
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-[75%] sm:w-[70%] bg-green-900 rounded-xl h-[70px]" />
 
-            {/* Front layer */}
+            {/* front */}
             <div
-              className={`absolute top-12 left-1/2 -translate-x-1/2 w-[78%] border ${dark ? "border-gray-700 bg-black" : "border-gray-300 bg-white"} rounded-xl z-[30]`}
+              className={`
+                absolute top-8 left-1/2 -translate-x-1/2
+                w-[85%] sm:w-[80%]
+                border rounded-xl
+                ${dark ? "border-gray-700 bg-black" : "border-gray-300 bg-white"}
+              `}
             >
-              <div className={`${dark ? "bg-gray-900" : "bg-gray-100"} py-3 m-2 rounded-md`}></div>
-              <div className={` ${dark ? "bg-gray-900" : "bg-gray-100"} py-3 m-2 rounded-md`}></div>
-              <div className="flex justify-center   px-2 py-3 text-sm">
-                <div className="flex items-center justify-center gap-2 px-2 py-1 border border-gray-200 rounded">
+              <div className={`${dark ? "bg-gray-900" : "bg-gray-100"} m-2 h-8 rounded`} />
+              <div className={`${dark ? "bg-gray-900" : "bg-gray-100"} m-2 h-8 rounded`} />
+
+              <div className="flex justify-center p-3">
+                <div className="flex items-center gap-2 border px-3 py-1 rounded text-sm">
                   <Copy className="w-4 h-4" />
-                  <span>Copy page</span>
+                  Copy page
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
-        {/* Right */}
+        {/* RIGHT CARD */}
         <div
-          className={`w-1/2 border rounded-2xl  ${dark ? "border-gray-900 " : "border-gray-200 "} p-3`}
+          className={`
+            w-full md:w-1/2 border rounded-2xl p-4 md:p-6
+            ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}
+          `}
         >
-          <div className="space-y-5  px-3 py-4">
-            <div className="font-medium text-green-800">AGENT</div>
-            <div className="font-semibold text-2xl">
+          <div className="space-y-3">
+            <div className="text-green-700 font-medium text-sm">
+              AGENT
+            </div>
+
+            <div className="font-semibold text-xl md:text-2xl">
               Self-updating knowledge management
             </div>
-            <div
-              className={`text-md  ${dark ? "text-white/80" : "text-gray-800"}`}
-            >
-              Draft, edit, and maintain content with a context-aware agent. Move
-              faster and more consistently without the documentation debt.
+
+            <div className={`${dark ? "text-white/80" : "text-gray-600"}`}>
+              Draft, edit, and maintain content with a context-aware agent.
             </div>
           </div>
 
-          <div className="relative px-2 mt-7 py-5">
-            {/* Line (centered) */}
-            <div className={`absolute top-1/2  mx-8 w-[320px] h-[1px] ${dark ? "bg-gray-700" : "bg-gray-200"}`} />
+          {/* Timeline */}
+          <div className="relative mt-10">
+            
+            {/* line */}
+            <div
+              className={`
+                absolute top-1/2 left-0 w-full h-[2px]
+                ${dark ? "bg-gray-700" : "bg-gray-300"}
+              `}
+            />
 
-            {/* Circles */}
-            <div className="relative z-10 flex mx-8 justify-between">
+            {/* circles */}
+            <div className="relative flex justify-between">
               {[0, 1, 2, 3].map((_, i) => {
                 const isLast = i === 3;
                 const isCompleted = !isLast || done;
@@ -111,15 +147,20 @@ const HomeCta = () => {
                 return (
                   <div
                     key={i}
-                    className={`w-14 h-14 shadow-lg shadow-gray-500 flex items-center justify-center rounded-full border transition-all duration-500
-            ${
-              isCompleted
-                ? "bg-green-900 border-gray-600 text-white"
-                : "bg-white border-gray-300"
-            }`}
+                    className={`
+                      w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14
+                      flex items-center justify-center
+                      rounded-full border shadow-md
+                      transition-all duration-500
+                      ${
+                        isCompleted
+                          ? "bg-green-900 text-white border-green-900"
+                          : "bg-white border-gray-300"
+                      }
+                    `}
                   >
                     {isCompleted ? (
-                      <Check size={25} />
+                      <Check size={18} />
                     ) : (
                       <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
                     )}
@@ -127,10 +168,12 @@ const HomeCta = () => {
                 );
               })}
             </div>
+
           </div>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

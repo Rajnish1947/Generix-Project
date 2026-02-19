@@ -1,18 +1,3 @@
-// "use client";
-// import React from 'react'
-// import MainPage from '@/pages/Mainpage/page'
-// const MainPages = () => {
-//   return (
-//     <>
-//       <MainPage />
-//     </>
-//   )
-// }
-
-// export default MainPages
-
-
-
 
 "use client";
 import Navbar from "@/layouts/Navbar";
@@ -25,7 +10,6 @@ import FounderNote from "@/components/Mainsection/FounderNote";
 import FooterLinks from "@/layouts/FooterLinks";
 import HelpCTA from "@/components/Mainsection/HelpCTA";
 import { useTheme } from "@/Context/ThemeContext/page";
-
 
 export default function MainPage() {
   const { dark } = useTheme();
@@ -45,8 +29,3 @@ export default function MainPage() {
     </div>
   );
 }
-
-
-
-
-
