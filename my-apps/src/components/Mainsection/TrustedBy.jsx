@@ -13,11 +13,10 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="130"
-          height="20"
+         
           viewBox="0 0 126 15"
           fill="currentColor"
-          className={`md:h-6 h-3 ${dark ? "text-white" : "text-black "}  transition-colors`}
+          className={`md:h-6 h-4 ${dark ? "text-white" : "text-black "}  transition-colors`}
         >
           <path d="M25.9509 9.87536L19.8609 0.399979H16.5742V13.9362H19.3776V4.46086L25.4676 13.9362H28.7542V0.399979H25.9509V9.87536Z" />
           <path d="M31.0742 3.01054H35.6179V13.9362H38.5181V3.01054H43.0617V0.399979H31.0742V3.01054Z" />
@@ -35,8 +34,7 @@ const TrustedBy = () => {
       title: "Congition",
       icon: (
         <svg
-          width="160"
-          height="38"
+        
           viewBox="0 0 160 38"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +60,7 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="135"
-          height="35"
+        
           viewBox="0 0 126 31"
           fill="currentColor"
           className={`md:h-6 h-4 ${dark ? "text-white" : "text-black "}  transition-colors`}
@@ -83,8 +80,7 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="100"
-          height="20"
+         
           viewBox="0 0 81 16"
           fill="currentColor"
           className={`md:h-6 h-4 ${dark ? "text-white" : "text-black "}  transition-colors`}
@@ -131,8 +127,7 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="107"
-          height="18"
+         
           viewBox="0 0 107 18"
           fill="currentColor"
           className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}

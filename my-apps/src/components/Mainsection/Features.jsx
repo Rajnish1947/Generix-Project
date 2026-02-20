@@ -16,7 +16,7 @@ const Features = () => {
 
       {/* Main heading */}
       <h3
-        className={`text-[30px] md:text-[40px] text-center font-semibold leading-[110%] tracking-[-0.8px] ${
+        className={`text-[35px] md:text-[40px] text-center font-semibold leading-[110%] tracking-[-0.8px] ${
           dark ? "text-white" : "text-black"
         }`}
       >
@@ -26,7 +26,7 @@ const Features = () => {
       {/* Description */}
       <p
         className={`text-center text-base/[150%] max-w-[640px] ${
-          dark ? "text-gray-400" : "text-gray-500"
+          dark ? "text-gray-400" : "text-gray-800"
         }`}
       >
         Designed for venture-backed businesses that are just getting started.

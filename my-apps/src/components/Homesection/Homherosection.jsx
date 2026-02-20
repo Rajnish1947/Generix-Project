@@ -29,12 +29,12 @@ const Homeherosection = () => {
       <div
         className="relative z-10
                    max-w-5xl mx-auto
-                   px-4 sm:px-6 lg:px-8
+                   px-4 sm:px-6 lg:px-8 lg:pt-5
                    flex flex-col items-center text-center
                    gap-6 sm:gap-8 lg:gap-10"
       >
         {/* Badge */}
-        <div className="w-full flex justify-center">
+        <div className="w-full hidden md:flex justify-center">
           <div
             className="
               flex items-center justify-center gap-2
@@ -60,8 +60,8 @@ const Homeherosection = () => {
         {/* Heading */}
         <h1
           className="
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
-            font-bold leading-tight text-white
+            text-4xl   lg:text-3xl xl:text-5xl
+            font-semibold leading-tight text-white
             max-w-3xl
           "
         >

@@ -5,7 +5,7 @@ const Hero = () => {
   const { dark, setDark } = useTheme();
   return (
     <section
-      className="relative bg-white min-h-screen bg-cover bg-center"
+      className="relative bg-white min-h-[65vh] lg:min-h-screen bg-cover bg-center"
       style={{
         backgroundImage: dark
           ? "url('https://www.mintlify.com/startups/hero-dark.svg')"
@@ -20,21 +20,20 @@ const Hero = () => {
       {/* Content */}
       <div
         className="relative z-10 max-w-6xl mx-auto  flex flex-col px-4 sm:px-6 lg:px-10
-pt-20 sm:pt-24 md:pt-32
+pt-38 sm:pt-29 md:pt-32 
 pb-16 md:pb-28 lg:flex-row items-start lg:items-center gap-12"
       >
-        <div className="lg:w-1/2 ">
-          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-bold leading-tight text-white">
+        <div className="lg:w-1/2  flex flex-col items-center text-center md:items-start md:text-left  ">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white">
             Built for startups <br /> and scaleups
           </h1>
 
-          <p className="mt-6 text-stone-50 text-lg">
-            Ambitious startups build world-class experiences with Mintlify,
-            scaling from pre-seed to billion dollar valuations.
+          <p className="mt-6 max-w-md md:max-w-xl text-stone-50 text-sm md:text-[16px]">
+          Ambitious startups build world-class experiences with Mintlify, scaling from pre-seed to billion dollar valuations.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button className="bg-white text-gray-700 px-7 py-2 rounded-3xl font-medium hover:bg-gray-100">
+            <button className="bg-white text-gray-900 px-30 py-1 md:px-7 md:py-2 rounded-3xl font-medium hover:bg-gray-100">
               Get Started
             </button>
 

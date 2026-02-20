@@ -439,14 +439,24 @@ const TrustedByHome = () => {
     <section
       className={`max-w-5xl relative z-10 mt-10  mx-auto px-6 py-16 ${dark ? "bg-black text-white" : ""}`}
     >
-      {/* Grid */}
-      <div className="grid grid-cols-4 gap-y-15 p-1 gap-x-10 place-items-center">
-        {items.map((item, index) => (
-          <div key={index} className="flex  items-center gap-3 ">
-            {item.icon}
-          </div>
-        ))}
-      </div>
+    {/* Grid */}
+<div className="
+  grid grid-cols-2
+  sm:grid-cols-3
+  md:grid-cols-4
+  gap-y-10 md:gap-y-14
+  gap-x-10
+  p-2
+  place-items-center
+  max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-6xl
+  mx-auto
+">
+  {items.map((item, index) => (
+    <div key={index} className="flex items-center justify-center gap-3">
+      {item.icon}
+    </div>
+  ))}
+</div>
     </section>
   );
 };
