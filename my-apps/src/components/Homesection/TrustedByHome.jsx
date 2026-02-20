@@ -441,8 +441,8 @@ const TrustedByHome = () => {
     >
     {/* Grid */}
 <div className="
-  grid grid-cols-2
-  sm:grid-cols-3
+  grid 
+  grid-cols-3
   md:grid-cols-4
   gap-y-10 md:gap-y-14
   gap-x-10
