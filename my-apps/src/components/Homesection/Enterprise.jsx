@@ -30,7 +30,7 @@ const Enterprise = () => {
             <h1
               className={`
                 font-semibold leading-tight
-                text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                text-2xl sm:text-3xl md:text-4xl lg:text-4xl
                 ${dark ? "text-white" : "text-black"}
               `}
             >

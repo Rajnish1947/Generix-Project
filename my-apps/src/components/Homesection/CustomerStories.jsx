@@ -49,11 +49,40 @@ const customers = [
     name: "Laravel",
     image: "/per.webp",
     desc: "How Laravel scaled world-class documentation across 10+ products.",
+  },{
+    name: "Perplexity",
+    image: "/per.webp",
+    desc: "How Perplexity transformed its documentation into an AI-native developer experience that matches the pace of its product development.",
+  },
+  {
+    name: "X",
+    image: "/x.webp",
+    desc: "How X is using Mintlify to power the developer experience for the global town square.",
+  },
+  {
+    name: "Kalshi",
+    image: "/kalshi.webp",
+    desc: "How Kalshi helps developers discover what's possible faster and ultimately drive broader adoption.",
+  },
+  {
+    name: "Cognition",
+    image: "/per.webp",
+    desc: "How Cognition scaled their documentation to mirror their product ethos.",
+  },
+  {
+    name: "Together AI",
+    image: "/togetherai.webp",
+    desc: "How Together AI scaled their documentation into a developer experience that mirrors their own ethos.",
+  },
+  {
+    name: "Laravel",
+    image: "/per.webp",
+    desc: "How Laravel scaled world-class documentation across 10+ products.",
   },
 ];
   return (
     <section className={`relative w-full py-28 ${dark ? "bg-black" : "bg-gradient-to-b from-white to-gray-50"}`}>
-      <div className="max-w-7xl mx-auto px-6">
+      <div className=" mx-auto px-6">
         
         {/* Header */}
         <div className="text-center mb-16">

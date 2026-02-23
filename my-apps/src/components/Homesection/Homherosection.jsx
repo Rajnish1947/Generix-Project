@@ -60,7 +60,7 @@ const Homeherosection = () => {
         {/* Heading */}
         <h1
           className="
-            text-4xl   lg:text-3xl xl:text-5xl
+            text-4xl   lg:text-3xl xl:text-6xl
             font-semibold leading-tight text-white
             max-w-3xl
           "
@@ -136,7 +136,7 @@ const Homeherosection = () => {
           alt="Hero"
           className="
             w-full p-2
-            rounded-lg 
+            rounded-4xl 
             shadow-lg
           "
         />
