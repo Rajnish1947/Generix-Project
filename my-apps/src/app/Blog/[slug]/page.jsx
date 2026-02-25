@@ -24,7 +24,7 @@ export default function BlogDetail() {
     <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
       <Navbar blogpage={true} />
 
-      <article className="container mx-auto px-6 my-15  py-16 max-w-4xl">
+      <article className="container mx-auto px-6 my-13  py-16 max-w-4xl">
         {/* Back */}
         <Link
           href="/blog"
