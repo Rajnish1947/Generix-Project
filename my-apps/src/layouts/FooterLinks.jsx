@@ -26,7 +26,6 @@ const FooterLinks = () => {
             {/* LEFT SIDE (Logo) */}
             <div>
               <Link href="/" className="flex items-center gap-2">
-             
                 <svg
                   width="104"
                   height="24"
@@ -86,31 +85,100 @@ const FooterLinks = () => {
             </div>
 
             {/* RIGHT SIDE (Social Icons) */}
-            <div className="flex items-center gap-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800 transition"
-              >
-                <Linkedin size={18} />
-              </a>
+            <div className="flex gap-3">
+              
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+                >
+                  <path
+                    d="M11.4595 11.5714V18.889H8.06641V6.24428H11.2672L11.3238 9.39982H11.1202C11.452 8.3442 11.9534 7.52987 12.6244 6.95682C13.3031 6.37623 14.1777 6.08594 15.2484 6.08594C16.1231 6.08594 16.8846 6.27821 17.5331 6.66275C18.189 7.03976 18.6942 7.58642 19.0486 8.30273C19.4105 9.0115 19.5915 9.85977 19.5915 10.8475V18.889H16.1985V11.4356C16.1985 10.6515 15.9949 10.0369 15.5877 9.59209C15.1881 9.14722 14.6301 8.92479 13.9138 8.92479C13.4388 8.92479 13.0128 9.03035 12.6358 9.24148C12.2663 9.44506 11.976 9.74289 11.7649 10.135C11.5613 10.5271 11.4595 11.0059 11.4595 11.5714Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M1.77748 18.889V6.2442H5.17054V18.889H1.77748ZM3.47401 4.59292C2.96128 4.59292 2.52395 4.42326 2.16203 4.08396C1.8001 3.74465 1.61914 3.33372 1.61914 2.85115C1.61914 2.36858 1.8001 1.95765 2.16203 1.61834C2.52395 1.27903 2.96128 1.10938 3.47401 1.10938C3.98674 1.10938 4.42406 1.27903 4.78599 1.61834C5.15546 1.9501 5.34019 2.36104 5.34019 2.85115C5.34019 3.33372 5.15546 3.74465 4.78599 4.08396C4.42406 4.42326 3.98674 4.59292 3.47401 4.59292Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
 
-              <a
-                href="https://github.com"
-                target="_blank"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800 transition"
-              >
-                <Github size={18} />
-              </a>
+              {/* Repeat other buttons with same classes */}
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+                >
+                  <mask
+                    id="mask0_9208_2830"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="21"
+                    height="20"
+                    style={{
+                      maskType: "luminance",
+                      WebkitMaskType: "luminance",
+                    }}
+                  >
+                    <path d="M20.6055 0H0.605469V20H20.6055V0Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_9208_2830)">
+                    <path
+                      d="M12.1188 8.75562L18.0382 1.875H16.6357L11.4957 7.84938L7.39062 1.875H2.65625L8.86375 10.9094L2.65625 18.125H4.05875L9.48625 11.8156L13.8213 18.125H18.5563L12.1188 8.75562ZM10.1975 10.9888L9.56875 10.0894L4.56437 2.93125H6.71875L10.7575 8.70812L11.3863 9.6075L16.6363 17.1169H14.4819L10.1975 10.9888Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+              </button>
 
-              <a
-                href="https://x.com"
-                target="_blank"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800 transition"
-              >
-                <Twitter size={18} />
-              </a>
+              
+
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  className="text-muted opacity-70 group-hover/social-link:opacity-100 transition-opacity duration-300"
+                >
+                  <mask
+                    id="mask0_9208_2837"
+                     style={{
+                      maskType: "luminance",
+                      WebkitMaskType: "luminance",
+                    }}
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="21"
+                    height="20"
+                  >
+                    <path
+                      d="M20.6055 0H0.605469V20H20.6055V0Z"
+                      fill="white"
+                    ></path>
+                  </mask>
+                  <g mask="url(#mask0_9208_2837)">
+                    <path
+                      d="M10.6055 1.46484C15.4399 1.46484 19.3555 5.38046 19.3555 10.2149C19.3543 13.9742 16.9561 17.3142 13.3949 18.5161C12.9574 18.6036 12.793 18.3299 12.793 18.1005C12.793 17.8049 12.8043 16.8642 12.8043 15.6942C12.8043 14.8742 12.5311 14.3492 12.2136 14.0755C14.1605 13.8567 16.2061 13.113 16.2061 9.75546C16.2061 8.79296 15.8668 8.01609 15.3093 7.40421C15.3968 7.18546 15.703 6.28859 15.2218 5.08546C15.2218 5.08546 14.4886 4.84484 12.8155 5.98234C12.1155 5.78546 11.3718 5.68734 10.628 5.68734C9.88422 5.68734 9.14047 5.78546 8.44047 5.98234C6.76735 4.85609 6.03422 5.08546 6.03422 5.08546C5.55297 6.28859 5.85922 7.18546 5.94672 7.40421C5.38922 8.01671 5.04985 8.80421 5.04985 9.75546C5.04985 13.1024 7.08422 13.8574 9.0311 14.0761C8.77922 14.2949 8.54985 14.678 8.47297 15.2461C7.96985 15.4761 6.71172 15.848 5.92485 14.5242C5.76047 14.2617 5.2686 13.6167 4.57985 13.6274C3.84672 13.6386 4.28485 14.043 4.59047 14.2067C4.96235 14.4142 5.3886 15.1911 5.48735 15.443C5.66235 15.9349 6.2311 16.8761 8.42922 16.4711C8.42922 17.2042 8.44047 17.893 8.44047 18.1005C8.44047 18.3305 8.2761 18.5924 7.8386 18.5161C4.26422 17.3261 1.8536 13.9817 1.85547 10.2142C1.85547 5.37984 5.7711 1.46484 10.6055 1.46484Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
             </div>
+         
           </div>
           <div className="max-w-6xl mx-auto px-6 md:px-8 py-12">
             {/* Footer links */}
@@ -174,7 +242,9 @@ const FooterLinks = () => {
               ))}
             </div>
           </div>
-          <div className={`border-t ${dark ? "border-gray-800" : "border-gray-200"} px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}>
+          <div
+            className={`border-t ${dark ? "border-gray-800" : "border-gray-200"} px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
+          >
             <p className="text-sm font-medium text-center">
               Backed by enterprise-grade security
             </p>
@@ -220,7 +290,9 @@ const FooterLinks = () => {
               </div>
             </div>
           </div>
-          <div className={`border-t ${dark ? "border-gray-800" : "border-gray-200"}  px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4`}>
+          <div
+            className={`border-t ${dark ? "border-gray-800" : "border-gray-200"}  px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4`}
+          >
             {/* Status */}
             <div className="flex-1">
               {/* <span className="size-2 p-1 rounded-4xl bg-green-500" ></span> */}
@@ -272,7 +344,9 @@ const FooterLinks = () => {
         </div>
 
         {/* RIGHT EMPTY DIV */}
-        <div className={`hidden md:block w-45  border-l ${dark ? "border-gray-800" : "border-gray-200"}`} />
+        <div
+          className={`hidden md:block w-45  border-l ${dark ? "border-gray-800" : "border-gray-200"}`}
+        />
       </div>
     </section>
   );

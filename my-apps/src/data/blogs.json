@@ -1,0 +1,101 @@
+{
+  "categories": [
+    "All",
+    "AI trends",
+    "Announcements",
+    "For founders",
+    "Engineering",
+    "Design",
+    "Best practices"
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "custom-frontends-content-engine",
+      "category": "Announcements",
+      "title": "Your docs, your frontend, our content engine",
+      "description": "Enterprise teams can now own their docs frontend while Mintlify handles the content engine.",
+      "content": [
+        "We built Mintlify to help teams create beautiful documentation quickly without worrying about infrastructure.",
+        "As companies scale, they often want more flexibility and ownership over their frontend experience.",
+        "With our new architecture, you can fully customize your frontend while Mintlify powers the content engine behind the scenes.",
+        "This unlocks better performance, flexibility, and integration with your internal tools."
+      ],
+      "image": "https://www.mintlify.com/_next/image?url=%2Fimages%2Ffeatured%2Fcustom-frontends-4.png&w=640&q=75",
+      "author": {
+        "name": "Hahnbee Lee",
+        "role": "Co-Founder",
+        "avatar": "https://www.mintlify.com/blog/authors/hahnbee.webp"
+      },
+      "publishedAt": "2026-02-19",
+      "readTime": "2 min read",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "slug": "control-documentation-system",
+      "category": "Best practices",
+      "title": "Take control of your documentation system",
+      "description": "New features for technical writers who need customizable documentation systems.",
+      "content": [
+        "Documentation is a critical part of developer experience.",
+        "Teams need full control over their content structure, integrations, and workflows.",
+        "Our new tools make it easier to customize your documentation while maintaining performance.",
+        "Writers and engineers can now collaborate more efficiently."
+      ],
+      "image": "https://www.mintlify.com/_next/image?url=%2Fimages%2Ffeatured%2Fwriter-devex.png&w=640&q=75",
+      "author": {
+        "name": "Hahnbee Lee",
+        "role": "Co-Founder",
+        "avatar": "https://www.mintlify.com/blog/authors/hahnbee.webp"
+      },
+      "publishedAt": "2026-02-18",
+      "readTime": "3 min read",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "slug": "docs-traffic-from-ai-agents",
+      "category": "AI trends",
+      "title": "Almost half your docs traffic is AI",
+      "description": "Nearly half of all the traffic to your documentation site is now AI agents.",
+      "content": [
+        "AI agents are rapidly becoming a major consumer of documentation.",
+        "This shift changes how documentation should be structured and optimized.",
+        "Clear structure and semantic content help AI understand your docs better.",
+        "Teams that adapt early will gain a competitive advantage."
+      ],
+      "image": "https://www.mintlify.com/_next/image?url=%2Fimages%2Fai-traffic.png&w=640&q=75",
+      "author": {
+        "name": "Peri Langlois",
+        "role": "Head of Product Marketing",
+        "avatar": "https://www.mintlify.com/blog/authors/peri.webp"
+      },
+      "publishedAt": "2026-02-17",
+      "readTime": "4 min read",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "slug": "mintlify-agent-faster-docs",
+      "category": "Engineering",
+      "title": "@mintlify for better docs, faster",
+      "description": "The improved agent means better contributions from my team.",
+      "content": [
+        "Engineering teams need fast and reliable documentation workflows.",
+        "Our improved AI agent helps teams write and maintain documentation faster.",
+        "This improves productivity and documentation quality.",
+        "Teams can focus more on building products."
+      ],
+      "image": "https://www.mintlify.com/_next/image?url=%2Fimages%2Fai-traffic.png&w=640&q=75",
+      "author": {
+        "name": "Ethan Palm",
+        "role": "Technical Writing",
+        "avatar": "https://www.mintlify.com/blog/authors/peri.webp"
+      },
+      "publishedAt": "2026-02-16",
+      "readTime": "3 min read",
+      "featured": false
+    }
+  ]
+}

@@ -35,22 +35,22 @@ export default function Navbar({ blogpage }) {
 
   
  ${blogpage
-      ? scrolled
-        ? dark
-          ? "bg-black text-white" 
-          : "bg-white text-black" 
-        : dark
-        ? "bg-transparent text-white" 
-        : "bg-transparent text-black" 
-      : dark
-      ? scrolled
-        ? " text-white" 
-        : "bg-transparent text-white" 
-      : scrolled
-      ? "bg-transparent text-black" 
-      : "bg-transparent text-black"
-    }
-  `}     
+            ? scrolled
+              ? dark
+                ? "bg-black text-white"
+                : "bg-white text-black"
+              : dark
+                ? "bg-black text-white"
+                : "bg-white text-black"
+            : dark
+              ? scrolled
+                ? " text-white"
+                : "bg-transparent text-white"
+              : scrolled
+                ? "bg-transparent text-black"
+                : "bg-transparent text-black"
+          }
+  `}
       >
         {/* Responsive Container */}
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 xl:px-29 lg:px-15 py-3 sm:py-4 flex items-center justify-between">
@@ -72,14 +72,14 @@ export default function Navbar({ blogpage }) {
                 //       ? "#000000"
                 //       : "#ffffff",
                 "--color-text-main": blogpage
-  ? dark
-    ? "#ffffff"
-    : "#000000"
-  : dark
-  ? "#ffffff"
-  : scrolled
-  ? "#000000"
-  : "#ffffff",
+                  ? dark
+                    ? "#ffffff"
+                    : "#000000"
+                  : dark
+                    ? "#ffffff"
+                    : scrolled
+                      ? "#000000"
+                      : "#ffffff",
               }} // conditional color
             >
               <path
@@ -133,17 +133,16 @@ export default function Navbar({ blogpage }) {
           {/* hide in mobile ipad  Links */}
           <ul
             className={`hidden lg:flex items-center gap-6 lg:gap-8 text-sm font-medium transition
-            ${
-      blogpage
-        ? dark
-          ? "text-white"
-          : "text-black"
-        : scrolled
-        ? dark
-          ? "text-white"
-          : "text-black"
-        : "text-white"
-    }`}
+            ${blogpage
+                ? dark
+                  ? "text-white"
+                  : "text-black"
+                : scrolled
+                  ? dark
+                    ? "text-white"
+                    : "text-black"
+                  : "text-white"
+              }`}
           >
             {links.map((item) => (
               <li key={item.label}>
@@ -162,15 +161,14 @@ export default function Navbar({ blogpage }) {
             <Link
               href="/contact"
               className={`rounded-full shadow-md px-2 py-1 md:px-2 md:py-1 lg:py-2 lg:px-4  sm:font-sans sm:text-[10px] md:text-sm  md:font-sans lg:font-medium transition whitespace-nowrap
-                 ${
-      blogpage
-        ? "text-black bg-gray-100"
-        : dark
-        ? "text-white bg-white/10"
-        : scrolled
-        ? "text-black bg-gray-100"
-        : "text-white bg-white/10"
-    }`}
+                 ${blogpage
+                  ? "text-black bg-gray-100"
+                  : dark
+                    ? "text-white bg-white/10"
+                    : scrolled
+                      ? "text-black bg-gray-100"
+                      : "text-white bg-white/10"
+                }`}
             >
               Contact Sales
             </Link>
@@ -195,7 +193,8 @@ export default function Navbar({ blogpage }) {
             aria-label="Toggle menu"
             onClick={() => setOpen(!open)}
             className={`lg:hidden transition flex items-center justify-center
-              ${scrolled ? (dark ? "text-white" : "text-black") : "text-white"
+              ${blogpage
+                ? (dark ? "text-white" : "text-black") : scrolled ? (dark ? "text-white" : "text-black") : "text-white"
               }`}
           >
             {open ? <X size={28} /> : <Equal size={28} />}
@@ -216,8 +215,8 @@ export default function Navbar({ blogpage }) {
                 <li
                   key={item.label}
                   className={`pb-4 ${dark
-                      ? "border-b border-white/10"
-                      : "border-b border-black/10"
+                    ? "border-b border-white/10"
+                    : "border-b border-black/10"
                     }`}
                 >
                   <Link
@@ -238,9 +237,9 @@ export default function Navbar({ blogpage }) {
                 onClick={() => setOpen(false)}
                 className={`rounded-full py-3 w-full text-sm font-medium text-center transition
                   ${blogpage
-                  ? " text-black" :dark
-                    ? "bg-white/10 text-white hover:bg-white/20"
-                    : "bg-stone-100 text-black hover:bg-black/5"
+                    ? " text-black" : dark
+                      ? "bg-white/10 text-white hover:bg-white/20"
+                      : "bg-stone-100 text-black hover:bg-black/5"
                   }`}
               >
                 Contact Sales
@@ -251,9 +250,9 @@ export default function Navbar({ blogpage }) {
                 onClick={() => setOpen(false)}
                 className={`rounded-full py-3 w-full text-sm font-semibold text-center transition
                   ${blogpage
-                  ? "text-white bg-black " :dark
-                    ? "bg-white text-black hover:bg-white/85"
-                    : "bg-black text-white hover:bg-blue-700"
+                    ? "text-white bg-black " : dark
+                      ? "bg-white text-black hover:bg-white/85"
+                      : "bg-black text-white hover:bg-blue-700"
                   }`}
               >
                 Start for Free

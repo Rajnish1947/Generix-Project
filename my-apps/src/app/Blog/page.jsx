@@ -6,13 +6,13 @@ import BlogCard from "@/components/BlogSection/BlogCard";
 import FooterLinks from "@/layouts/FooterLinks";
 export default function BlogPage() {
   const { dark } = useTheme();
-const blogpage=true;
+  const blogpage = true;
   return (
     <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
       <Navbar blogpage={blogpage} />
       <BlogHero />
       <BlogCard />
-           <FooterLinks />
+      <FooterLinks />
     </div>
   );
 }
