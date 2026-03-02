@@ -2,6 +2,9 @@
 import Navbar from "@/layouts/Navbar";
 import PricingSection from "@/components/Pricing/PricingHero";
 import CustomizationSection from "@/components/Pricing/CustomizationSection";
+import CustomerStories from "@/components/Homesection/CustomerStories";
+import  TrustedByHome from "@/components/Homesection/TrustedByHome";
+import Help from "@/components/Homesection/Help";
 import FaqSection from "@/components/Pricing/FaqSection";
 import FooterLinks from "@/components/Mainsection/FooterLinks";
 import { useTheme } from "@/Context/ThemeContext/page";
@@ -13,8 +16,11 @@ export default function PricingPage() {
     <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
       <Navbar blogpage={blogpage} />
       <PricingSection />
+      <TrustedByHome />
       <CustomizationSection />
+      <CustomerStories />
       <FaqSection />
+       <Help />
       <FooterLinks />
     </div>
   );

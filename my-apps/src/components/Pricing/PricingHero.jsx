@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { User } from "lucide-react";
+import { PlusIcon, User } from "lucide-react";
 
 const plans = [
   {
@@ -37,6 +37,7 @@ const plans = [
   },
   {
     name: "Pro",
+
     icon: (
       <svg
         viewBox="0 0 16 16"
@@ -69,6 +70,20 @@ const plans = [
       "Styling checks",
     ],
     button: "Try for free",
+    text: "Popular",
+    PlusIcon: (
+      <svg
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0 select-none text-green-900 text-brand size-4"
+      >
+        <path
+          d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.25 8.75H8.75V11.25C8.75 11.664 8.414 12 8 12C7.586 12 7.25 11.664 7.25 11.25V8.75H4.75C4.336 8.75 4 8.414 4 8C4 7.586 4.336 7.25 4.75 7.25H7.25V4.75C7.25 4.336 7.586 4 8 4C8.414 4 8.75 4.336 8.75 4.75V7.25H11.25C11.664 7.25 12 7.586 12 8C12 8.414 11.664 8.75 11.25 8.75Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    ),
     highlight: true,
   },
   {
@@ -78,7 +93,7 @@ const plans = [
         viewBox="0 0 18 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0 w-5 h-5 select-none size-4.5"
+        className="shrink-0 w-5  h-5 select-none size-4.5"
       >
         <path
           d="M10.75 1.25C11.715 1.25 12.5 2.035 12.5 3V4.75H14.25C15.767 4.75 17 5.983 17 7.5V8.26855C14.606 9.52755 11.887 10.25 9 10.25C6.113 10.25 3.394 9.52755 1 8.26855V7.5C1 5.983 2.233 4.75 3.75 4.75H5.5V3C5.5 2.035 6.285 1.25 7.25 1.25H10.75ZM7.25 2.75C7.112 2.75 7 2.862 7 3V4.75H11V3C11 2.862 10.888 2.75 10.75 2.75H7.25Z"
@@ -100,6 +115,19 @@ const plans = [
       "Support SLA",
     ],
     button: "Contact us",
+    PlusIcon: (
+      <svg
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0 select-none text-green-900 text-brand size-4"
+      >
+        <path
+          d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.25 8.75H8.75V11.25C8.75 11.664 8.414 12 8 12C7.586 12 7.25 11.664 7.25 11.25V8.75H4.75C4.336 8.75 4 8.414 4 8C4 7.586 4.336 7.25 4.75 7.25H7.25V4.75C7.25 4.336 7.586 4 8 4C8.414 4 8.75 4.336 8.75 4.75V7.25H11.25C11.664 7.25 12 7.586 12 8C12 8.414 11.664 8.75 11.25 8.75Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    ),
     highlight: false,
   },
 ];
@@ -135,7 +163,7 @@ const PricingSection = () => {
           <span className="font-medium">Yearly</span>
         </div>
 
-        <p className="text-sm text-green-600">
+        <p className="text-sm text-green-500">
           Save up to 15% with annual billing
         </p>
       </div>
@@ -153,13 +181,23 @@ const PricingSection = () => {
           return (
             <div
               key={index}
-              className={`p-8 rounded-3xl border flex flex-col ${
-                plan.highlight ? "bg-gray-100 border-black" : "border-gray-200"
+              className={`p-[1rem] rounded-3xl border flex flex-col ${
+                plan.highlight
+                  ? "bg-gray-100 border-gray-400"
+                  : "border-gray-200"
               }`}
             >
-              <h3 className="text-sm font-medium flex items-center gap-2 mb-2">
-                {plan.icon}
-                {plan.name}
+              <h3 className="text-sm font-medium flex justify-between items-center gap-2 mb-1">
+                <div className="flex gap-2">
+                  {" "}
+                  {plan.icon}
+                  {plan.name}
+                </div>
+                {plan.text && (
+                  <div className="text-white  bg-green-900 rounded-2xl py-2 px-4">
+                    {plan.text}
+                  </div>
+                )}
               </h3>
 
               <div className="mb-6">
@@ -178,29 +216,34 @@ const PricingSection = () => {
 
               <hr className="my-1 border-gray-200" />
 
-              <ul className="flex-1 space-y-3 mb-8">
+              <ul className="flex-1 space-y-3 mt-4 mb-[5rem]">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <span className="text-gray-200">
-                      <svg
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-4 h-4"
-                      >
-                        <path
-                          d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.843 5.708L7.593 11.208C7.457 11.384 7.25 11.491 7.028 11.499C7.018 11.499 7.009 11.499 7 11.499C6.788 11.499 6.585 11.409 6.442 11.251L4.192 8.751C3.915 8.443 3.94 7.969 4.248 7.691C4.557 7.415 5.029 7.439 5.308 7.747L6.956 9.579L10.657 4.79C10.91 4.462 11.382 4.402 11.709 4.655C12.037 4.908 12.097 5.379 11.844 5.707L11.843 5.708Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </span>
+                    {index !== 0 && i === 0 ? (
+                      plan.PlusIcon
+                    ) : (
+                      <span className="text-gray-200">
+                        <svg
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-4 h-4"
+                        >
+                          <path
+                            d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.843 5.708L7.593 11.208C7.457 11.384 7.25 11.491 7.028 11.499C7.018 11.499 7.009 11.499 7 11.499C6.788 11.499 6.585 11.409 6.442 11.251L4.192 8.751C3.915 8.443 3.94 7.969 4.248 7.691C4.557 7.415 5.029 7.439 5.308 7.747L6.956 9.579L10.657 4.79C10.91 4.462 11.382 4.402 11.709 4.655C12.037 4.908 12.097 5.379 11.844 5.707L11.843 5.708Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </span>
+                    )}
+
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <button
-                className={`w-full py-2 rounded-full font-medium transition ${
+                className={`w-full py-3 rounded-full font-medium transition ${
                   plan.highlight
                     ? "bg-black text-white hover:bg-black/80"
                     : "border border-gray-300 hover:bg-gray-100"
