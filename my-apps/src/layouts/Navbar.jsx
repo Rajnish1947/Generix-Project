@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Equal, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTheme } from "@/Context/ThemeContext/page";
 
 export default function Navbar({ blogpage }) {
@@ -206,7 +206,7 @@ export default function Navbar({ blogpage }) {
                      : "text-primary "
              }`}
           >
-            {open ? <X size={28} /> : <Equal size={28} />}
+            {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </nav>
