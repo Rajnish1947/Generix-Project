@@ -60,7 +60,7 @@ const Homeherosection = () => {
         {/* Heading */}
         <h1
           className="
-            text-4xl   lg:text-3xl xl:text-6xl
+            text-3xl   lg:text-4xl xl:text-5xl
             font-semibold leading-tight text-white
             max-w-3xl
           "
@@ -74,7 +74,7 @@ const Homeherosection = () => {
           className="
             text-white/90
             text-sm sm:text-base lg:text-lg
-            max-w-xs sm:max-w-md lg:max-w-xl
+            max-w-xs sm:max-w-md lg:max-w-md
           "
         >
           Helping teams create and maintain world-class documentation built
@@ -106,11 +106,11 @@ const Homeherosection = () => {
           <button
             className="
               text-black bg-white
-              px-4 sm:px-6 py-2 sm:py-3
+              px-4 sm:px-4 py-2 sm:py-[0.5rem]
               m-1 font-semibold
               rounded-full
               whitespace-nowrap
-              text-sm sm:text-base
+              text-[10px] sm:text-base
               hover:bg-gray-200 transition
             "
           >
@@ -124,7 +124,7 @@ const Homeherosection = () => {
         className="
           max-w-6xl mx-auto
           px-4 sm:px-6 lg:px-8
-          mt-10 sm:mt-14 lg:mt-20
+          mt-10 sm:mt-14 lg:mt-20  
         "
       >
         <img
@@ -136,7 +136,7 @@ const Homeherosection = () => {
           alt="Hero"
           className="
             w-full p-2
-            rounded-4xl 
+rounded-[40px]
             shadow-lg
           "
         />

@@ -68,18 +68,31 @@ const Help = () => {
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto">
           <h3
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl  ${dark ? "text-white" : "text-black"} font-bold leading-tight`}
+            className={`text-2xl sm:text-3xl md:text-3xl lg:text-4xl  ${dark ? "text-white" : "text-black"} font-bold leading-tight`}
           >
             Make documentation <br className="hidden sm:block" />
             your winning advantage
           </h3>
 
           <p
-            className={`mt-4 text-sm sm:text-base ${dark ? "text-white/70" : "text-gray-600"} md:text-lg`}
+            className={`mt-4 text-sm sm:text-base ${dark ? "text-white/70" : "text-gray-900"} md:text-lg`}
           >
             Join the leaders of tomorrow to future proof your documentation
             today.
           </p>
+
+          <div className="mt-6 flex flex-col sm:flex-row gap-2 justify-center">
+            <button
+              className={`px-12 py-2 bg-secondary ${dark ? "bg-white text-black " : "bg-secondary-light text-white "} rounded-[5.5rem]  transition-colors`}
+            >
+              Get started
+            </button>
+            <button
+              className={`px-10 py-2 border ${dark ? "border-gray-700" : "border-gray-300"} rounded-[5.5rem]   transition-colors`}
+            >
+              Get demo
+            </button>
+          </div>
         </div>
 
         {/* Grid */}
@@ -96,9 +109,9 @@ const Help = () => {
             
 
             /* horizontal divider */
-       ${i < 2 ? `sm:border-b ${dark ? "border-gray-900" : "border-gray-800"}` : ""}
+       ${i < 2 ? `sm:border-b ${dark ? "border-gray-900" : "border-gray-300"}` : ""}
 
-${i % 2 === 0 ? `sm:border-r ${dark ? "border-gray-900" : "border-gray-800"}` : ""}`}
+${i % 2 === 0 ? `sm:border-r ${dark ? "border-gray-900" : "border-gray-300"}` : ""}`}
             >
               {/* Icon */}
               <div

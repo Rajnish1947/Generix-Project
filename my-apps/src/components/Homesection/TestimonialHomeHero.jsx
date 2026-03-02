@@ -15,7 +15,7 @@ const TestimonialHomeHero = () => {
           height="20"
           viewBox="0 0 126 15"
           fill="currentColor"
-          className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+          className={`h-3 sm:h-4 md:h-5 lg:h-4 xl:h-5 w-auto
               ${dark ? "text-white" : "text-black"}
               transition-colors`}
         >
@@ -272,7 +272,7 @@ const TestimonialHomeHero = () => {
           height="25"
           viewBox="0 0 102 19"
           fill="currentColor"
-          className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
+          className={`h-3 sm:h-4 md:h-5 lg:h-5 xl:h-6 w-auto
               ${dark ? "text-white" : "text-black"}
               transition-colors`}
           aria-hidden="true"

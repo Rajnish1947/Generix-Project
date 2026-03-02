@@ -13,10 +13,9 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-         
           viewBox="0 0 126 15"
           fill="currentColor"
-          className={`md:h-6 h-4 ${dark ? "text-white" : "text-black "}  transition-colors`}
+          className={`md:h-8 h-4 font-semibold ${dark ? "text-primary" : "text-secondary "}  `}
         >
           <path d="M25.9509 9.87536L19.8609 0.399979H16.5742V13.9362H19.3776V4.46086L25.4676 13.9362H28.7542V0.399979H25.9509V9.87536Z" />
           <path d="M31.0742 3.01054H35.6179V13.9362H38.5181V3.01054H43.0617V0.399979H31.0742V3.01054Z" />
@@ -34,7 +33,6 @@ const TrustedBy = () => {
       title: "Congition",
       icon: (
         <svg
-        
           viewBox="0 0 160 38"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +58,6 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-        
           viewBox="0 0 126 31"
           fill="currentColor"
           className={`md:h-6 h-4 ${dark ? "text-white" : "text-black "}  transition-colors`}
@@ -80,7 +77,6 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-         
           viewBox="0 0 81 16"
           fill="currentColor"
           className={`md:h-6 h-4 ${dark ? "text-white" : "text-black "}  transition-colors`}
@@ -127,7 +123,6 @@ const TrustedBy = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-         
           viewBox="0 0 107 18"
           fill="currentColor"
           className={`md:h-8 h-6 ${dark ? "text-white" : "text-black "}  transition-colors`}
@@ -315,19 +310,9 @@ const TrustedBy = () => {
     },
   ];
   return (
-    // <section className={`max-w-5xl relative z-index: auto  mt-10  mx-auto px-6 py-16 ${dark ? 'bg-black text-white' : ''}`}>
-    //   {/* Grid */}
-    //   <div className="grid grid-cols-3 gap-y-15 gap-x-10 place-items-center">
-    //     {items.map((item, index) => (
-    //       <div key={index} className="flex  items-center gap-3 ">
-    //         {item.icon}
-    //       </div>
-    //     ))}
-    //   </div>
-    // </section>
     <section
-  className={`
-    max-w-5xl
+      className={`
+ max-w-[69rem]
     relative
     mx-auto
     mt-8 sm:mt-10 lg:mt-12
@@ -335,12 +320,12 @@ const TrustedBy = () => {
     px-3 sm:px-6 lg:px-8
     py-10 sm:py-14 lg:py-16
 
-    ${dark ? "bg-black text-white" : ""}
+    ${dark ? "bg-secondary text-primary" : ""}
   `}
->
-  {/* Grid */}
-  <div
-    className="
+    >
+      {/* Grid */}
+      <div
+        className="
       grid
       grid-cols-3
 
@@ -353,11 +338,11 @@ const TrustedBy = () => {
 
       place-items-center
     "
-  >
-    {items.map((item, index) => (
-      <div
-        key={index}
-        className="
+      >
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="
           flex
           items-center
           justify-center
@@ -375,13 +360,12 @@ const TrustedBy = () => {
 
           hover:scale-105
         "
-      >
-        {item.icon}
+          >
+            {item.icon}
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
-
+    </section>
   );
 };
 

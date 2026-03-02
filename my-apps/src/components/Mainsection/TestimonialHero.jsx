@@ -184,9 +184,9 @@ const TestimonialHero = () => {
 
   return (
     <section
-      className={`max-w-5xl relative mt-10 mx-auto
+      className={`max-w-[69rem] relative mt-8 mx-auto
   px-4 sm:px-6 lg:px-8
-  py-10 sm:py-14 lg:py-16`}
+  py-10 sm:py-14 lg:py-14`}
     >
       <div className="relative h-[380px] lg:h-[480px] rounded-3xl overflow-hidden p-6 lg:p-16">
         {/* Background */}

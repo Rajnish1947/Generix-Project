@@ -33,7 +33,7 @@ const Card = () => {
   return (
     <section
       className="
-      max-w-6xl mx-auto
+      max-w-[69rem] mx-auto
       px-4 sm:px-6 lg:px-8
       py-12 sm:py-16 lg:py-20
       "
@@ -55,7 +55,7 @@ const Card = () => {
             flex flex-col items-center text-center
             min-h-[220px] sm:min-h-[200px]
             transition duration-300 hover:scale-[1.02]
-            ${dark ? "bg-neutral-900 text-white" : "bg-gray-100 text-black"}
+            ${dark ? "bg-neutral-900 text-primary" : "bg-gray-100 text-secondary"}
             `}
           >
             {/* Icon */}
