@@ -123,7 +123,7 @@ export default function PricingComparison() {
       {/* ================= MOBILE HEADER ================= */}
       <div
         className={`md:hidden sticky top-[72px] z-30 border-b mb-6 ${
-          dark ? "bg-gray-900 border-gray-700" : "bg-white border-gray-200"
+          dark ? " border-gray-700" : "bg-white border-gray-200"
         }`}
       >
         {/* Plan Tabs */}
@@ -132,13 +132,13 @@ export default function PricingComparison() {
             <button
               key={plan.name}
               onClick={() => setSelectedPlan(plan.name)}
-              className={`flex flex-col items-center gap-1 py-3 text-sm font-medium transition ${
+              className={`flex  items-center gap-1 py-3 text-sm font-medium transition ${
                 selectedPlan === plan.name
                   ? "border-b-2 border-black dark:border-white"
                   : "opacity-60 dark:text-gray-300"
               }`}
             >
-              {plan.icon}
+             
               {plan.name}
             </button>
           ))}
@@ -156,9 +156,7 @@ export default function PricingComparison() {
                 : "bg-white text-black"
           }`}
         >
-          <button className="border px-4 py-1.5 rounded-full text-sm font-medium">
-            {plans.find((p) => p.name === selectedPlan)?.text}
-          </button>
+         
         </div>
       </div>
 
