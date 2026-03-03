@@ -426,40 +426,11 @@ const TrustedByHome = () => {
       ),
     },
   ];
-//   return (
-//     <section
-//       className={`max-w-5xl relative z-10 mt-10  mx-auto px-6 py-16 ${dark ? "bg-black text-white" : ""}`}
-//     >
-//      {/* Grid */}
-//       <div
-//         className="
-// grid 
-//  grid-cols-4
-//   md :grid-cols-4
-//   gap-y-10 md:gap-y-14
-//   gap-x-10
-//   p-2
-//   place-items-center
-//   max-w-xl sm:max-w-2xl md:max-w-4xl lg:max-w-7xl
-//   mx-auto
-// "
-//       >
-//         {items.map((item, index) => (
-//           <div key={index} className=" items-center justify-center gap-3">
-//             {item.icon}
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default TrustedByHome;
 
  return (
- <section className="w-full py-10 bg-transparent">
+ <section className="w-full py-12 bg-transparent">
   <div className="max-w-[69rem] mx-auto px-4">
-    <div className="grid grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-items-center">
+    <div className="grid grid-cols-3 space-y-6 lg:grid-cols-4 gap-6 items-center justify-items-center">
       {items.map((item, index) => (
         <div key={index} className="flex items-center justify-center w-full">
           {item.icon ? item.icon : <Placeholder />}

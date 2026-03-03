@@ -18,7 +18,7 @@ export default function PricingPage() {
       <PricingSection />
       <TrustedByHome />
       <CustomizationSection />
-      <CustomerStories />
+       <CustomerStories />
       <FaqSection />
        <Help />
       <FooterLinks />

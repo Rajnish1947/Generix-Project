@@ -4,6 +4,7 @@ import { useState } from "react";
 const plans = [
   {
     name: "Hobby",
+    bgcolor: false,
     icon: (
       <svg
         viewBox="0 0 18 18"
@@ -25,6 +26,7 @@ const plans = [
   },
   {
     name: "Pro",
+    bgcolor: true,
     icon: (
       <svg
         viewBox="0 0 16 16"
@@ -50,6 +52,7 @@ const plans = [
   },
   {
     name: "Enterprise",
+    bgcolor: false,
     icon: (
       <svg
         viewBox="0 0 18 18"
@@ -68,7 +71,6 @@ const plans = [
       </svg>
     ),
     text: "Contact us",
-    
   },
 ];
 
@@ -96,8 +98,9 @@ const features = [
     ],
   },
 ];
-
+import { useTheme } from "@/Context/ThemeContext/page";
 export default function PricingComparison() {
+  const { dark } = useTheme();
   const [selectedPlan, setSelectedPlan] = useState("Hobby");
 
   const CheckIcon = () => (
@@ -115,76 +118,126 @@ export default function PricingComparison() {
   );
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-6 py-12">
-      {/* 🔹 Mobile Plan Switch */}
-      <div className="md:hidden sticky top-[66px] z-10 bg-white flex items-center justify-between mb-6">
-     <div className="flex gap-6">
-  {plans.map((plan) => (
-    <div key={plan.name} className="flex items-center gap-4">
-      <button
-        onClick={() => setSelectedPlan(plan.name)}
-        className={`flex items-center gap-2 py-3 text-base font-medium transition ${
-          selectedPlan === plan.name
-            ? "border-b-2 border-black"
-            : "opacity-60"
+ 
+    <section className="mx-auto mb-10 mt-[4.5rem] w-full max-w-[65rem] px-4 sm:px-8 py-14">
+      {/* ================= MOBILE HEADER ================= */}
+      <div
+        className={`md:hidden sticky top-[72px] z-30 border-b mb-6 ${
+          dark ? "bg-gray-900 border-gray-700" : "bg-white border-gray-200"
         }`}
       >
-        {plan.icon}
-        {plan.name}
-      </button>
+        {/* Plan Tabs */}
+        <div className="flex justify-between">
+          {plans.map((plan) => (
+            <button
+              key={plan.name}
+              onClick={() => setSelectedPlan(plan.name)}
+              className={`flex flex-col items-center gap-1 py-3 text-sm font-medium transition ${
+                selectedPlan === plan.name
+                  ? "border-b-2 border-black dark:border-white"
+                  : "opacity-60 dark:text-gray-300"
+              }`}
+            >
+              {plan.icon}
+              {plan.name}
+            </button>
+          ))}
+        </div>
 
-      <button className="border px-4 py-1.5 rounded-full text-sm">
-        {plan.text}
-      </button>
-    </div>
-  ))}
-</div>
+        {/* Selected Plan CTA */}
+        <div
+          className={`flex justify-center py-4 ${
+            plans.find((p) => p.name === selectedPlan)?.bgcolor
+              ? dark
+                ? "bg-white text-black"
+                : "bg-gray-100 text-black"
+              : dark
+                ? "bg-gray-900 text-white"
+                : "bg-white text-black"
+          }`}
+        >
+          <button className="border px-4 py-1.5 rounded-full text-sm font-medium">
+            {plans.find((p) => p.name === selectedPlan)?.text}
+          </button>
+        </div>
       </div>
 
-      {/* 🔹 Desktop Header */}
-      <div className="hidden md:grid grid-cols-4 mb-10">
-        <div></div>
+      {/* ================= DESKTOP HEADER ================= */}
+      <div
+        className={`hidden md:flex gap-[4rem] lg:gap-[6rem] px-4 justify-end sticky top-[66px] z-30 py-8 mb-6 ${
+          dark ? "bg-secondary" : "bg-white"
+        }`}
+      >
         {plans.map((plan) => (
           <div key={plan.name} className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-2">
               {plan.icon}
-              <span className="font-medium">{plan.name}</span>
+              <span className="font-medium dark:text-gray-200">
+                {plan.name}
+              </span>
             </div>
-            <button className="border px-4 py-1.5 rounded-full text-sm">
-              Get started
+
+            <button
+              className={`border ${dark ? "border-gray-900" : "border-gray-200"} font-semibold px-4 py-2 rounded-full text-[15px] ${
+                plan.bgcolor
+                  ? dark
+                    ? "bg-white text-black"
+                    : "bg-black text-white"
+                  : dark
+                    ? "text-white border-gray-700"
+                    : "text-black border-gray-200"
+              }`}
+            >
+              {plan.text}
             </button>
           </div>
         ))}
       </div>
 
-      {/* 🔹 Feature Table */}
+      {/* ================= FEATURE TABLE ================= */}
       {features.map((group) => (
-        <div key={group.category} className="mb-12">
-          <h3 className="text-lg font-semibold mb-6">{group.category}</h3>
+        <div key={group.category} className="relative">
+          {/* Sticky category header */}
+          <div
+            className={`sticky top-[66px] z-20  ${
+              dark ? " border-gray-700" : "bg-white border-gray-200"
+            }`}
+          >
+            <h3 className="text-lg font-semibold py-3 px-2 dark:text-gray-200">
+              {group.category}
+            </h3>
+          </div>
 
-          {group.items.map((item) => (
-            <div
-              key={item}
-              className="grid md:grid-cols-4 grid-cols-2 border-b py-4 items-center"
-            >
-              {/* Feature Name */}
-              <div className="text-gray-600 text-sm">{item}</div>
-
-              {/* Plan Columns */}
-              {plans.map((plan) => (
+          {/* Items */}
+          <div className="mt-1">
+            {group.items.map((item) => (
+              <div
+                key={item}
+                className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 border-b py-4 items-center ${
+                  dark ? "text-white/80 border-gray-900" : "bg-white"
+                }`}
+              >
                 <div
-                  key={plan.name}
-                  className={`flex justify-center ${
-                    selectedPlan !== plan.name ? "md:flex hidden" : ""
-                  }`}
+                  className={` text-sm px-2 ${dark ? "text-gray-300" : "text-gray-600"}`}
                 >
-                  <CheckIcon />
+                  {item}
                 </div>
-              ))}
-            </div>
-          ))}
+                {plans.map((plan) => (
+                  <div
+                    key={plan.name}
+                    className={`flex justify-center ${
+                      selectedPlan === plan.name ? "flex" : "hidden md:flex"
+                    }`}
+                  >
+                    <CheckIcon className="text-black dark:text-white" />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       ))}
     </section>
+    
   );
 }
