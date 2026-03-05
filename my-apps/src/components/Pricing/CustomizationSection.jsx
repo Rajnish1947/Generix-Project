@@ -314,13 +314,13 @@ export default function PricingComparison() {
 
   return (
     <section className="mx-auto mb-10 mt-[4.5rem] w-full max-w-[65rem] px-4 sm:px-8 py-14">
-      <div className="flex flex-col gap-4">
+      <div className="md:hidden sticky top-[66px] z-50 flex-col gap-4">
         <div
-          className={`w-full  ${dark ? "border-gray-800" : "border-gray-200"}`}
+          className={`w-full  ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}`}
         >
-          <div className="flex items-center justify-between">
+          <div className={`flex items-center ${dark ? " bg-black" : " bg-white"} justify-between`}>
             {/* PLAN TABS */}
-            <div className="flex gap-8">
+            <div className="flex  gap-8">
               {plans.map((plan) => (
                 <button
                   key={plan.name}
@@ -328,11 +328,11 @@ export default function PricingComparison() {
                   className={`relative py-3 text-[15px] font-medium transition ${
                     selectedPlan === plan.name
                       ? dark
-                        ? "text-white"
-                        : "text-black"
+                        ? "text-white bg-black"
+                        : "text-black bg-white"
                       : dark
-                        ? "text-gray-400"
-                        : "text-gray-500"
+                        ? "text-gray-400 bg-black"
+                        : "text-gray-500 bg-white"
                   }`}
                 >
                   {plan.name}
@@ -367,7 +367,7 @@ export default function PricingComparison() {
         </div>
       </div>
       <div
-        className={`hidden md:flex gap-[4rem] lg:gap-[6rem] px-4 justify-end sticky top-[66px] z-30 py-8 mb-6 ${
+        className={`hidden md:flex gap-[4rem] lg:gap-[6rem] px-4 justify-end sticky top-[60px] z-30 py-8 mb-6 ${
           dark ? "bg-secondary" : "bg-white"
         }`}
       >
@@ -398,20 +398,20 @@ export default function PricingComparison() {
       </div>
 
       {features.map((group) => (
-        <div key={group.category} className="relative mt-6">
+        <div key={group.category} className="relative mt-10 lg:mt-6">
           {/* Sticky category header */}
           <div
-            className={`sticky top-[205px] z-20  ${
-              dark ? " border-gray-700" : "bg-white border-gray-200"
+            className={` relative md:sticky top-[200px]   ${
+              dark ? " border-gray-700 bg-black" : "bg-white border-gray-200"
             }`}
           >
-            <h3 className="text-[15px] flex font-semibold py-3 gap-2 px-2 dark:text-gray-200">
+            <h3 className="text-[15px] relative z-40 flex font-semibold py-3 gap-2 px-2 dark:text-gray-200">
               {group.icon} {group.category}
             </h3>
           </div>
 
           {/* Items */}
-          <div className="mt-1">
+          <div className="mt-1 ">
             {group.items.map((item) => (
               <div
                 key={item}

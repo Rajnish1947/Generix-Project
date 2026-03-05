@@ -1,0 +1,217 @@
+[
+  {
+    "name": "Coinbase",
+    "category": "Finance",
+    "featured": true,
+    "title": "20min → 60s",
+    "subtitle": "Doc update time reduction",
+    "description": "Coinbase streamlined their developer documentation with Mintlify, replacing scattered resources with a unified platform that makes it easier for developers to build and integrate with their APIs.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fcoinbase.png&w=750&q=75"
+  },
+  {
+    "name": "Coinbase",
+    "category": "Finance",
+    "title": "20min → 60s",
+    "subtitle": "Doc update time reduction",
+    "description": "Coinbase streamlined their developer documentation with Mintlify, replacing scattered resources with a unified platform that makes it easier for developers to build and integrate with their APIs.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fatt.png&w=2048&q=75"
+  },
+  {
+    "name": "Coinbase",
+    "category": "Finance",
+    "title": "20min → 60s",
+    "subtitle": "Doc update time reduction",
+    "description": "Coinbase streamlined their developer documentation with Mintlify, replacing scattered resources with a unified platform that makes it easier for developers to build and integrate with their APIs.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fbrowserbase.png&w=2048&q=75"
+  },
+  {
+    "name": "Coinbase",
+    "category": "Finance",
+    "title": "20min → 60s",
+    "subtitle": "Doc update time reduction",
+    "description": "Coinbase streamlined their developer documentation with Mintlify, replacing scattered resources with a unified platform that makes it easier for developers to build and integrate with their APIs.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fcognition.png&w=2048&q=75"
+  },
+  {
+    "name": "Coinbase",
+    "category": "Finance",
+    "title": "20min → 60s",
+    "subtitle": "Doc update time reduction",
+    "description": "Coinbase streamlined their developer documentation with Mintlify, replacing scattered resources with a unified platform that makes it easier for developers to build and integrate with their APIs.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fdecagon.png&w=2048&q=75"
+  },
+  {
+    "name": "Coinbase",
+    "category": "Finance",
+    "featured": true,
+    "title": "20min → 60s",
+    "subtitle": "Doc update time reduction",
+    "description": "Coinbase streamlined their developer documentation with Mintlify, replacing scattered resources with a unified platform that makes it easier for developers to build and integrate with their APIs.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fkalshi.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "featured": true,
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Flaravel.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fmirage.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Follama.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fpaypal.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fplanetscale.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "featured": true,
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Freplit.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fresend.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fzapier.png&w=2048&q=75"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Developer tools",
+    "title": "99.99%",
+    "subtitle": "Uptime since launch",
+    "description": "Enterprise-level documentation built for performance and reliability.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fvercel.png&w=2048&q=75"
+  },
+  {
+    "name": "Cognition",
+    "featured": true,
+    "category": "AI",
+    "description": "How Cognition scaled their documentation to mirror their product ethos.",
+    "image": "https://www.mintlify.com/enterprise/anthropic.svg"
+  },
+  {
+    "name": "Cognition",
+    "category": "AI",
+    "description": "How Cognition scaled their documentation to mirror their product ethos.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fbrowserbase.png&w=2048&q=75"
+  },
+  {
+    "name": "Cognition",
+    "category": "AI",
+    "description": "How Cognition scaled their documentation to mirror their product ethos.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fcognition.png&w=2048&q=75"
+  },
+  {
+    "name": "Cognition",
+    "category": "AI",
+    "description": "How Cognition scaled their documentation to mirror their product ethos.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fdecagon.png&w=2048&q=75"
+  },
+  {
+    "name": "Decagon",
+    "category": "AI",
+    "description": "Modern AI docs built for scale.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fglean.png&w=2048&q=75"
+  },
+  {
+    "name": "Cognition",
+    "category": "AI",
+    "description": "How Cognition scaled their documentation to mirror their product ethos.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Flovable.png&w=2048&q=75"
+  },
+  {
+    "name": "Cognition",
+    "category": "AI",
+    "description": "How Cognition scaled their documentation to mirror their product ethos.",
+    "image": "https://www.mintlify.com/enterprise/anthropic.svg"
+  },
+  {
+    "name": "Decagon",
+    "category": "AI",
+    "description": "Modern AI docs built for scale.",
+    "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fglean.png&w=2048&q=75"
+  }
+  ,{
+  "name": "Anaconda",
+  "category": "Enterprise",
+   "featured": true,
+  "title": "99.99%",
+  "subtitle": "Uptime since launch",
+  "description": "Enterprise-level documentation built for performance and reliability.",
+  "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fpaypal.png&w=2048&q=75"
+},
+{
+  "name": "Anaconda",
+  "category": "Enterprise",
+  "title": "99.99%",
+  "subtitle": "Uptime since launch",
+  "description": "Enterprise-level documentation built for performance and reliability.",
+  "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fplanetscale.png&w=2048&q=75"
+},
+{
+  "name": "Anaconda",
+ 
+  "category": "Enterprise",
+  "title": "99.99%",
+  "subtitle": "Uptime since launch",
+  "description": "Enterprise-level documentation built for performance and reliability.",
+  "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Freplit.png&w=2048&q=75"
+},
+{
+  "name": "Anaconda",
+  "category": "Enterprise",
+  "title": "99.99%",
+  "subtitle": "Uptime since launch",
+  "description": "Enterprise-level documentation built for performance and reliability.",
+  "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fresend.png&w=2048&q=75"
+},
+{
+  "name": "Anaconda",
+  "category": "Enterprise",
+  "title": "99.99%",
+  "subtitle": "Uptime since launch",
+  "description": "Enterprise-level documentation built for performance and reliability.",
+  "image": "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fzapier.png&w=2048&q=75"
+}
+]
