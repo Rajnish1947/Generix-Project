@@ -16,7 +16,7 @@ export default function ConnectedCards() {
     <div className="relative w-64">
       {/* connection line */}
       {index !== total - 1 && (
-        <div className="absolute top-1/2 -right-6 w-6 h-[2px] bg-green-400"></div>
+        <div className="absolute top-1/2 -right-6 w-6 h-[2px] bg-[var(--color-accent)]"></div>
       )}
 
       {/* card */}
@@ -24,27 +24,27 @@ export default function ConnectedCards() {
         className={`relative bg-white rounded-lg p-4 space-y-3 overflow-hidden
         ${
           active === index
-            ? "border-2 border-green-500"
+            ? "border-2 bg-[var(--color-accent)]"
             : "border border-gray-200"
         }`}
       >
         {/* animated border overlay */}
         {active === index && (
-          <span className="absolute inset-0 border-2 border-green-500 animate-borderFill rounded-lg pointer-events-none" />
+          <span className="absolute inset-0 border-2 bg-[var(--color-accent)] animate-borderFill rounded-lg pointer-events-none" />
         )}
 
         <div className="font-semibold text-sm">Guidance Start</div>
 
         {/* bars */}
-        <div className={`h-2 bg-green-400 ${active === index && "animate-fill"}`} />
-        <div className={`h-2 bg-green-400 ${active === index && "animate-fill delay-200"}`} />
+        <div className={`h-2 bg-[var(--color-accent)] ${active === index && "animate-fill"}`} />
+        <div className={`h-2 bg-[var(--color-accent)] ${active === index && "animate-fill delay-200"}`} />
 
         {/* blocks */}
         <div className="grid grid-cols-3 gap-2">
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className={`h-6 bg-green-400 rounded ${
+              className={`h-6 bg-[var(--color-accent)] rounded ${
                 active === index && "animate-fill-small"
               }`}
             />

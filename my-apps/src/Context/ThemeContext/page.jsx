@@ -1,20 +1,46 @@
 
-"use client";
+// "use client";
 
+// import { createContext, useContext, useEffect, useState } from "react";
+
+// const ThemeContext = createContext();
+
+// export const ThemeProvider = ({ children }) => {
+//   const [dark, setDark] = useState(false);
+
+
+
+//   return (
+//     <ThemeContext.Provider value={{ dark, setDark }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
+// };
+
+// export const useTheme = () => useContext(ThemeContext);
+"use client";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
+export function ThemeProvider({ children }) {
   const [dark, setDark] = useState(false);
 
+  useEffect(() => {
+    const root = document.documentElement;
 
+    if (dark) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [dark]);
 
   return (
     <ThemeContext.Provider value={{ dark, setDark }}>
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
 export const useTheme = () => useContext(ThemeContext);

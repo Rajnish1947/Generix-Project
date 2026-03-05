@@ -10,7 +10,7 @@ const Features = () => {
   return (
     <div className="flex flex-col items-center relative justify-center gap-4 space-y-2 py-15 mt-10 px-6">
       {/* Small heading */}
-      <span className="text-green-500 text-center font-mono text-sm font-semibold leading-[150%] tracking-[0.6px] uppercase">
+      <span className="text-[var(--color-accent)] text-center font-mono text-sm font-semibold leading-[150%] tracking-[0.6px] uppercase">
         Mintlify for startups
       </span>
 
@@ -38,8 +38,8 @@ const Features = () => {
       <a
         className={`inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full font-medium px-6 py-[0.4375rem] w-fit mt-4 border shadow-sm transition-colors duration-100 focus-visible:outline-2 focus-visible:outline-green-500 ${
           dark
-            ? "bg-white text-black border-white hover:bg-white/85"
-            : "bg-black text-white border-black hover:bg-black/85"
+            ? "bg-primary text-secondary border-primary hover:bg-primary/85"
+            : "bg-secondary text-primary border-secondary hover:bg-secondary/85"
         }`}
       >
         Apply now

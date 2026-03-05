@@ -5,13 +5,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-   --color-primary: #ffffff;
+  --color-primary: #ffffff;
   --color-secondary: #000000;
 
+  --color-bg: #ffffff;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+    --color-accent: #22c55e;  
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
   --font-inter: 'Inter', sans-serif;
   --default-font-family: var(--font-inter);
 }
+
+
 
 @keyframes draw {
   from {
@@ -28,9 +39,14 @@
 
 /* Apply globally */
 body {
+  font-family: var(--default-font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+/* body {
 font-family: var(--default-font-family);
 
-}
+} */
 /* Hide scrollbar for all browsers */
 .hide-scrollbar {
   -ms-overflow-style: none; 
@@ -39,4 +55,65 @@ font-family: var(--default-font-family);
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;            
+}
+
+@layer utilities {
+  .heading-hero {
+    @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl 
+           leading-[110%] font-bold;
+  }
+}
+
+@layer utilities {
+  .icon-default {
+    @apply md:h-6 h-4 transition-colors dark:text-white text-black;
+  }
+}
+
+@layer utilities {
+  /* Icon size & color */
+  .card-icon {
+    @apply w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-colors;
+    @apply dark:text-white text-black;
+  }
+}
+
+@layer utilities {
+  /* Analogue logo size & color */
+  .testimatio-logo {
+    @apply h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto transition-colors;
+    @apply dark:text-white text-black;
+  }
+}
+
+@layer utilities {
+  .section-maxwidth {
+    @apply relative max-w-[69rem] ;
+  }
+}
+
+@layer utilities {
+  .bg-mode {
+    @apply bg-white dark:bg-black;
+  }
+}
+@layer utilities {
+  .helpicon {
+    @apply w-6 h-6 fill-current text-[var(--color-accent)];
+  }
+}
+
+@layer utilities {
+  /* optional: define reusable colors first */
+  .text-muted {
+    @apply text-gray-400;
+  }
+  .text-text-main {
+    @apply text-gray-900;
+  }
+
+  /* define icon-small */
+  .icon-small {
+    @apply w-4 h-4 transition-colors duration-100 text-muted group-hover:text-text-main;
+  }
 }

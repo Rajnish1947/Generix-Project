@@ -102,7 +102,7 @@ const FooterLinks = () => {
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-5 h-5"
+                  className="icon-small"
                 >
                   <path
                     d="M11.4595 11.5714V18.889H8.06641V6.24428H11.2672L11.3238 9.39982H11.1202C11.452 8.3442 11.9534 7.52987 12.6244 6.95682C13.3031 6.37623 14.1777 6.08594 15.2484 6.08594C16.1231 6.08594 16.8846 6.27821 17.5331 6.66275C18.189 7.03976 18.6942 7.58642 19.0486 8.30273C19.4105 9.0115 19.5915 9.85977 19.5915 10.8475V18.889H16.1985V11.4356C16.1985 10.6515 15.9949 10.0369 15.5877 9.59209C15.1881 9.14722 14.6301 8.92479 13.9138 8.92479C13.4388 8.92479 13.0128 9.03035 12.6358 9.24148C12.2663 9.44506 11.976 9.74289 11.7649 10.135C11.5613 10.5271 11.4595 11.0059 11.4595 11.5714Z"
@@ -123,7 +123,7 @@ const FooterLinks = () => {
                   viewBox="0 0 22 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+               className="icon-small"
                 >
                   <mask
                     id="mask0_9208_2830"
@@ -158,7 +158,7 @@ const FooterLinks = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
-                  className="text-muted opacity-70 group-hover/social-link:opacity-100 transition-opacity duration-300"
+                  className="icon-small"
                 >
                   <mask
                     id="mask0_9208_2837"

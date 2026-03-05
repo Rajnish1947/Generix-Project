@@ -1,3 +1,4 @@
+
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -44,7 +45,7 @@ export default function Navbar({ blogpage }) {
          : "bg-primary text-secondary"
      : dark
        ? scrolled
-         ? " text-primary"
+         ? "bg-secondary text-primary"
          : "bg-transparent text-primary"
        : scrolled
          ? "bg-primary text-secondary"

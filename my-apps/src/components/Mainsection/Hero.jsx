@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative bg-white min-h-[65vh] lg:min-h-screen bg-cover bg-center"
+      className="relative  min-h-[65vh] lg:min-h-screen bg-cover bg-center"
       style={{
         backgroundImage: dark
           ? "url('https://www.mintlify.com/startups/hero-dark.svg')"
@@ -42,10 +42,9 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 flex flex-col items-center md:items-start">
 
           <h1 className="
-            text-3xl sm:text-3xl md:text-4xl lg:text-5xl
+            heading-hero
             max-w-[58rem]
-            leading-[110%]
-            font-bold
+           
             text-white
           ">
             Built for startups <br /> and scaleups

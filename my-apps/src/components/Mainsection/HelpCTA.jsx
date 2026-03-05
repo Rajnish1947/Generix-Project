@@ -13,7 +13,7 @@ const HelpCTA = () => {
       link: "mailto:gtm@mintlify.com",
       linkText: "Contact sales",
       icon: (
-        <svg viewBox="0 0 16 16" className="size-7 text-green-600">
+        <svg viewBox="0 0 16 16" className="helpicon">
           <rect width="16" height="12" y="4" rx="3" fill="currentColor" opacity="0.2" />
           <rect width="6" height="4" x="5" fill="currentColor" />
         </svg>
@@ -25,7 +25,7 @@ const HelpCTA = () => {
       link: "mailto:founders@mintlify.com",
       linkText: "Contact founders",
       icon: (
-        <svg viewBox="0 0 16 16" className="size-8 text-green-600">
+        <svg viewBox="0 0 16 16" className="helpicon">
           <circle cx="8" cy="8" r="8" fill="currentColor" opacity="0.2" />
           <circle cx="8" cy="6" r="2" fill="currentColor" />
           <path d="M3 14c1-3 9-3 10 0" fill="currentColor" />
@@ -38,7 +38,7 @@ const HelpCTA = () => {
       link: "/docs",
       linkText: "Go to documentation",
       icon: (
-        <svg viewBox="0 0 16 16" className="size-8 text-green-600">
+        <svg viewBox="0 0 16 16" className="helpicon">
           <path d="M2 2h5a3 3 0 013 3v9a3 3 0 00-3-3H2z" fill="currentColor" />
           <path d="M14 2h-5a3 3 0 00-3 3v9a3 3 0 013-3h5z" fill="currentColor" opacity="0.2" />
         </svg>
@@ -50,7 +50,7 @@ const HelpCTA = () => {
       link: "/guides",
       linkText: "Open guide",
       icon: (
-        <svg viewBox="0 0 18 18" className="size-8 text-green-600">
+        <svg viewBox="0 0 18 18" className="helpicon">
           <circle cx="9" cy="9" r="8" fill="currentColor" opacity="0.2" />
           <path d="M9 4v10M4 9h10" stroke="currentColor" strokeWidth="2" />
         </svg>
@@ -61,7 +61,7 @@ const HelpCTA = () => {
   return (
     <section
       className={`relative py-28 px-6 transition-colors duration-300 ${
-        dark ? "bg-black text-white" : "bg-gray-50 text-gray-900"
+        dark ? "bg-secondary text-primary" : "bg-gray-50 text-gray-900"
       }`}
     >
       <div className="max-w-5xl mx-auto">
@@ -95,7 +95,7 @@ const HelpCTA = () => {
               <div
                 className={`p-3 rounded-2xl border shadow-sm ${
                   dark
-                    ? "bg-black border-gray-700"
+                    ? "bg-secondary border-gray-700"
                     : " border-gray-200"
                 }`}
               >

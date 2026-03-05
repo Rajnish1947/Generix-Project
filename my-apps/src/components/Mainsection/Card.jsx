@@ -9,22 +9,22 @@ const Card = () => {
 
   const items = [
     {
-      icon: <Wallpaper className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+      icon: <Wallpaper className="card-icon" />,
       title: "Discounts and credits",
       desc: "Unlock Pro plan features for free for the first six months and extended AI credits.",
     },
     {
-      icon: <Trophy className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+      icon: <Trophy className="card-icon" />,
       title: "Priority support",
       desc: "Get fast support from our team, with a dedicated channel for startup founders.",
     },
     {
-      icon: <LampDesk className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+      icon: <LampDesk className="card-icon" />,
       title: "Startup pack",
       desc: "Access discounts and perks from popular products for startups.",
     },
     {
-      icon: <Flame className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+      icon: <Flame className="card-icon" />,
       title: "Startup survival kit",
       desc: "Get access to our startup survival kit sent to your doorstep.",
     },
@@ -33,7 +33,7 @@ const Card = () => {
   return (
     <section
       className="
-      max-w-[69rem] mx-auto
+      section-maxwidth mx-auto
       px-4 sm:px-6 lg:px-8
       py-12 sm:py-16 lg:py-20
       "

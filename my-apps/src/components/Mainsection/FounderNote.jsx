@@ -7,14 +7,10 @@ const FounderNote = () => {
 
   return (
     <section
-      className={`w-full flex items-center justify-center py-32 px-6 ${
-        dark ? "bg-black" : "bg-neutral-50"
-      }`}
+      className={`w-full flex items-center justify-center py-32 px-6 bg-mode `}
     >
       <div
-        className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg shadow-sm ${
-          dark ? "bg-neutral-900" : "bg-white"
-        }`}
+        className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg shadow-sm bg-mode `}
       >
         {/* Decorative underline SVG */}
         <svg
