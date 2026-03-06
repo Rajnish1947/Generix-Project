@@ -7,7 +7,7 @@ const FounderNote = () => {
 
   return (
     <section
-      className={`w-full flex items-center justify-center py-32 px-6 bg-mode `}
+      className={`w-full flex items-center justify-center py-32 px-6 bg-mode ${dark ? "bg-black" : "bg-gray-200"}`}
     >
       <div
         className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg shadow-sm bg-mode `}
@@ -32,7 +32,7 @@ const FounderNote = () => {
 
         {/* Heading */}
         <h3
-          className={`text-2xl font-medium tracking-tight ${
+          className={`founder-heading ${
             dark ? "text-white" : "text-gray-900"
           }`}
         >
@@ -79,7 +79,7 @@ const FounderNote = () => {
             dark ? "text-gray-400" : "text-gray-500"
           }`}
         >
-          <div className="text-[20px]/[150%] font-sans font-normal my-2 tracking-[-0.24px]">
+          <div className="founder-signature my-2 ">
             Han & Hahnbee
           </div>
 

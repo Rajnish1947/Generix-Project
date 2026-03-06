@@ -66,11 +66,11 @@ const HelpCTA = () => {
     >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h3 className="text-[45px] font-semibold text-center">
+        <h3 className="help-heading">
           Need help?
         </h3>
 
-        <p className={`mt-4 text-center ${dark ? "text-white/70" : "text-gray-600"}`}>
+        <p className={`help-subtext ${dark ? "text-white/70" : "text-gray-600"}`}>
           Join the leaders of tomorrow to future proof your documentation today.
         </p>
 
@@ -104,10 +104,10 @@ const HelpCTA = () => {
 
               {/* Text */}
               <div>
-                <h4 className={`text-xl font-medium ${dark ? "text-white" : "text-gray-900"}`}>
+                <h4 className={`help-card-title ${dark ? "text-white" : "text-gray-900"}`}>
                   {item.title}
                 </h4>
-                <p className={`mt-2 max-w-xs ${dark ? "text-gray-400" : "text-gray-600"}`}>
+                <p className={` help-card-desc ${dark ? "text-gray-400" : "text-gray-600"}`}>
                   {item.desc}
                 </p>
               </div>
@@ -115,7 +115,7 @@ const HelpCTA = () => {
               {/* Link */}
               <a
                 href={item.link}
-                className="flex items-center gap-2 font-medium text-green-600 hover:translate-x-1 transition"
+                className="help-link"
               >
                 {item.linkText}
                 <ChevronRight size={16} />

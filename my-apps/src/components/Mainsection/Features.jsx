@@ -10,13 +10,13 @@ const Features = () => {
   return (
     <div className="flex flex-col items-center relative justify-center gap-4 space-y-2 py-15 mt-10 px-6">
       {/* Small heading */}
-      <span className="text-[var(--color-accent)] text-center font-mono text-sm font-semibold leading-[150%] tracking-[0.6px] uppercase">
+      <span className="text-[var(--color-accent)] text-center  features-label ">
         Mintlify for startups
       </span>
 
       {/* Main heading */}
       <h3
-        className={`text-[35px] md:text-[40px] text-center font-semibold leading-[110%] tracking-[-0.8px] ${
+        className={`features-heading text-center ${
           dark ? "text-white" : "text-black"
         }`}
       >
@@ -25,7 +25,7 @@ const Features = () => {
 
       {/* Description */}
       <p
-        className={`text-center text-base/[150%] max-w-[640px] ${
+        className={`text-center features-desc max-w-[640px] ${
           dark ? "text-gray-400" : "text-gray-800"
         }`}
       >

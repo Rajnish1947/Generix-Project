@@ -54,7 +54,7 @@ const Hero = () => {
             mt-6
             max-w-md md:max-w-3xl
             text-stone-50
-            text-sm md:text-[18px]
+            hero-description
           ">
             Ambitious startups build world-class experiences with Mintlify,
             scaling from pre-seed to billion dollar valuations.

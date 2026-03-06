@@ -55,7 +55,7 @@ const Card = () => {
             flex flex-col items-center text-center
             min-h-[220px] sm:min-h-[200px]
             transition duration-300 hover:scale-[1.02]
-            ${dark ? "bg-neutral-900 text-primary" : "bg-gray-100 text-secondary"}
+            ${dark ? "bg-neutral-900 text-primary" : "bg-cardBg text-secondary"}
             `}
           >
             {/* Icon */}
@@ -67,8 +67,7 @@ const Card = () => {
             <h3
               className="
               mb-2 sm:mb-3
-              text-base sm:text-lg lg:text-xl
-              font-semibold
+             card-title 
               "
             >
               {item.title}
@@ -77,8 +76,7 @@ const Card = () => {
             {/* Description */}
             <p
               className={`
-              text-sm sm:text-[15px] lg:text-base
-              leading-relaxed
+              card-desc
               ${dark ? "text-gray-400" : "text-gray-600"}
               `}
             >

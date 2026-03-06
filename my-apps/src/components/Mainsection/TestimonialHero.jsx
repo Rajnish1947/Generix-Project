@@ -230,12 +230,12 @@ const TestimonialHero = () => {
               font-semibold
             "
           >
-            <p className="text-white text-lg lg:text-2xl leading-snug mb-6 lg:mb-7">
+            <p className="testimonial-quote mb-6 lg:mb-7">
               “Every YC batch we consistently see the top performing startups
               use Mintlify to build their docs.”
             </p>
 
-            <div className="text-white text-xs uppercase tracking-widest font-mono">
+            <div className="testimonial-author">
               <p>Harj Tagger</p>
               <p>Group Partner</p>
             </div>

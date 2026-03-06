@@ -18,7 +18,7 @@ module.exports = {
     content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: "class", // important
+  darkMode: "class", 
   theme: {
     extend: {
       colors: {
@@ -26,6 +26,8 @@ module.exports = {
         secondary: "var(--color-secondary)",
         border: "var(--color-border)",
         muted: "var(--color-muted)",
+        cardBg: "var(--card-bg)",
+        cardBorder: "var(--card-border)",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

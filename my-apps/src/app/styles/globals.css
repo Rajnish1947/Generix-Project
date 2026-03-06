@@ -10,13 +10,11 @@
   --color-primary: #ffffff;
   --color-secondary: #000000;
 
-  --color-bg: #ffffff;
-  --color-text: #0f172a;
-  --color-muted: #64748b;
-  --color-border: #e2e8f0;
+ 
+ 
 
     --color-accent: #22c55e;  
-  --card-bg: #ffffff;
+  --card-bg: hsla(0, 24%, 96%, 0.651);
   --card-border: #e5e7eb;
   --font-inter: 'Inter', sans-serif;
   --default-font-family: var(--font-inter);
@@ -43,11 +41,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
 }
-/* body {
-font-family: var(--default-font-family);
 
-} */
-/* Hide scrollbar for all browsers */
 .hide-scrollbar {
   -ms-overflow-style: none; 
   scrollbar-width: none;     
@@ -62,7 +56,135 @@ font-family: var(--default-font-family);
     @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl 
            leading-[110%] font-bold;
   }
+
+  
 }
+
+@layer utilities {
+    .hero-description {
+    @apply text-sm md:text-[18px];
+  }
+}
+@layer utilities {
+  .hero-text {
+    @apply mt-6 max-w-md md:max-w-3xl
+           text-stone-50
+           text-sm md:text-[18px];
+  }
+}
+
+@layer utilities {
+
+  /* Features small label */
+  .features-label {
+    @apply font-mono text-sm font-semibold leading-[150%] tracking-[0.6px] uppercase;
+  }
+
+  /* Features main heading */
+  .features-heading {
+    @apply text-[35px] md:text-[40px] font-semibold leading-[110%] tracking-[-0.8px];
+  }
+
+  /* Features description */
+  .features-desc {
+    @apply text-base leading-[150%];
+  }
+
+}
+
+@layer utilities {
+
+  /* Card title font */
+  .card-title {
+    @apply text-base sm:text-lg lg:text-xl font-semibold;
+  }
+
+  /* Card description font */
+  .card-desc {
+    @apply text-sm sm:text-[15px] lg:text-base leading-relaxed;
+  }
+
+}
+
+
+@layer utilities {
+
+  /* Section main heading */
+  .Testimonialhero-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight;
+  }
+
+  /* Section paragraph text */
+  .Testimonialhero-text {
+    @apply text-sm sm:text-base lg:text-lg leading-relaxed;
+  }
+
+}
+
+@layer components {
+  /* Testimonial Hero */
+
+  .testimonial-quote {
+    @apply text-lg lg:text-2xl leading-snug text-white;
+  }
+
+  .testimonial-author {
+    @apply text-xs uppercase tracking-widest font-mono text-white;
+  }
+}
+
+@layer components {
+
+  /* Founder Note */
+
+  .founder-heading{
+    @apply text-2xl font-medium tracking-tight;
+  }
+
+  .founder-content{
+    @apply text-base leading-relaxed;
+  }
+
+  .founder-signature{
+    @apply text-[20px]/[150%] font-sans font-normal tracking-[-0.24px];
+  }
+
+  .founder-role{
+    @apply text-sm font-medium tracking-wide;
+  }
+
+}
+
+@layer components {
+
+  /* Help section heading */
+  .help-heading {
+    @apply text-[45px] font-semibold text-center;
+  }
+
+  /* Help section subtitle */
+  .help-subtext {
+    @apply mt-4 text-center text-base leading-[160%];
+  }
+
+  /* Card title */
+  .help-card-title {
+    @apply text-xl font-medium;
+  }
+
+  /* Card description */
+  .help-card-desc {
+    @apply mt-2 text-sm leading-relaxed max-w-xs;
+  }
+
+  /* CTA link */
+  .help-link {
+    @apply flex items-center gap-2 font-medium text-green-600 transition hover:translate-x-1;
+  }
+
+}
+
+
 
 @layer utilities {
   .icon-default {
