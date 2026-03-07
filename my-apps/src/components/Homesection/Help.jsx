@@ -68,7 +68,7 @@ const Help = () => {
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto">
           <h3
-            className={`text-2xl sm:text-3xl md:text-3xl lg:text-4xl  ${dark ? "text-white" : "text-black"} font-bold leading-tight`}
+            className={`text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-secondary font-bold leading-tight`}
           >
             Make documentation <br className="hidden sm:block" />
             your winning advantage
@@ -83,7 +83,7 @@ const Help = () => {
 
           <div className="mt-6 flex flex-col sm:flex-row gap-2 justify-center">
             <button
-              className={`px-12 py-2 bg-secondary ${dark ? "bg-white text-black " : "bg-secondary-light text-white "} rounded-[5.5rem]  transition-colors`}
+              className={`px-12 py-2 border text-secondary ${dark ? "bg-primary border-gray-800  " : "bg-secondary-light  "} rounded-[5.5rem]  transition-colors`}
             >
               Get started
             </button>
@@ -97,7 +97,7 @@ const Help = () => {
 
         {/* Grid */}
         <div
-          className={`mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 rounded-3xl overflow-hidden ${dark ? "bg-black" : "bg-white"}`}
+          className={`mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 rounded-3xl overflow-hidden}`}
         >
           {items.map((item, i) => (
             <div

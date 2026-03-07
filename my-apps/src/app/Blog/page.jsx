@@ -8,7 +8,7 @@ export default function BlogPage() {
   const { dark } = useTheme();
   const blogpage = true;
   return (
-    <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div >
       <Navbar blogpage={blogpage} />
       <BlogHero />
       <BlogCard />

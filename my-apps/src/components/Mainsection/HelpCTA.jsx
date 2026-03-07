@@ -61,12 +61,12 @@ const HelpCTA = () => {
   return (
     <section
       className={`relative py-28 px-6 transition-colors duration-300 ${
-        dark ? "bg-secondary text-primary" : "bg-gray-50 text-gray-900"
+        dark ? " text-primary" : "bg-gray-50 text-gray-900"
       }`}
     >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h3 className="help-heading">
+        <h3 className="help-heading text-secondary">
           Need help?
         </h3>
 
@@ -76,9 +76,7 @@ const HelpCTA = () => {
 
         {/* Grid */}
         <div
-          className={`mt-16 grid grid-cols-1 sm:grid-cols-2 rounded-3xl overflow-hidden ${
-            dark ? "bg-black  " : "  "
-          }`}
+          className={`mt-16 grid grid-cols-1 sm:grid-cols-2 rounded-3xl overflow-hidden `}
         >
           {items.map((item, i) => (
             <div
@@ -95,7 +93,7 @@ const HelpCTA = () => {
               <div
                 className={`p-3 rounded-2xl border shadow-sm ${
                   dark
-                    ? "bg-secondary border-gray-700"
+                    ? " border-gray-700"
                     : " border-gray-200"
                 }`}
               >

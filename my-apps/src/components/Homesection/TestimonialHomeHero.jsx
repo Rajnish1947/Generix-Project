@@ -273,7 +273,7 @@ const TestimonialHomeHero = () => {
           viewBox="0 0 102 19"
           fill="currentColor"
           className={`h-3 sm:h-4 md:h-5 lg:h-5 xl:h-6 w-auto
-              ${dark ? "text-white" : "text-black"}
+              text-secondary
               transition-colors`}
           aria-hidden="true"
         >
@@ -324,7 +324,7 @@ const TestimonialHomeHero = () => {
           aria-hidden="true"
           fill="currentColor"
           className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
-              ${dark ? "text-white" : "text-black"}
+          text-secondary
               transition-colors`}
         >
           <g clip-path="url(#clip0_12517_107173)">
@@ -360,7 +360,7 @@ const TestimonialHomeHero = () => {
           viewBox="0 0 120 33"
           fill="currentColor"
           className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
-              ${dark ? "text-white" : "text-black"}
+              text-secondary
               transition-colors`}
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
@@ -424,7 +424,7 @@ const TestimonialHomeHero = () => {
           aria-hidden="true"
           fill="currentColor"
           className={`h-3 sm:h-4 md:h-5 lg:h-6 xl:h-7 w-auto
-              ${dark ? "text-white" : "text-black"}
+              text-secondary
               transition-colors`}
         >
           <path
@@ -444,7 +444,7 @@ const TestimonialHomeHero = () => {
   return (
     <section
       className={`w-full flex justify-center items-center flex-col ${
-        dark ? "bg-black" : "bg-gray-100"
+        dark ? " " : "bg-gray-100"
       } mx-auto py-6 md:py-3 px-4 sm:px-6`}
     >
       {/* Card Container */}

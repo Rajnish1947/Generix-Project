@@ -81,7 +81,7 @@ const PricingSection = () => {
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`shrink-0 select-none ${dark ? "text-green-300" : "text-green-900"} text-brand size-4`}
+          className={`shrink-0 select-none text-[ --color-accent] text-brand size-4`}
         >
           <path
             d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.25 8.75H8.75V11.25C8.75 11.664 8.414 12 8 12C7.586 12 7.25 11.664 7.25 11.25V8.75H4.75C4.336 8.75 4 8.414 4 8C4 7.586 4.336 7.25 4.75 7.25H7.25V4.75C7.25 4.336 7.586 4 8 4C8.414 4 8.75 4.336 8.75 4.75V7.25H11.25C11.664 7.25 12 7.586 12 8C12 8.414 11.664 8.75 11.25 8.75Z"
@@ -125,7 +125,7 @@ const PricingSection = () => {
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`shrink-0 select-none ${dark ? "text-green-300" : "text-green-900"} text-brand size-4`}
+          className={`shrink-0 select-none text-[ --color-accent]  text-brand size-4`}
         >
           <path
             d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.25 8.75H8.75V11.25C8.75 11.664 8.414 12 8 12C7.586 12 7.25 11.664 7.25 11.25V8.75H4.75C4.336 8.75 4 8.414 4 8C4 7.586 4.336 7.25 4.75 7.25H7.25V4.75C7.25 4.336 7.586 4 8 4C8.414 4 8.75 4.336 8.75 4.75V7.25H11.25C11.664 7.25 12 7.586 12 8C12 8.414 11.664 8.75 11.25 8.75Z"
@@ -140,9 +140,7 @@ const PricingSection = () => {
   
 
     <section
-  className={`pt-12 sm:pt-16 pb-16 sm:pb-24 max-w-[66rem] mx-auto px-4 sm:px-6 transition-colors duration-300 ${
-    dark ? "bg-black text-white" : "bg-white text-black"
-  }`}
+  className={`pt-12 sm:pt-16 pb-16 sm:pb-24 max-w-[66rem] mx-auto px-4 sm:px-6 transition-colors duration-300 text-secondary bg-primary`}
 >
   {/* Header */}
   <div className="text-center py-8 sm:py-12">
@@ -163,19 +161,16 @@ const PricingSection = () => {
       <span className="font-medium text-sm sm:text-base">Monthly</span>
       <button
         onClick={() => setYearly(!yearly)}
-        className={`w-10 h-6 rounded-full relative transition ${
-          dark ? "bg-white" : "bg-black"
-        }`}
+        className={`w-10 h-6 rounded-full relative transition bg-primary`}
       >
         <span
-          className={`absolute top-1 left-1 w-4 h-4 rounded-full transition ${
-            dark ? "bg-black" : "bg-white"
-          } ${yearly ? "translate-x-4" : ""}`}
+          className={`absolute top-1 left-1 w-4 h-4 rounded-full transition  bg-primary
+         ${yearly ? "translate-x-4" : ""}`}
         />
       </button>
       <span className="font-medium text-sm sm:text-base">Yearly</span>
     </div>
-    <p className={`text-sm sm:text-base ${dark ? "text-green-300" : "text-green-600"} text-center`}>
+    <p className={`text-sm sm:text-base text-[--color-accent] text-center`}>
       Save up to 15% with annual billing
     </p>
   </div>

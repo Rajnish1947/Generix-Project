@@ -12,7 +12,7 @@ const Enterprise = () => {
         w-full
         mt-10 sm:mt-12 md:mt-16
         py-12 sm:py-14 md:py-16 lg:py-20
-        ${dark ? "bg-black" : "bg-gray-100"}
+        ${dark ? "" : "bg-gray-100"}
       `}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
@@ -31,7 +31,7 @@ const Enterprise = () => {
               className={`
                 font-semibold leading-tight
                 text-2xl sm:text-3xl md:text-4xl lg:text-4xl
-                ${dark ? "text-white" : "text-black"}
+                text-secondary
               `}
             >
               Bring intelligence to <br className="hidden sm:block" />
@@ -59,8 +59,9 @@ const Enterprise = () => {
                 font-semibold
                 text-sm sm:text-base
                 transition-all duration-200
+                bg-secondary text-primary
                 hover:scale-105
-                ${dark ? "bg-white text-black" : "bg-black text-white"}
+               
               `}
             >
               Explore for enterprise

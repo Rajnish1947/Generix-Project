@@ -1,8 +1,7 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X ,Equal } from "lucide-react";
+import { Menu, X, Equal } from "lucide-react";
 import { useTheme } from "@/Context/ThemeContext/page";
 
 export default function Navbar({ blogpage }) {
@@ -33,24 +32,13 @@ export default function Navbar({ blogpage }) {
       <nav
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300
 
-  
- ${
-   blogpage
-     ? scrolled
-       ? dark
-         ? "bg-secondary text-primary"
-         : "bg-primary text-secondary"
-       : dark
-         ? "bg-secondary text-primary"
-         : "bg-primary text-secondary"
-     : dark
-       ? scrolled
-         ? "bg-secondary text-primary"
-         : "bg-transparent text-primary"
-       : scrolled
-         ? "bg-primary text-secondary"
-         : "bg-transparent text-secondary"
- }
+${
+  blogpage
+    ? "bg-primary text-secondary"
+    : scrolled
+      ? "bg-primary text-secondary"
+      : " text-primary"
+}
   ${open ? (dark ? "bg-secondary" : "bg-primary") : ""}
   `}
       >
@@ -130,17 +118,7 @@ export default function Navbar({ blogpage }) {
             {/* hide in mobile ipad  Links */}
             <ul
               className={`hidden  lg:flex items-center mr-[3.5rem] gap-6 lg:gap-7 text-sm font-medium transition
-            ${
-              blogpage
-                ? dark
-                  ? "text-primary"
-                  : "text-secondary"
-                : scrolled
-                  ? dark
-                    ? "text-primary"
-                    : "text-secondary"
-                  : "text-white"
-            }`}
+         ${blogpage || scrolled ? "text-secondary" : "text-white"}`}
             >
               {links.map((item) => (
                 <li key={item.label}>
@@ -155,35 +133,35 @@ export default function Navbar({ blogpage }) {
             </ul>
             <Link
               href="/contact"
-              className={`rounded-full shadow-sm px-2 py-1 lg:text-[15px] md:px-2 md:py-1 lg:py-[7px] lg:px-3  sm:text-[10px] md:text-sm    transition whitespace-nowrap
-                  ${
-                    blogpage
-                      ? dark
-                        ? "text-primary bg-secondary"
-                        : "text-secondary bg-gray-100"
+              className={`rounded-full shadow-md px-2 py-1 lg:text-[15px] md:px-2 md:py-1 lg:py-[7px] lg:px-3  sm:text-[10px] md:text-sm    transition whitespace-nowrap
+   ${
+                  blogpage
+                    ? dark
+                      ? " text-secondary "
+                      : "text-primary bg-secondary"
+                    : scrolled
+                      ? "text-secondary "
                       : dark
-                        ? "text-primary bg-white/10"
-                        : scrolled
-                          ? "text-secondary bg-gray-100"
-                          : "text-primary bg-white/10"
-                  }`}
+                        ? " text-secondary"
+                        : "text-primary "
+                }`}
             >
               Contact sales
             </Link>
 
             <Link
               href="/register"
-              className={`rounded-full lg:text-[15px]  px-2 py-1 md:px-2 md:py-1 lg:py-[5px] lg:px-3   transition whitespace-nowrap
+              className={`rounded-full lg:text-y[15px]  px-2 py-1 md:px-2 md:py-1 lg:py-[5px] lg:px-3   transition whitespace-nowrap
                 ${
-                  blogpage && dark
-                    ? "bg-white text-secondary hover:bg-gray-100"
-                    : blogpage
-                      ? "text-primary bg-secondary"
+                  blogpage
+                    ? dark
+                      ? "bg-secondary text-primary hover:bg-gray-100"
+                      : "text-primary bg-secondary"
+                    : scrolled
+                      ? "bg-secondary text-primary"
                       : dark
                         ? "bg-primary text-secondary"
-                        : scrolled
-                          ? "bg-secondary text-primary"
-                          : "text-secondary bg-primary"
+                        : "text-secondary bg-primary"
                 }`}
             >
               Start for free
@@ -208,8 +186,7 @@ export default function Navbar({ blogpage }) {
              }`}
           >
             {/* {open ? <X size={28} /> : <Menu size={28} />} */}
-             {open ? <X size={28} /> :
-             <Equal size={28}/>}
+            {open ? <X size={28} /> : <Equal size={28} />}
           </button>
         </div>
       </nav>

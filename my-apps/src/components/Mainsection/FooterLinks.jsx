@@ -12,8 +12,8 @@ const FooterLinks = () => {
     <section
       className={`relative z-20 border-t transition-colors duration-300 ${
         dark
-          ? "bg-black text-white border-gray-950"
-          : "bg-gray-100 text-black border-gray-200"
+          ? " border-gray-950"
+          : "bg-gray-100  border-gray-200"
       }`}
     >
       <div className="w-full flex items-stretch">
@@ -246,8 +246,8 @@ const FooterLinks = () => {
                             href="#"
                             className={`text-sm px-3 py-1.5 rounded-full inline-block transition ${
                               dark
-                                ? "text-gray-300 hover:text-white "
-                                : "text-gray-800 hover:text-black "
+                                ? "text-gray-300  "
+                                : "text-gray-800  "
                             }`}
                           >
                             {item}

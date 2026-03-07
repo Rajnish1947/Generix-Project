@@ -15,7 +15,7 @@ export default function HomePage() {
   const { dark } = useTheme();
 
   return (
-    <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div >
       <Navbar />
       <Homeherosection />
       <TrustedByHome />

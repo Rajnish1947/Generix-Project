@@ -9,7 +9,7 @@ const BlogHero = () => {
   return (
     <section
       className={`w-full flex justify-center items-center flex-col
-      ${dark ? "bg-black" : ""}
+     
       mx-auto
       pt-24 md:pt-28
       pb-6 md:pb-10

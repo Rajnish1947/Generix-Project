@@ -81,7 +81,7 @@ const customers = [
   },
 ];
   return (
-    <section className={`relative w-full py-28 ${dark ? "bg-black" : "bg-gradient-to-b from-white to-gray-50"}`}>
+    <section className={`relative w-full py-28 ${dark ? "" : "bg-gradient-to-b from-white to-gray-50"}`}>
       <div className=" mx-auto px-6">
         
         {/* Header */}
@@ -157,16 +157,16 @@ const customers = [
           <div className="flex justify-center gap-6 mt-10">
             <button
               onClick={() => scroll("left")}
-              className={`p-1 flex items-center justify-center rounded-full ${dark ? "bg-white text-black" : "bg-black text-white"} text-white hover:scale-110 transition`}
+              className={`p-1 flex items-center justify-center rounded-full  bg-secondary text-primary hover:scale-110 transition`}
             >
-              <ChevronLeft  className={`${dark ? "text-black" : "text-white"}`} size={20} />
+              <ChevronLeft  className={`text-primary`} size={20} />
             </button>
 
             <button
               onClick={() => scroll("right")}
-              className={`p-1 flex items-center justify-center rounded-full ${dark ? "bg-white text-black" : "bg-black text-white"} text-white hover:scale-110 transition`}
+              className={`p-1 flex items-center justify-center rounded-full  bg-secondary text-primary hover:scale-110 transition`}
             >
-              <ChevronRight className={`${dark ? "text-black" : "text-white"}`} size={20} />
+              <ChevronRight className={`text-primary`} size={20} />
             </button>
           </div>
         </div>

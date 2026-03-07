@@ -14,7 +14,7 @@ import { useTheme } from "@/Context/ThemeContext/page";
 export default function MainPage() {
   const { dark } = useTheme();
   return (
-    <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div >
       <Navbar />
       <Hero />
 

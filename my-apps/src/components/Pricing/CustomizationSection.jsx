@@ -316,9 +316,9 @@ export default function PricingComparison() {
     <section className="mx-auto mb-10 mt-[4.5rem] w-full max-w-[65rem] px-4 sm:px-8 py-14">
       <div className="md:hidden sticky top-[66px] z-50 flex-col gap-4">
         <div
-          className={`w-full  ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}`}
+          className={`w-full bg-primary `}
         >
-          <div className={`flex items-center ${dark ? " bg-black" : " bg-white"} justify-between`}>
+          <div className={`flex items-center justify-between`}>
             {/* PLAN TABS */}
             <div className="flex  gap-8">
               {plans.map((plan) => (
@@ -340,9 +340,7 @@ export default function PricingComparison() {
                   {/* Active Underline */}
                   {selectedPlan === plan.name && (
                     <span
-                      className={`absolute left-0 bottom-0 h-[2px] w-full ${
-                        dark ? "bg-white" : "bg-black"
-                      }`}
+                      className={`absolute left-0 bottom-0 h-[2px] w-full `}
                     ></span>
                   )}
                 </button>
@@ -367,9 +365,7 @@ export default function PricingComparison() {
         </div>
       </div>
       <div
-        className={`hidden md:flex gap-[4rem] lg:gap-[6rem] px-4 justify-end sticky top-[60px] z-30 py-8 mb-6 ${
-          dark ? "bg-secondary" : "bg-white"
-        }`}
+        className={`hidden md:flex gap-[4rem] lg:gap-[6rem] px-4 justify-end sticky top-[60px] z-30 py-8 mb-6 bg-primary`}
       >
         {plans.map((plan) => (
           <div key={plan.name} className="flex flex-col items-center gap-3">
@@ -401,9 +397,7 @@ export default function PricingComparison() {
         <div key={group.category} className="relative mt-10 lg:mt-6">
           {/* Sticky category header */}
           <div
-            className={` relative md:sticky top-[200px]   ${
-              dark ? " border-gray-700 bg-black" : "bg-white border-gray-200"
-            }`}
+            className={` relative md:sticky top-[200px]   text-secondary bg-primary`}
           >
             <h3 className="text-[15px] relative z-40 flex font-semibold py-3 gap-2 px-2 dark:text-gray-200">
               {group.icon} {group.category}
@@ -415,12 +409,12 @@ export default function PricingComparison() {
             {group.items.map((item) => (
               <div
                 key={item}
-                className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 border-b py-4 items-center ${
-                  dark ? "text-white/80 border-gray-950" : "bg-white"
-                }`}
+                className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 border-b py-4 items-center 
+                  text-secondary/30  bg-primary  border-secondary
+                `}
               >
                 <div
-                  className={` text-sm px-2 ${dark ? "text-gray-300" : "text-gray-600"}`}
+                  className={` text-sm px-2 border-primary `}
                 >
                   {item}
                 </div>
@@ -431,7 +425,7 @@ export default function PricingComparison() {
                       selectedPlan === plan.name ? "flex" : "hidden md:flex"
                     }`}
                   >
-                    <CheckIcon className="text-black dark:text-white" />
+                    <CheckIcon className="text-secondary" />
                   </div>
                 ))}
               </div>

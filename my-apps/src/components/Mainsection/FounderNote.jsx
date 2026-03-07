@@ -7,16 +7,14 @@ const FounderNote = () => {
 
   return (
     <section
-      className={`w-full flex items-center justify-center py-32 px-6 bg-mode ${dark ? "bg-black" : "bg-gray-200"}`}
+      className={`w-full flex items-center justify-center py-32 px-6 bg-mode ${dark ? "bg-gray-800" : "bg-gray-200"}`}
     >
       <div
-        className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg shadow-sm bg-mode `}
+        className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg  shadow-sm bg-mode `}
       >
         {/* Decorative underline SVG */}
         <svg
-          className={`absolute -bottom-4 right-2 -z-10 blur-[2px] ${
-            dark ? "text-white" : "text-black"
-          }`}
+          className={`absolute -bottom-4 right-2 -z-10 blur-[2px] text-secondary`}
           width="289"
           height="34"
           viewBox="0 0 289 34"

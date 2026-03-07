@@ -24,7 +24,7 @@ const HomeCta = () => {
           className={`
             font-bold tracking-tight leading-tight
             text-2xl sm:text-3xl md:text-4xl lg:text-[38px]
-            ${dark ? "text-white" : "text-black"}
+            text-secondary
           `}
         >
           Built for the intelligence age
@@ -33,7 +33,7 @@ const HomeCta = () => {
         <p
           className={`
             text-sm sm:text-base md:text-lg
-            ${dark ? "text-white/80" : "text-gray-600"}
+         text-secondary/60
           `}
         >
           Integrate AI into every part of your docs lifecycle. Woven into how
@@ -48,8 +48,8 @@ const HomeCta = () => {
         {/* LEFT CARD */}
         <div
           className={`
-            w-full md:w-1/2 border rounded-2xl p-4 md:p-6
-            ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}
+            w-full md:w-1/2 border rounded-2xl p-4 md:p-6 bg-primary
+            ${dark ? "border-gray-800 " : "border-gray-200 "}
           `}
         >
           <div className="space-y-3">
@@ -76,7 +76,7 @@ const HomeCta = () => {
                 absolute top-0 left-1/2 -translate-x-1/2
                 w-[60%] sm:w-[55%]
                 border rounded-xl p-4
-                ${dark ? "border-gray-700 bg-black" : "border-gray-300 bg-white"}
+                ${dark ? "border-gray-700 " : "border-gray-300 "}
               `}
             />
 
@@ -89,7 +89,7 @@ const HomeCta = () => {
                 absolute top-8 left-1/2 -translate-x-1/2
                 w-[85%] sm:w-[80%]
                 border rounded-xl
-                ${dark ? "border-gray-700 bg-black" : "border-gray-300 bg-white"}
+                ${dark ? "border-gray-700 " : "border-gray-300 "}
               `}
             >
               <div className={`${dark ? "bg-gray-900" : "bg-gray-100"} m-2 h-8 rounded`} />
@@ -110,7 +110,7 @@ const HomeCta = () => {
         <div
           className={`
             w-full md:w-1/2 border rounded-2xl p-4 md:p-6
-            ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}
+            ${dark ? "border-gray-800 " : "border-gray-200 "}
           `}
         >
           <div className="space-y-3">
@@ -155,7 +155,7 @@ const HomeCta = () => {
                       ${
                         isCompleted
                           ? "bg-green-900 text-white border-green-900"
-                          : "bg-white border-gray-300"
+                          : " border-gray-300"
                       }
                     `}
                   >

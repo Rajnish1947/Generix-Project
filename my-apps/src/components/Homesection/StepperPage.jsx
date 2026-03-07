@@ -20,8 +20,9 @@ const StepperPage = () => {
           py-8 sm:py-10 md:py-14
           px-4 sm:px-6 md:px-10
           gap-3 sm:gap-4 md:gap-5
+          
           transition-colors
-          ${dark ? "border-gray-800 bg-black" : "border-gray-200 bg-white"}
+          ${dark ? "border-gray-800 " : "border-gray-200 "}
         `}
       >
         {/* Badge */}
@@ -29,7 +30,7 @@ const StepperPage = () => {
           className={`
             font-semibold
             text-sm sm:text-base md:text-lg
-            ${dark ? "text-white" : "text-green-800"}
+            ${dark ? "text-primary" : "text-green-800"}
           `}
         >
           Assistant
@@ -41,7 +42,7 @@ const StepperPage = () => {
             font-semibold leading-tight
             text-xl sm:text-2xl md:text-3xl lg:text-4xl
             max-w-2xl
-            ${dark ? "text-white" : "text-gray-900"}
+            text-secondary
           `}
         >
           Intelligent assistance for your users

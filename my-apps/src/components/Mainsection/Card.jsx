@@ -54,8 +54,8 @@ const Card = () => {
             p-5 sm:p-6 lg:p-8
             flex flex-col items-center text-center
             min-h-[220px] sm:min-h-[200px]
-            transition duration-300 hover:scale-[1.02]
-            ${dark ? "bg-neutral-900 text-primary" : "bg-cardBg text-secondary"}
+            transition duration-300 hover:scale-[1.02] text-secondary
+            ${dark ? "bg-neutral-900 " : "bg-cardBg "}
             `}
           >
             {/* Icon */}
