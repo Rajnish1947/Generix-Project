@@ -137,11 +137,11 @@ const customers = [
 
                 {/* Content */}
                 <div className="p-6">
-                  <p className={`text-gray-600 ${dark ? "text-white" : ""} text-sm leading-relaxed mb-6 line-clamp-2`}>
+                  <p className={`text-gray-800  text-sm leading-relaxed mb-6 line-clamp-2`}>
                     {item.desc}
                   </p>
 
-                  <div className={`flex items-center gap-2 ${dark ? "text-white/60" : "text-gray-700"} text-sm hover:text-green-700 font-medium cursor-pointer group/link`}>
+                  <div className={`flex items-center gap-2 text-gray-800 text-sm hover:text-green-700 font-medium cursor-pointer group/link`}>
                     Read story
                     <ChevronRight
                       size={18}

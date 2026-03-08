@@ -14,7 +14,7 @@ const Help = () => {
           viewBox="0 0 18 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="size-8 shrink-0 select-none text-green-900"
+          className="size-8 shrink-0 select-none text-green-700"
         >
           <path
             opacity="0.2"
@@ -46,7 +46,7 @@ const Help = () => {
           viewBox="0 0 18 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="size-8 shrink-0 select-none text-green-900"
+          className="size-8 shrink-0 select-none text-green-700"
         >
           <path
             d="M5.37701 2.01401C3.78843 2.01401 2.56755 2.561 1.85582 2.9811C1.31588 3.29978 1.00101 3.87517 1.00101 4.48701V13.57C1.00101 14.7707 2.20639 15.6627 3.36965 15.2049C3.9013 14.9951 4.57667 14.8229 5.36584 14.822C6.60305 14.8203 7.5635 15.2391 8.13255 15.5674C8.39841 15.7201 8.69579 15.801 9.00001 15.801V3.05078C8.29992 2.62423 7.0284 2.01401 5.37701 2.01401Z"
@@ -75,7 +75,7 @@ const Help = () => {
           </h3>
 
           <p
-            className={`mt-4 text-sm sm:text-base ${dark ? "text-white/70" : "text-gray-900"} md:text-lg`}
+            className={`mt-4 text-sm sm:text-base text-gray-800 md:text-lg`}
           >
             Join the leaders of tomorrow to future proof your documentation
             today.
@@ -83,12 +83,12 @@ const Help = () => {
 
           <div className="mt-6 flex flex-col sm:flex-row gap-2 justify-center">
             <button
-              className={`px-12 py-2 border text-secondary ${dark ? "bg-primary border-gray-800  " : "bg-secondary-light  "} rounded-[5.5rem]  transition-colors`}
+              className={`px-12 py-2 border text-secondary  bg-secondary-light border-secondary  "} rounded-[5.5rem]  transition-colors`}
             >
               Get started
             </button>
             <button
-              className={`px-10 py-2 border ${dark ? "border-gray-700" : "border-gray-300"} rounded-[5.5rem]   transition-colors`}
+              className={`px-10 py-2 border border-secondary rounded-[5.5rem]   transition-colors`}
             >
               Get demo
             </button>
@@ -109,13 +109,13 @@ const Help = () => {
             
 
             /* horizontal divider */
-       ${i < 2 ? `sm:border-b ${dark ? "border-gray-900" : "border-gray-300"}` : ""}
+       ${i < 2 ? `sm:border-b border-secondary` : ""}
 
-${i % 2 === 0 ? `sm:border-r ${dark ? "border-gray-900" : "border-gray-300"}` : ""}`}
+${i % 2 === 0 ? `sm:border-r border-secondary` : ""}`}
             >
               {/* Icon */}
               <div
-                className={`p-3 sm:p-4 rounded-2xl border ${dark ? "border-gray-900" : "border-gray-200"} ${dark ? "bg-black" : "bg-white"} shadow-sm`}
+                className={`p-3 sm:p-4 rounded-2xl border border-secondary shadow-sm`}
               >
                 <div className="w-6 h-6 sm:w-8 sm:h-8">{item.icon}</div>
               </div>
@@ -123,13 +123,13 @@ ${i % 2 === 0 ? `sm:border-r ${dark ? "border-gray-900" : "border-gray-300"}` : 
               {/* Text */}
               <div>
                 <h4
-                  className={`text-lg sm:text-xl font-semibold ${dark ? "text-white" : "text-gray-900"}`}
+                  className={`text-lg sm:text-xl font-semibold text-gray-800`}
                 >
                   {item.title}
                 </h4>
 
                 <p
-                  className={`mt-2 text-sm sm:text-base ${dark ? "text-white/70" : "text-gray-600"} max-w-xs mx-auto`}
+                  className={`mt-2 text-sm sm:text-base text-gray-800 max-w-xs mx-auto`}
                 >
                   {item.desc}
                 </p>
