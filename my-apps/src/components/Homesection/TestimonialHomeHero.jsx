@@ -16,7 +16,7 @@ const TestimonialHomeHero = () => {
           viewBox="0 0 126 15"
           fill="currentColor"
           className={`h-3 sm:h-4 md:h-5 lg:h-4 xl:h-5 w-auto
-              ${dark ? "text-white" : "text-black"}
+              text-secondary
               transition-colors`}
         >
           <g clip-path="url(#clip0_8659_7026)">
@@ -443,9 +443,9 @@ const TestimonialHomeHero = () => {
 
   return (
     <section
-      className={`w-full flex justify-center items-center flex-col ${
-        dark ? " " : "bg-gray-100"
-      } mx-auto py-6 md:py-3 px-4 sm:px-6`}
+      className={`w-full flex justify-center items-center flex-col 
+        "bg-gray-100
+      mx-auto py-6 md:py-3 px-4 sm:px-6`}
     >
       {/* Card Container */}
       <div
@@ -469,8 +469,7 @@ const TestimonialHomeHero = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/20 hover:bg-black/25 transition-colors duration-300" />
 
-        {/* Content */}
-        {/* Content */}
+       
         <div
           className="
         absolute inset-0 z-10

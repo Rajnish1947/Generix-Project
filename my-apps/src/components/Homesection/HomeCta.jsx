@@ -33,7 +33,7 @@ const HomeCta = () => {
         <p
           className={`
             text-sm sm:text-base md:text-lg
-         text-secondary/60
+         text-gray-800
           `}
         >
           Integrate AI into every part of your docs lifecycle. Woven into how
@@ -49,7 +49,7 @@ const HomeCta = () => {
         <div
           className={`
             w-full md:w-1/2 border rounded-2xl p-4 md:p-6 bg-primary
-            ${dark ? "border-gray-800 " : "border-gray-200 "}
+            border-secondary
           `}
         >
           <div className="space-y-3">
@@ -61,7 +61,7 @@ const HomeCta = () => {
               Built for both people and AI
             </div>
 
-            <div className={`${dark ? "text-white/80" : "text-gray-600"}`}>
+            <div className={`text-gray-600`}>
               Ensure your product shows up in the AI workflows users already
               rely on.
             </div>
@@ -76,12 +76,12 @@ const HomeCta = () => {
                 absolute top-0 left-1/2 -translate-x-1/2
                 w-[60%] sm:w-[55%]
                 border rounded-xl p-4
-                ${dark ? "border-gray-700 " : "border-gray-300 "}
+                border-secondary
               `}
             />
 
             {/* middle */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-[75%] sm:w-[70%] bg-green-900 rounded-xl h-[70px]" />
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-[75%] sm:w-[70%] bg-green-700 rounded-xl h-[70px]" />
 
             {/* front */}
             <div
@@ -89,11 +89,11 @@ const HomeCta = () => {
                 absolute top-8 left-1/2 -translate-x-1/2
                 w-[85%] sm:w-[80%]
                 border rounded-xl
-                ${dark ? "border-gray-700 " : "border-gray-300 "}
+                border-secondary
               `}
             >
-              <div className={`${dark ? "bg-gray-900" : "bg-gray-100"} m-2 h-8 rounded`} />
-              <div className={`${dark ? "bg-gray-900" : "bg-gray-100"} m-2 h-8 rounded`} />
+              <div className={`bg-gray-100 m-2 h-8 rounded`} />
+              <div className={`bg-gray-100  m-2 h-8 rounded`} />
 
               <div className="flex justify-center p-3">
                 <div className="flex items-center gap-2 border px-3 py-1 rounded text-sm">
@@ -110,7 +110,7 @@ const HomeCta = () => {
         <div
           className={`
             w-full md:w-1/2 border rounded-2xl p-4 md:p-6
-            ${dark ? "border-gray-800 " : "border-gray-200 "}
+           border-gray-200 
           `}
         >
           <div className="space-y-3">
@@ -122,7 +122,7 @@ const HomeCta = () => {
               Self-updating knowledge management
             </div>
 
-            <div className={`${dark ? "text-white/80" : "text-gray-600"}`}>
+            <div className={`text-gray-600`}>
               Draft, edit, and maintain content with a context-aware agent.
             </div>
           </div>
@@ -134,7 +134,7 @@ const HomeCta = () => {
             <div
               className={`
                 absolute top-1/2 left-0 w-full h-[2px]
-                ${dark ? "bg-gray-700" : "bg-gray-300"}
+                bg-gray-300
               `}
             />
 
@@ -151,12 +151,8 @@ const HomeCta = () => {
                       w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14
                       flex items-center justify-center
                       rounded-full border shadow-md
-                      transition-all duration-500
-                      ${
-                        isCompleted
-                          ? "bg-green-900 text-white border-green-900"
-                          : " border-gray-300"
-                      }
+                      transition-all duration-500 bg-green-700 border-secondary
+                     
                     `}
                   >
                     {isCompleted ? (

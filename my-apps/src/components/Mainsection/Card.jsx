@@ -55,7 +55,7 @@ const Card = () => {
             flex flex-col items-center text-center
             min-h-[220px] sm:min-h-[200px]
             transition duration-300 hover:scale-[1.02] text-secondary
-            ${dark ? "bg-neutral-900 " : "bg-cardBg "}
+            bg-bgray 
             `}
           >
             {/* Icon */}
@@ -77,7 +77,7 @@ const Card = () => {
             <p
               className={`
               card-desc
-              ${dark ? "text-gray-400" : "text-gray-600"}
+                text-gray-600
               `}
             >
               {item.desc}

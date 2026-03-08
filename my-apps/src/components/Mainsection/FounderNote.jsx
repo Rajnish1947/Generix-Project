@@ -7,10 +7,10 @@ const FounderNote = () => {
 
   return (
     <section
-      className={`w-full flex items-center justify-center py-32 px-6 bg-mode ${dark ? "bg-gray-800" : "bg-gray-200"}`}
+      className={`w-full flex items-center justify-center bg-bggray py-32 px-6 `}
     >
       <div
-        className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg  shadow-sm bg-mode `}
+        className={`relative max-w-xl w-full p-10 md:p-12 rounded-lg  bg-bgray shadow-sm  `}
       >
         {/* Decorative underline SVG */}
         <svg
@@ -30,18 +30,16 @@ const FounderNote = () => {
 
         {/* Heading */}
         <h3
-          className={`founder-heading ${
-            dark ? "text-white" : "text-gray-900"
-          }`}
+          className={`founder-heading text-secondary/86`}
         >
           From one founder to another
         </h3>
 
         {/* Content */}
         <p
-          className={`mt-4 text-base leading-relaxed max-w-[464px] ${
-            dark ? "text-gray-300" : "text-gray-600"
-          }`}
+          className={`mt-4 text-base leading-relaxed max-w-[464px] 
+            text-gray-800
+          `}
         >
           Supporting startups and empowering builders is in our DNA.
           <br />
@@ -66,22 +64,18 @@ const FounderNote = () => {
 
         {/* Divider */}
         <hr
-          className={`w-[120px] my-8 ${
-            dark ? "border-neutral-700" : "border-gray-200"
-          }`}
+          className={`w-[120px] my-8 border-secondary/20`}
         />
 
         {/* Signature */}
         <div
-          className={`py-1 ${
-            dark ? "text-gray-400" : "text-gray-500"
-          }`}
+          className={`py-1 text-text-gray-400`}
         >
           <div className="founder-signature my-2 ">
             Han & Hahnbee
           </div>
 
-          <div className={dark ? "text-gray-300" : "text-gray-700"}>
+          <div className={`text-sm text-text-gray-400`}>
             FOUNDERS OF MINTLIFY
           </div>
         </div>

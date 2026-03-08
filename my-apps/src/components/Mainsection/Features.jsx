@@ -23,9 +23,7 @@ const Features = () => {
 
       {/* Description */}
       <p
-        className={`text-center features-desc max-w-[640px] ${
-          dark ? "text-gray-400" : "text-gray-800"
-        }`}
+        className={`text-center features-desc max-w-[640px] text-gray-800`}
       >
         Designed for venture-backed businesses that are just getting started.
         Receive discount to the platform, extended AI credits, priority support,

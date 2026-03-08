@@ -313,6 +313,7 @@ const TrustedBy = () => {
     <section
       className={`
  max-w-[69rem]
+ bg-primary
     relative
     mx-auto
     mt-8 sm:mt-10 lg:mt-12

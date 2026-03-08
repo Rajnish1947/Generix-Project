@@ -13,15 +13,15 @@
   --color-primary: #ffffff;
   --color-secondary: #000000;
   --color-red-600: #e40014;
-
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
+--color-green-400: #1ca54e;
+  --color-gray-100: #f5f6fa;
+  --color-gray-200: #ffffff;
   --color-gray-400: #9ca3af;
   --color-gray-600: #4a5565;
   --color-gray-800: #1e2939;
   --color-gray-900: #111827;
 
-  --color-accent: #0af360;
+  --color-accent: #19c458;
 /* border */
   --border-primary: #e5e7eb;   /* border-gray-200 */
   --border-secondary: #d1d5db;
@@ -98,9 +98,9 @@
 
   --color-primary: #000000;
   --color-secondary: #ffffff;
-
-  --color-gray-100: #0f172a;
-  --color-gray-200: #1e293b;
+--color-green-400: #15803d;
+  --color-gray-100: #0d0d0e;
+  --color-gray-200: #111213;
   --color-gray-400: #94a3b8;
   --color-gray-600: #cbd5e1;
   --color-gray-800: #e2e8f0;
@@ -108,7 +108,7 @@
   --border-primary: #1f2937;   
   --border-secondary: #171718;
 
-  --color-accent: #109940;
+  --color-accent: #17cf58;
 
 }
 
@@ -224,15 +224,15 @@ body {
   }
 
   .icon-default {
-    @apply md:h-6 h-4 transition-colors dark:text-white text-black;
+    @apply md:h-6 h-4 transition-colors text-secondary;
   }
 
   .card-icon {
-    @apply w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-colors dark:text-white text-black;
+    @apply w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-colors text-secondary ;
   }
 
   .testimatio-logo {
-    @apply h-3 sm:h-3 md:h-4 lg:h-5 xl:h-6 w-auto transition-colors dark:text-white text-black;
+    @apply h-3 sm:h-3 md:h-4 lg:h-5 xl:h-6 w-auto transition-colors text-secondary;
   }
 
   .section-maxwidth {
@@ -240,7 +240,7 @@ body {
   }
 
   .bg-mode {
-    @apply bg-white dark:bg-black;
+    @apply bg-primary;
   }
 
   .helpicon {

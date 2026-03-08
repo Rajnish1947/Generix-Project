@@ -10,19 +10,14 @@ const FooterLinks = () => {
 
   return (
     <section
-      className={`relative z-20 border-t transition-colors duration-300 ${
-        dark
-          ? " border-gray-950"
-          : "bg-gray-100  border-gray-200"
-      }`}
+      className={`relative z-20 border-t transition-colors duration-300 bg-bgray border-primary 
+      `}
     >
       <div className="w-full flex items-stretch">
         
         {/* LEFT BORDER */}
         <div
-          className={`hidden md:block w-[200px] ${
-            dark ? "border-r border-gray-950" : "border-r border-gray-200"
-          }`}
+          className={`hidden md:block w-[200px] border-primary border-r `}
         />
 
         {/* CENTER */}
@@ -31,9 +26,7 @@ const FooterLinks = () => {
 
             {/* Top Section */}
             <div
-              className={`mb-10 border-b px-9 pt-10 pb-3 flex items-center justify-between ${
-                dark ? "border-gray-950" : "border-gray-200"
-              }`}
+              className={`mb-10 border-b px-9 pt-10 pb-3 flex items-center justify-between border-primary`}
             >
               <Link href="/" className="flex items-center gap-2">
                 <svg
@@ -95,7 +88,7 @@ const FooterLinks = () => {
 
               {/* Social Buttons */}
               <div className="flex items-center gap-2">
-                  <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+                  <button className={`w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 p-1`}>
                 <svg
                   width="24"
                   height="24"
@@ -116,7 +109,7 @@ const FooterLinks = () => {
               </button>
 
               {/* Repeat other buttons with same classes */}
-              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 p-1`}>
                 <svg
                   width="22"
                   height="20"
@@ -150,7 +143,7 @@ const FooterLinks = () => {
 
               
 
-              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 p-1`}>
                 <svg
                   width="22"
                   height="20"
@@ -232,9 +225,7 @@ const FooterLinks = () => {
                 ].map((col) => (
                   <div key={col.title}>
                     <h3
-                      className={`mb-3 uppercase text-xs tracking-wider font-medium ${
-                        dark ? "text-gray-400" : "text-gray-500"
-                      }`}
+                      className={`mb-3 uppercase text-xs tracking-wider font-medium text-gray-500`}
                     >
                       {col.title}
                     </h3>
@@ -244,11 +235,8 @@ const FooterLinks = () => {
                         <li key={item}>
                           <a
                             href="#"
-                            className={`text-sm px-3 py-1.5 rounded-full inline-block transition ${
-                              dark
-                                ? "text-gray-300  "
-                                : "text-gray-800  "
-                            }`}
+                            className={`text-sm px-3 py-1.5 rounded-full inline-block transition text-gray-800
+                            `}
                           >
                             {item}
                           </a>
@@ -262,7 +250,7 @@ const FooterLinks = () => {
 
             {/* Security */}
            <div
-            className={`border-t ${dark ? "border-gray-950" : "border-gray-200"} px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
+            className={`border-t border-secondary px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
           >
             <p className="text-sm font-medium text-center">
               Backed by enterprise-grade security
@@ -312,16 +300,14 @@ const FooterLinks = () => {
 
             {/* Bottom */}
             <div
-              className={`border-t px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4 ${
-                dark ? "border-gray-950" : "border-gray-200"
-              }`}
+              className={`border-t px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4 border-primary justify-between`}
             >
               <div className="flex-1">All systems normal</div>
 
               <div
-                className={`flex-1 text-center text-sm ${
-                  dark ? "text-gray-400" : "text-gray-500"
-                }`}
+                className={`flex-1 text-center text-sm
+                  text-gray-500
+                `}
               >
                 © 2026 Mintlify, Inc.
               </div>
@@ -366,9 +352,9 @@ const FooterLinks = () => {
 
         {/* RIGHT BORDER */}
         <div
-          className={`hidden md:block w-[200px] ${
-            dark ? "border-l border-gray-950" : "border-l border-gray-200"
-          }`}
+          className={`hidden md:block w-[200px] 
+border-l border-primary
+          `}
         />
       </div>
     </section>

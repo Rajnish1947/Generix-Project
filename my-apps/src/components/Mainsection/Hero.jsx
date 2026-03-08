@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative  min-h-[65vh] lg:min-h-screen bg-cover bg-center"
+      className="relative  min-h-[65vh] lg:min-h-screen  bg-cover bg-center"
       style={{
         backgroundImage: dark
           ? "url('https://www.mintlify.com/startups/hero-dark.svg')"
@@ -64,7 +64,7 @@ const Hero = () => {
 
             <button className="
               w-full sm:w-auto
-              bg-white text-gray-900
+              bg-white text-black
               px-6 md:px-7
               py-2
               rounded-3xl

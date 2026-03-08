@@ -22,7 +22,7 @@ const StepperPage = () => {
           gap-3 sm:gap-4 md:gap-5
           
           transition-colors
-          ${dark ? "border-gray-800 " : "border-gray-200 "}
+         border-secondary
         `}
       >
         {/* Badge */}
@@ -30,7 +30,7 @@ const StepperPage = () => {
           className={`
             font-semibold
             text-sm sm:text-base md:text-lg
-            ${dark ? "text-primary" : "text-green-800"}
+           text-green-700
           `}
         >
           Assistant
@@ -54,7 +54,7 @@ const StepperPage = () => {
             max-w-md sm:max-w-lg md:max-w-xl
             text-sm sm:text-base md:text-lg
             leading-relaxed
-            ${dark ? "text-white/80" : "text-gray-600"}
+           text-gray-600
           `}
         >
           Turn every documentation visit into a guided conversation. Your AI

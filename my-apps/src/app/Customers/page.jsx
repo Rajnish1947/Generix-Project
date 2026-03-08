@@ -10,7 +10,7 @@ export default function PricingPage() {
   const { dark } = useTheme();
   const blogpage = true;
   return (
-    <div >
+    <div className="bg-primary" >
       <Navbar blogpage={blogpage} />
       <TrustedCustomers />
       <TrustedBy />

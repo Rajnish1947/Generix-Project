@@ -12,7 +12,7 @@ const Enterprise = () => {
         w-full
         mt-10 sm:mt-12 md:mt-16
         py-12 sm:py-14 md:py-16 lg:py-20
-        ${dark ? "" : "bg-gray-100"}
+        bg-gray-100
       `}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
@@ -41,7 +41,7 @@ const Enterprise = () => {
             <p
               className={`
                 text-sm sm:text-base md:text-lg
-                ${dark ? "text-white/80" : "text-gray-700"}
+                text-gray-800
               `}
             >
               Modernize without the rebuild with enterprise-grade professional
@@ -84,7 +84,7 @@ const Enterprise = () => {
                 viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 text-green-800"
+                className="w-8 text-green-700"
               >
                 <path
                   fillRule="evenodd"
@@ -139,7 +139,7 @@ const Enterprise = () => {
             <p
               className={`
                 text-sm sm:text-base
-                ${dark ? "text-white/80" : "text-gray-700"}
+                text-gray-800
               `}
             >
               Direct, white-glove access to our documentation experts. Dedicated
@@ -154,7 +154,7 @@ const Enterprise = () => {
                 viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 text-green-800"
+                className="w-8 text-green-700"
               >
                 <path
                   opacity="0.2"
@@ -175,7 +175,7 @@ const Enterprise = () => {
               className={`
                 font-semibold
                 text-lg sm:text-xl md:text-2xl
-                ${dark ? "text-white" : "text-gray-900"}
+                text-gray-800
               `}
             >
               Compliance and access control
@@ -184,7 +184,7 @@ const Enterprise = () => {
             <p
               className={`
                 text-sm sm:text-base
-                ${dark ? "text-white/80" : "text-gray-700"}
+                text-gray-800
               `}
             >
               Compliant with SOC 2, ISO/27001, and GDPR. Secure access and

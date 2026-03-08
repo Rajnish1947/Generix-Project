@@ -1,30 +1,38 @@
-// "use client";
 
-// import React, { useState, useEffect } from "react";
+
+
+// import React from "react";
 // import Link from "next/link";
 // import { useTheme } from "@/Context/ThemeContext/page";
-// import { Linkedin, Github, Twitter, Sun, Moon } from "lucide-react";
+// import { Sun, Moon } from "lucide-react";
+
 // const FooterLinks = () => {
 //   const { dark, setDark } = useTheme();
 
 //   return (
 //     <section
-//       className={`w-full relative z-20  border-t  ${dark ? "bg-black text-white border-gray-800 " : "bg-gray-100 border-gray-200"}`}
+//       className={`relative z-20 border-t transition-colors duration-300 bg-bgray
+//     `}
 //     >
 //       <div className="w-full flex items-stretch">
-//         {/* LEFT EMPTY DIV */}
+        
+//         {/* LEFT BORDER */}
 //         <div
-//           className={`hidden md:block w-45 border-r  ${dark ? "border-gray-800 " : "border-gray-200"}`}
+//           className={`hidden md:block w-[200px] ${
+//             dark ? "border-r border-gray-950" : "border-r border-gray-200"
+//           }`}
 //         />
 
-//         {/* CENTER CONTENT */}
-//         <div className="flex-1">
-//           {/* Middle content */}
-//           <div
-//             className={`mb-10 border-b ${dark ? "border-gray-800" : "border-gray-200"} flex items-center justify-between px-4 py-4`}
-//           >
-//             {/* LEFT SIDE (Logo) */}
-//             <div>
+//         {/* CENTER */}
+//         <div className="w-full">
+//           <div className="max-w-[69rem] mx-auto">
+
+//             {/* Top Section */}
+//             <div
+//               className={`mb-10 border-b px-9 pt-10 pb-3 flex items-center justify-between ${
+//                 dark ? "border-gray-950" : "border-gray-200"
+//               }`}
+//             >
 //               <Link href="/" className="flex items-center gap-2">
 //                 <svg
 //                   width="104"
@@ -82,19 +90,17 @@
 //                   />
 //                 </svg>
 //               </Link>
-//             </div>
 
-//             {/* RIGHT SIDE (Social Icons) */}
-//             <div className="flex gap-3">
-              
-//               <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+//               {/* Social Buttons */}
+//               <div className="flex items-center gap-2">
+//                   <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
 //                 <svg
-//                   width="21"
-//                   height="20"
+//                   width="24"
+//                   height="24"
 //                   viewBox="0 0 21 20"
 //                   fill="none"
 //                   xmlns="http://www.w3.org/2000/svg"
-//                   className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+//                   className="text-muted group-hover:text-text-main transition-colors duration-100 w-5 h-5"
 //                 >
 //                   <path
 //                     d="M11.4595 11.5714V18.889H8.06641V6.24428H11.2672L11.3238 9.39982H11.1202C11.452 8.3442 11.9534 7.52987 12.6244 6.95682C13.3031 6.37623 14.1777 6.08594 15.2484 6.08594C16.1231 6.08594 16.8846 6.27821 17.5331 6.66275C18.189 7.03976 18.6942 7.58642 19.0486 8.30273C19.4105 9.0115 19.5915 9.85977 19.5915 10.8475V18.889H16.1985V11.4356C16.1985 10.6515 15.9949 10.0369 15.5877 9.59209C15.1881 9.14722 14.6301 8.92479 13.9138 8.92479C13.4388 8.92479 13.0128 9.03035 12.6358 9.24148C12.2663 9.44506 11.976 9.74289 11.7649 10.135C11.5613 10.5271 11.4595 11.0059 11.4595 11.5714Z"
@@ -177,73 +183,84 @@
 //                   </g>
 //                 </svg>
 //               </button>
+//               </div>
 //             </div>
-         
-//           </div>
-//           <div className="max-w-6xl mx-auto px-6 md:px-8 py-12">
-//             {/* Footer links */}
-//             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-//               {[
-//                 {
-//                   title: "Explore",
-//                   items: ["Startups", "Enterprise", "Switch", "OSS Program"],
-//                 },
-//                 {
-//                   title: "Resources",
-//                   items: [
-//                     "Customers",
-//                     "Blog",
-//                     "Pricing",
-//                     "Guides",
-//                     "Feature Requests",
-//                   ],
-//                 },
-//                 {
-//                   title: "Documentation",
-//                   items: [
-//                     "Getting Started",
-//                     "API Reference",
-//                     "Components",
-//                     "Changelog",
-//                   ],
-//                 },
-//                 {
-//                   title: "Company",
-//                   items: ["Careers", "Wall of Love"],
-//                 },
-//                 {
-//                   title: "Legal",
-//                   items: [
-//                     "Privacy Policy",
-//                     "Responsible Disclosure",
-//                     "Terms of Service",
-//                     "Security",
-//                     "DSR / DSAR",
-//                   ],
-//                 },
-//               ].map((col) => (
-//                 <div key={col.title}>
-//                   <h3 className="mb-3 uppercase text-xs tracking-wider font-bold text-gray-500">
-//                     {col.title}
-//                   </h3>
-//                   <ul className="space-y-2">
-//                     {col.items.map((item) => (
-//                       <li key={item}>
-//                         <a
-//                           href="#"
-//                           className={`text-sm dar  px-3 ${dark ? "text-white font-bold" : "text-gray-800"} py-1.5 rounded-full inline-block transition`}
-//                         >
-//                           {item}
-//                         </a>
-//                       </li>
-//                     ))}
-//                   </ul>
-//                 </div>
-//               ))}
+
+//             {/* Grid */}
+//             <div className="px-6 md:px-8 py-12">
+//               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+//                 {[
+//                   {
+//                     title: "Explore",
+//                     items: ["Startups", "Enterprise", "Switch", "OSS Program"],
+//                   },
+//                   {
+//                     title: "Resources",
+//                     items: [
+//                       "Customers",
+//                       "Blog",
+//                       "Pricing",
+//                       "Guides",
+//                       "Feature Requests",
+//                     ],
+//                   },
+//                   {
+//                     title: "Documentation",
+//                     items: [
+//                       "Getting Started",
+//                       "API Reference",
+//                       "Components",
+//                       "Changelog",
+//                     ],
+//                   },
+//                   {
+//                     title: "Company",
+//                     items: ["Careers", "Wall of Love"],
+//                   },
+//                   {
+//                     title: "Legal",
+//                     items: [
+//                       "Privacy Policy",
+//                       "Responsible Disclosure",
+//                       "Terms of Service",
+//                       "Security",
+//                       "DSR / DSAR",
+//                     ],
+//                   },
+//                 ].map((col) => (
+//                   <div key={col.title}>
+//                     <h3
+//                       className={`mb-3 uppercase text-xs tracking-wider font-medium ${
+//                         dark ? "text-gray-400" : "text-gray-500"
+//                       }`}
+//                     >
+//                       {col.title}
+//                     </h3>
+
+//                     <ul className="space-y-2">
+//                       {col.items.map((item) => (
+//                         <li key={item}>
+//                           <a
+//                             href="#"
+//                             className={`text-sm px-3 py-1.5 rounded-full inline-block transition ${
+//                               dark
+//                                 ? "text-gray-300 hover:text-white "
+//                                 : "text-gray-800 hover:text-black "
+//                             }`}
+//                           >
+//                             {item}
+//                           </a>
+//                         </li>
+//                       ))}
+//                     </ul>
+//                   </div>
+//                 ))}
+//               </div>
 //             </div>
-//           </div>
-//           <div
-//             className={`border-t ${dark ? "border-gray-800" : "border-gray-200"} px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
+
+//             {/* Security */}
+//            <div
+//             className={`border-t ${dark ? "border-gray-950" : "border-gray-200"} px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
 //           >
 //             <p className="text-sm font-medium text-center">
 //               Backed by enterprise-grade security
@@ -289,63 +306,67 @@
 //                 </p>
 //               </div>
 //             </div>
-//           </div>
-//           <div
-//             className={`border-t ${dark ? "border-gray-800" : "border-gray-200"}  px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4`}
-//           >
-//             {/* Status */}
-//             <div className="flex-1">
-//               {/* <span className="size-2 p-1 rounded-4xl bg-green-500" ></span> */}
-//               All systems normal
-//             </div>
+//              </div>
 
-//             {/* Copyright */}
-//             <div className="flex-1 text-center text-sm text-gray-500">
-//               © 2026 Mintlify, Inc.
-//             </div>
+//             {/* Bottom */}
+//             <div
+//               className={`border-t px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4 ${
+//                 dark ? "border-gray-950" : "border-gray-200"
+//               }`}
+//             >
+//               <div className="flex-1">All systems normal</div>
 
-//             {/* Theme Switcher (UI only) */}
-//             <div className="flex items-center justify-center">
 //               <div
-//                 onClick={() => setDark(!dark)}
-//                 className="relative flex items-center bg-gray-100 border border-gray-200 rounded-full p-1 w-[110px] h-10 cursor-pointer"
+//                 className={`flex-1 text-center text-sm ${
+//                   dark ? "text-gray-400" : "text-gray-500"
+//                 }`}
 //               >
-//                 {/* Slider */}
+//                 © 2026 Mintlify, Inc.
+//               </div>
+
+//               {/* Toggle */}
+//               <div className="flex items-center justify-center">
 //                 <div
-//                   className={`absolute top-1 h-8 w-[48px] rounded-full shadow-md transition-all duration-300 ${
+//                   onClick={() => setDark(!dark)}
+//                   className={`relative flex items-center rounded-full p-1 w-[110px] h-10 cursor-pointer transition ${
 //                     dark
-//                       ? "translate-x-[52px] bg-black"
-//                       : "translate-x-0 bg-white"
+//                       ? "bg-gray-950 border border-gray-700"
+//                       : "bg-gray-100 border border-gray-200"
 //                   }`}
-//                 />
-
-//                 {/* Sun */}
-//                 <div className="relative z-10 flex-1 flex items-center justify-center">
-//                   <Sun
-//                     size={14}
-//                     className={`transition-colors ${
-//                       dark ? "text-gray-400" : "text-black"
+//                 >
+//                   <div
+//                     className={`absolute top-1 h-8 w-[48px] rounded-full shadow-md transition-all duration-300 ${
+//                       dark
+//                         ? "translate-x-[52px] bg-white"
+//                         : "translate-x-0 bg-black"
 //                     }`}
 //                   />
-//                 </div>
 
-//                 {/* Moon */}
-//                 <div className="relative z-10 flex-1 flex items-center justify-center">
-//                   <Moon
-//                     size={14}
-//                     className={`transition-colors ${
-//                       dark ? "text-white" : "text-gray-400"
-//                     }`}
-//                   />
+//                   <div className="relative z-10 flex-1 flex items-center justify-center">
+//                     <Sun
+//                       size={14}
+//                       className={dark ? "text-gray-500" : "text-white"}
+//                     />
+//                   </div>
+
+//                   <div className="relative z-10 flex-1 flex items-center justify-center">
+//                     <Moon
+//                       size={14}
+//                       className={dark ? "text-black" : "text-gray-500"}
+//                     />
+//                   </div>
 //                 </div>
 //               </div>
 //             </div>
+
 //           </div>
 //         </div>
 
-//         {/* RIGHT EMPTY DIV */}
+//         {/* RIGHT BORDER */}
 //         <div
-//           className={`hidden md:block w-45  border-l ${dark ? "border-gray-800" : "border-gray-200"}`}
+//           className={`hidden md:block w-[200px] ${
+//             dark ? "border-l border-gray-950" : "border-l border-gray-200"
+//           }`}
 //         />
 //       </div>
 //     </section>
@@ -353,6 +374,7 @@
 // };
 
 // export default FooterLinks;
+
 
 
 import React from "react";
@@ -365,19 +387,14 @@ const FooterLinks = () => {
 
   return (
     <section
-      className={`relative z-20 border-t transition-colors duration-300 ${
-        dark
-          ? "bg-black text-white border-gray-950"
-          : "bg-gray-100 text-black border-gray-200"
-      }`}
+      className={`relative z-20 border-t transition-colors duration-300 bg-bgray border-primary 
+      `}
     >
       <div className="w-full flex items-stretch">
         
         {/* LEFT BORDER */}
         <div
-          className={`hidden md:block w-[200px] ${
-            dark ? "border-r border-gray-950" : "border-r border-gray-200"
-          }`}
+          className={`hidden md:block w-[200px] border-primary border-r `}
         />
 
         {/* CENTER */}
@@ -386,9 +403,7 @@ const FooterLinks = () => {
 
             {/* Top Section */}
             <div
-              className={`mb-10 border-b px-9 pt-10 pb-3 flex items-center justify-between ${
-                dark ? "border-gray-950" : "border-gray-200"
-              }`}
+              className={`mb-10 border-b px-9 pt-10 pb-3 flex items-center justify-between border-primary`}
             >
               <Link href="/" className="flex items-center gap-2">
                 <svg
@@ -450,14 +465,14 @@ const FooterLinks = () => {
 
               {/* Social Buttons */}
               <div className="flex items-center gap-2">
-                  <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+                  <button className={`w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 p-1`}>
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-5 h-5"
+                  className="icon-small"
                 >
                   <path
                     d="M11.4595 11.5714V18.889H8.06641V6.24428H11.2672L11.3238 9.39982H11.1202C11.452 8.3442 11.9534 7.52987 12.6244 6.95682C13.3031 6.37623 14.1777 6.08594 15.2484 6.08594C16.1231 6.08594 16.8846 6.27821 17.5331 6.66275C18.189 7.03976 18.6942 7.58642 19.0486 8.30273C19.4105 9.0115 19.5915 9.85977 19.5915 10.8475V18.889H16.1985V11.4356C16.1985 10.6515 15.9949 10.0369 15.5877 9.59209C15.1881 9.14722 14.6301 8.92479 13.9138 8.92479C13.4388 8.92479 13.0128 9.03035 12.6358 9.24148C12.2663 9.44506 11.976 9.74289 11.7649 10.135C11.5613 10.5271 11.4595 11.0059 11.4595 11.5714Z"
@@ -471,14 +486,14 @@ const FooterLinks = () => {
               </button>
 
               {/* Repeat other buttons with same classes */}
-              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 p-1`}>
                 <svg
                   width="22"
                   height="20"
                   viewBox="0 0 22 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+               className="icon-small"
                 >
                   <mask
                     id="mask0_9208_2830"
@@ -505,7 +520,7 @@ const FooterLinks = () => {
 
               
 
-              <button className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? 'bg-gray-800' : 'bg-gray-100'} p-1`}>
+              <button className={`w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 p-1`}>
                 <svg
                   width="22"
                   height="20"
@@ -513,7 +528,7 @@ const FooterLinks = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
-                  className="text-muted opacity-70 group-hover/social-link:opacity-100 transition-opacity duration-300"
+                  className="icon-small"
                 >
                   <mask
                     id="mask0_9208_2837"
@@ -587,9 +602,7 @@ const FooterLinks = () => {
                 ].map((col) => (
                   <div key={col.title}>
                     <h3
-                      className={`mb-3 uppercase text-xs tracking-wider font-medium ${
-                        dark ? "text-gray-400" : "text-gray-500"
-                      }`}
+                      className={`mb-3 uppercase text-xs tracking-wider font-medium text-gray-500`}
                     >
                       {col.title}
                     </h3>
@@ -599,11 +612,8 @@ const FooterLinks = () => {
                         <li key={item}>
                           <a
                             href="#"
-                            className={`text-sm px-3 py-1.5 rounded-full inline-block transition ${
-                              dark
-                                ? "text-gray-300 hover:text-white "
-                                : "text-gray-800 hover:text-black "
-                            }`}
+                            className={`text-sm px-3 py-1.5 rounded-full inline-block transition text-gray-800
+                            `}
                           >
                             {item}
                           </a>
@@ -617,7 +627,7 @@ const FooterLinks = () => {
 
             {/* Security */}
            <div
-            className={`border-t ${dark ? "border-gray-950" : "border-gray-200"} px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
+            className={`border-t border-secondary px-6 md:px-8 py-6 flex flex-col sm:flex-row items-center gap-6`}
           >
             <p className="text-sm font-medium text-center">
               Backed by enterprise-grade security
@@ -667,16 +677,14 @@ const FooterLinks = () => {
 
             {/* Bottom */}
             <div
-              className={`border-t px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4 ${
-                dark ? "border-gray-950" : "border-gray-200"
-              }`}
+              className={`border-t px-6 sm:px-8 py-6 flex flex-col sm:flex-row items-center gap-4 border-primary justify-between`}
             >
               <div className="flex-1">All systems normal</div>
 
               <div
-                className={`flex-1 text-center text-sm ${
-                  dark ? "text-gray-400" : "text-gray-500"
-                }`}
+                className={`flex-1 text-center text-sm
+                  text-gray-500
+                `}
               >
                 © 2026 Mintlify, Inc.
               </div>
@@ -721,9 +729,9 @@ const FooterLinks = () => {
 
         {/* RIGHT BORDER */}
         <div
-          className={`hidden md:block w-[200px] ${
-            dark ? "border-l border-gray-950" : "border-l border-gray-200"
-          }`}
+          className={`hidden md:block w-[200px] 
+border-l border-primary
+          `}
         />
       </div>
     </section>

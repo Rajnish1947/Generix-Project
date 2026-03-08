@@ -60,9 +60,8 @@ const HelpCTA = () => {
 
   return (
     <section
-      className={`relative py-28 px-6 transition-colors duration-300 ${
-        dark ? " text-primary" : "bg-gray-50 text-gray-900"
-      }`}
+      className={`relative py-28 px-6 transition-colors duration-300 bg-bgray text-gray-800
+      `}
     >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
@@ -70,7 +69,7 @@ const HelpCTA = () => {
           Need help?
         </h3>
 
-        <p className={`help-subtext ${dark ? "text-white/70" : "text-gray-600"}`}>
+        <p className={`help-subtext text-gray-800 `}>
           Join the leaders of tomorrow to future proof your documentation today.
         </p>
 
@@ -84,28 +83,24 @@ const HelpCTA = () => {
               className={`
                 flex flex-col items-center text-center gap-6 p-10
                 transition-colors duration-300
-                ${dark ? "border-gray-800" : "border-gray-200"}
+                border-primary
                 ${i < 2 ? "sm:border-b" : ""}
                 ${i % 2 === 0 ? "sm:border-r" : ""}
               `}
             >
               {/* Icon */}
               <div
-                className={`p-3 rounded-2xl border shadow-sm ${
-                  dark
-                    ? " border-gray-700"
-                    : " border-gray-200"
-                }`}
+                className={`p-3 rounded-2xl border shadow-sm border-secondary `}
               >
                 {item.icon}
               </div>
 
               {/* Text */}
               <div>
-                <h4 className={`help-card-title ${dark ? "text-white" : "text-gray-900"}`}>
+                <h4 className={`help-card-title text-gray-800`}>
                   {item.title}
                 </h4>
-                <p className={` help-card-desc ${dark ? "text-gray-400" : "text-gray-600"}`}>
+                <p className={` help-card-desc text-gray-700`}>
                   {item.desc}
                 </p>
               </div>

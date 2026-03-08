@@ -21,10 +21,10 @@ export default function BlogDetail() {
   const relatedBlogs = blogData.blogs.filter((item) => item.slug !== slug);
 
   return (
-    <div className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div className={`bg-primary text-secondary`}>
       <Navbar blogpage={true} />
 
-      <article className="container mx-auto px-6 my-13  py-16 max-w-4xl">
+      <article className="container mx-auto px-6  my-13  py-16 max-w-4xl">
         {/* Back */}
         <Link
           href="/blog"
