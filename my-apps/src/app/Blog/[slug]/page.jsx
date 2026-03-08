@@ -39,7 +39,7 @@ export default function BlogDetail() {
         {/* Header */}
         <div className="mt-6 max-w-3xl">
           <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider">
-            <span className="text-green-600">{blog.category}</span>
+            <span className="text-green-700">{blog.category}</span>
             <span>/</span>
             <span className="text-gray-500">{blog.readTime}</span>
           </div>
@@ -47,13 +47,13 @@ export default function BlogDetail() {
           <h1 className="text-4xl max-w-xl font-semibold leading-tight mt-3">
             {blog.title}
           </h1>
-          <p className="text-gray-500 font-mono text-xs uppercase mt-4">
+          <p className="text-gray-800 font-mono text-xs uppercase mt-4">
             {blog.publishedAt}
           </p>
         </div>
 
         <hr
-          className={`my-10 ${dark ? "border-gray-800" : "border-gray-200"}`}
+          className={`my-10 border-secondary`}
         />
 
         <div className=" flex flex-col-reverse md:flex-row  lg:flex gap-16">
@@ -70,12 +70,12 @@ export default function BlogDetail() {
 
             {/* Summary */}
             <div
-              className={`${dark ? "bg-black text-white" : "bg-gray-100 text-gray-800"} p-6 rounded-2xl mb-10`}
+              className={`bg-bgray text-gray-800 p-6 rounded-2xl mb-10`}
             >
-              <p className="text-xs font-mono uppercase text-green-600 mb-2">
+              <p className="text-xs font-mono uppercase text-green-700 mb-2">
                 Summary
               </p>
-              <p className={`${dark ? "text-white" : "text-gray-700"}`}>
+              <p className={`text-gray-800`}>
                 {blog.description}
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function BlogDetail() {
                       />
                     </div>
                     <div className="mt-4">
-                      <span className="text-xs font-mono uppercase text-green-600">
+                      <span className="text-xs font-mono uppercase text-green-700">
                         {item.category}
                       </span>
                       <h4 className="text-lg font-medium mt-2">{item.title}</h4>
@@ -134,7 +134,7 @@ export default function BlogDetail() {
               />
               <div>
                 <p className="font-medium">{blog.author.name}</p>
-                <p className="text-sm text-gray-500">{blog.author.role}</p>
+                <p className="text-sm text-gray-800">{blog.author.role}</p>
               </div>
             </div>
 
@@ -145,7 +145,7 @@ export default function BlogDetail() {
             <div className="flex gap-3">
               {/* All buttons perfectly centered */}
               <button
-                className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? "bg-gray-800" : "bg-gray-100"} p-1`}
+                className={`w-8 h-8 flex items-center justify-center rounded-full bg-bgray p-1`}
               >
                 <svg
                   width="21"
@@ -153,7 +153,7 @@ export default function BlogDetail() {
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+                  className="text-secondary group-hover:text-text-main transition-colors duration-100 w-4 h-4"
                 >
                   <path
                     d="M11.4595 11.5714V18.889H8.06641V6.24428H11.2672L11.3238 9.39982H11.1202C11.452 8.3442 11.9534 7.52987 12.6244 6.95682C13.3031 6.37623 14.1777 6.08594 15.2484 6.08594C16.1231 6.08594 16.8846 6.27821 17.5331 6.66275C18.189 7.03976 18.6942 7.58642 19.0486 8.30273C19.4105 9.0115 19.5915 9.85977 19.5915 10.8475V18.889H16.1985V11.4356C16.1985 10.6515 15.9949 10.0369 15.5877 9.59209C15.1881 9.14722 14.6301 8.92479 13.9138 8.92479C13.4388 8.92479 13.0128 9.03035 12.6358 9.24148C12.2663 9.44506 11.976 9.74289 11.7649 10.135C11.5613 10.5271 11.4595 11.0059 11.4595 11.5714Z"
@@ -168,7 +168,7 @@ export default function BlogDetail() {
 
               {/* Repeat other buttons with same classes */}
               <button
-                className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? "bg-gray-800" : "bg-gray-100"} p-1`}
+                className={`w-8 h-8 flex items-center justify-center rounded-full bg-bgray p-1`}
               >
                 <svg
                   width="22"
@@ -176,7 +176,7 @@ export default function BlogDetail() {
                   viewBox="0 0 22 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+                  className="text-secondary group-hover:text-text-main transition-colors duration-100 w-4 h-4"
                 >
                   <mask
                     id="mask0_9208_2830"
@@ -202,7 +202,7 @@ export default function BlogDetail() {
               </button>
 
               <button
-                className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? "bg-gray-800" : "bg-gray-100"} p-1`}
+                className={`w-8 h-8 flex items-center justify-center rounded-full bg-bgray p-1`}
               >
                 <svg
                   width="16"
@@ -210,7 +210,7 @@ export default function BlogDetail() {
                   viewBox="0 0 16 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+                  className="text-secondary group-hover:text-text-main transition-colors duration-100 w-4 h-4"
                 >
                   <path
                     d="M0 0V16H16V0H0ZM8.5 9.5V12.5H7.5V9.5L4 3.5H5.2L8 8.3L10.8 3.5H12L8.5 9.5Z"
@@ -220,7 +220,7 @@ export default function BlogDetail() {
               </button>
 
               <button
-                className={`w-8 h-8 flex items-center justify-center rounded-full ${dark ? "bg-gray-800" : "bg-gray-100"} p-1`}
+                className={`w-8 h-8 flex items-center  justify-center rounded-full bg-bgray p-1`}
               >
                 <svg
                   width="14"
@@ -228,7 +228,7 @@ export default function BlogDetail() {
                   viewBox="0 0 14 15"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="shrink-0 select-none text-muted group-hover:text-text-main transition-colors duration-100 w-4 h-4"
+                  className="shrink-0 select-none group-hover:text-text-main text-secondary transition-colors duration-100 w-4 h-4"
                 >
                   <path
                     d="M6.50954 5.5257C6.27419 5.65053 6.05322 5.81215 5.85535 6.01072L5.84758 6.0185C4.77346 7.09261 4.77346 8.83327 5.84758 9.90738L7.53924 11.5991C8.61336 12.6732 10.354 12.6732 11.4281 11.5991L11.4359 11.5913C12.51 10.5172 12.51 8.7765 11.4359 7.70238L10.8429 7.10941"

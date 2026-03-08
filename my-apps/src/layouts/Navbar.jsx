@@ -186,7 +186,7 @@ ${
              }`}
           >
             {/* {open ? <X size={28} /> : <Menu size={28} />} */}
-            {open ? <X size={28} /> : <Equal size={28} />}
+            {open ? <X size={28} /> : <Equal size={28} className="text-secondry"/>}
           </button>
         </div>
       </nav>

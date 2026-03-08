@@ -305,8 +305,8 @@ export default function TrustedBy() {
        
         <div className="relative overflow-hidden">
           {/* Fade Effect Left + Right */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24  z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10" />
 
           <div
             ref={scrollRef}
@@ -315,7 +315,7 @@ export default function TrustedBy() {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center min-w-[160px] h-16 text-gray-500"
+                className="flex items-center justify-center min-w-[160px] h-16 text-secondary"
               >
                 {logo.icon}
               </div>

@@ -325,15 +325,11 @@ export default function PricingComparison() {
                 <button
                   key={plan.name}
                   onClick={() => setSelectedPlan(plan.name)}
-                  className={`relative py-3 text-[15px] font-medium transition ${
-                    selectedPlan === plan.name
-                      ? dark
-                        ? "text-white bg-black"
-                        : "text-black bg-white"
-                      : dark
-                        ? "text-gray-400 bg-black"
-                        : "text-gray-500 bg-white"
-                  }`}
+                  className={`relative py-3 text-sm font-medium transition ${
+    selectedPlan === plan.name
+      ? "text-secondary bg-primary"
+      : "text-gray-800 bg-primary"
+  }`}
                 >
                   {plan.name}
 
@@ -350,14 +346,10 @@ export default function PricingComparison() {
             {/* CTA BUTTON */}
             <button
               className={`px-4 py-2 rounded-full text-sm font-semibold transition ${
-                activePlan?.bgcolor
-                  ? dark
-                    ? "bg-white text-black"
-                    : "bg-black text-white"
-                  : dark
-                    ? "border border-gray-700 text-white"
-                    : "border border-gray-300 text-black"
-              }`}
+  activePlan?.bgcolor
+    ? "bg-secondary text-primary"
+    : "border border-primary text-secondary"
+}`}
             >
               {activePlan?.text}
             </button>
@@ -371,21 +363,17 @@ export default function PricingComparison() {
           <div key={plan.name} className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-2">
               {plan.icon}
-              <span className="font-medium dark:text-gray-200">
+              <span className="font-medium text-gray-800">
                 {plan.name}
               </span>
             </div>
 
             <button
-              className={`border ${dark ? "border-gray-900" : "border-gray-200"} font-semibold px-4 py-2 rounded-full text-[15px] ${
-                plan.bgcolor
-                  ? dark
-                    ? "bg-white text-black"
-                    : "bg-black text-white"
-                  : dark
-                    ? "text-white border-gray-700"
-                    : "text-black border-gray-200"
-              }`}
+              className={`border border-secondary font-semibold px-4 py-2 rounded-full text-[15px]  ${
+    plan.bgcolor
+      ? "bg-secondary text-primary"
+      : "text-secondary border border-primary"
+  }`}
             >
               {plan.text}
             </button>
@@ -399,7 +387,7 @@ export default function PricingComparison() {
           <div
             className={` relative md:sticky top-[200px]   text-secondary bg-primary`}
           >
-            <h3 className="text-[15px] relative z-40 flex font-semibold py-3 gap-2 px-2 dark:text-gray-200">
+            <h3 className="text-[15px] relative z-40 flex font-semibold py-3 gap-2 px-2 text-gray-800">
               {group.icon} {group.category}
             </h3>
           </div>

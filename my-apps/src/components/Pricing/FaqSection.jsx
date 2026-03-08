@@ -71,7 +71,7 @@ export default function FaqSection() {
 
   return (
     <section className="pb-20 mx-auto w-full max-w-5xl px-6">
-      <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-center text-green-600">
+      <p className="text-xs font-semibold tracking-widest uppercase mb-4 text-center text-green-700">
         FAQ
       </p>
 
@@ -87,9 +87,8 @@ export default function FaqSection() {
           return (
             <div
               key={index}
-              className={`border ${
-                dark ? "border-gray-900" : "border-gray-200"
-              } rounded-2xl overflow-hidden shadow-sm`}
+              className={`border 
+                border-secondary rounded-2xl overflow-hidden shadow-sm`}
             >
               <button
                 onClick={() => toggle(index)}
@@ -115,9 +114,9 @@ export default function FaqSection() {
               </button>
 
               <div
-                className={`px-5 pb-4 text-sm transition-all duration-300 ease-in-out overflow-hidden ${
-                  dark ? "text-gray-300" : "text-gray-600"
-                } ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+                className={`px-5 pb-4 text-sm transition-all duration-300 ease-in-out overflow-hidden 
+                  text-gray-800
+                ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
               >
                 <p className="pt-1">{faq.answer}</p>
               </div>

@@ -17,10 +17,10 @@ export default function TrustedCustomers() {
     <section className="py-20">
       {/* Header */}
       <div className=" max-w-[72rem] mx-auto px-6 my-10">
-        <p className="uppercase font-mono text-xs tracking-wide text-gray-500">
+        <p className="uppercase font-mono text-xs tracking-wide text-gray-800">
           Trusted by the best
         </p>
-        <h2 className="text-xl font-medium mt-2">
+        <h2 className="text-xl text-gray-900 font-medium mt-2">
           These teams ship to millions of users every day
         </h2>
       </div>
@@ -53,7 +53,7 @@ export default function TrustedCustomers() {
           return (
             <div
               key={index}
-              className={`group rounded-3xl overflow-hidden bg-gray-100/60 transition hover:bg-gray-100
+              className={`group rounded-3xl overflow-hidden bg-bgray transition hover:bg-gray-100
         ${isFeatured ? "md:col-span-2 lg:col-span-2" : ""}
       `}
             >
@@ -69,10 +69,10 @@ export default function TrustedCustomers() {
 
                       {customer.title && (
                         <div className="mb-3">
-                          <p className="text-3xl font-medium">
+                          <p className="text-3xl text-gray-800 font-medium">
                             {customer.title}
                           </p>
-                          <p className="text-sm text-gray-500">
+                          <p className="text-sm text-gray-800">
                             {customer.subtitle}
                           </p>
                         </div>
@@ -124,7 +124,7 @@ export default function TrustedCustomers() {
 
                   {/* Content */}
                   <div className="p-5 flex-1">
-                    <p className="text-gray-500 line-clamp-3">
+                    <p className="text-gray-800 line-clamp-3">
                       {customer.description}
                     </p>
                   </div>

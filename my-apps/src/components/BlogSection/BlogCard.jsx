@@ -33,7 +33,7 @@ export default function BlogCard() {
                             ${
                                 activeTab === category
                                     ? "bg-black text-white"
-                                    : "text-gray-500 hover:text-gray-900"
+                                    : "text-gray-800 hover:text-gray-900"
                             }
                         `}
                     >
@@ -73,7 +73,7 @@ export default function BlogCard() {
                             {/* Content */}
                             <div className="flex flex-col gap-2 flex-grow">
 
-                                <span className="text-green-800 text-xs uppercase font-mono">
+                                <span className="text-green-700 text-xs uppercase font-mono">
                                     {blog.category}
                                 </span>
 
@@ -81,7 +81,7 @@ export default function BlogCard() {
                                     {blog.title}
                                 </h3>
 
-                                <p className="text-gray-500 text-sm line-clamp-2">
+                                <p className="text-gray-800 text-sm line-clamp-2">
                                     {blog.description}
                                 </p>
 
@@ -102,7 +102,7 @@ export default function BlogCard() {
                                         {blog.author.name}
                                     </p>
 
-                                    <p className="text-sm text-gray-500">
+                                    <p className="text-sm text-gray-400">
                                         {blog.author.role}
                                     </p>
 

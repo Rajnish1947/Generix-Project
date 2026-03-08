@@ -137,136 +137,136 @@ const PricingSection = () => {
     },
   ];
   return (
-  
-
     <section
-  className={`pt-12 sm:pt-16 pb-16 sm:pb-24 max-w-[66rem] mx-auto px-4 sm:px-6 transition-colors duration-300 text-secondary bg-primary`}
->
-  {/* Header */}
-  <div className="text-center py-8 sm:py-12">
-    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
-      Pricing on your terms
-    </h1>
-    <p className={`${dark ? "text-gray-400" : "text-gray-500"} text-sm sm:text-base`}>
-      Get started for free with a 14 day trial.
-    </p>
-    <p className={`${dark ? "text-gray-400" : "text-gray-500"} text-sm sm:text-base`}>
-      No credit card required.
-    </p>
-  </div>
+      className={`pt-12 sm:pt-16 pb-16 sm:pb-24 max-w-[66rem] mx-auto px-4 sm:px-6 transition-colors duration-300 text-secondary bg-primary`}
+    >
+      {/* Header */}
+      <div className="text-center py-8 sm:py-12">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
+          Pricing on your terms
+        </h1>
+        <p className={`text-gray-800 text-sm sm:text-base`}>
+          Get started for free with a 14 day trial.
+        </p>
+        <p className={`text-gray-800 text-sm sm:text-base`}>
+          No credit card required.
+        </p>
+      </div>
 
-  {/* Toggle */}
-  <div className="flex flex-col items-center gap-3 mb-8 sm:mb-12">
-    <div className="flex items-center gap-4">
-      <span className="font-medium text-sm sm:text-base">Monthly</span>
-      <button
-        onClick={() => setYearly(!yearly)}
-        className={`w-10 h-6 rounded-full relative transition bg-primary`}
-      >
-        <span
-          className={`absolute top-1 left-1 w-4 h-4 rounded-full transition  bg-primary
-         ${yearly ? "translate-x-4" : ""}`}
-        />
-      </button>
-      <span className="font-medium text-sm sm:text-base">Yearly</span>
-    </div>
-    <p className={`text-sm sm:text-base text-[--color-accent] text-center`}>
-      Save up to 15% with annual billing
-    </p>
-  </div>
-
-  {/* Plans */}
-  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-    {plans.map((plan, index) => {
-      const price =
-        plan.price !== null
-          ? yearly
-            ? Math.round(plan.price * 12 * 0.85)
-            : plan.price
-          : null;
-
-      return (
-        <div
-          key={index}
-          className={`p-4 sm:p-6 rounded-3xl flex flex-col transition-colors duration-300 ${
-            plan.highlight
-              ? dark
-                ? "bg-black/90 border-gray-900"
-                : "bg-gray-100 border-gray-200"
-              : dark
-              ? "border-gray-800 bg-black"
-              : "border-gray-200 bg-white"
-          }`}
-        >
-          {/* Header */}
-          <h3 className="text-sm sm:text-base font-medium flex justify-between items-center gap-2 mb-2 sm:mb-3">
-            <div className="flex gap-2 items-center">
-              {plan.icon}
-              {plan.name}
-            </div>
-            {plan.text && (
-              <div className={`text-white ${dark ? "bg-green-600" : "bg-green-900"} rounded-2xl py-1 px-3 text-xs sm:text-sm`}>
-                {plan.text}
-              </div>
-            )}
-          </h3>
-
-          {/* Price */}
-          <div className="mb-4 sm:mb-6">
-            {price !== null ? (
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
-                ${price}
-                <span className={`text-sm sm:text-base font-normal ${dark ? "text-gray-400" : "text-gray-500"}`}>
-                  /{yearly ? "year" : "month"}
-                </span>
-              </h2>
-            ) : (
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">Contact us</h2>
-            )}
-            <p className={`text-sm sm:text-base ${dark ? "text-gray-400" : "text-gray-500"}`}>
-              {plan.description}
-            </p>
-          </div>
-
-          <hr className={`my-2 border ${dark ? "border-gray-800" : "border-gray-200"}`} />
-
-          {/* Features */}
-          <ul className="flex-1 space-y-2 sm:space-y-3 mt-3 mb-8 sm:mb-12 text-sm sm:text-base">
-            {plan.features.map((feature, i) => (
-              <li key={i} className="flex items-center gap-2">
-                {index !== 0 && i === 0 ? (
-                  plan.PlusIcon
-                ) : (
-                  <span className={`${dark ? "text-gray-600" : "text-gray-200"}`}>
-                    <svg viewBox="0 0 16 16" className="w-4 h-4" fill="currentColor">
-                      <path d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.843 5.708L7.593 11.208C7.457 11.384 7.25 11.491 7.028 11.499C7.018 11.499 7.009 11.499 7 11.499C6.788 11.499 6.585 11.409 6.442 11.251L4.192 8.751C3.915 8.443 3.94 7.969 4.248 7.691C4.557 7.415 5.029 7.439 5.308 7.747L6.956 9.579L10.657 4.79C10.91 4.462 11.382 4.402 11.709 4.655C12.037 4.908 12.097 5.379 11.844 5.707Z" />
-                    </svg>
-                  </span>
-                )}
-                <span>{feature}</span>
-              </li>
-            ))}
-          </ul>
-
-          {/* Button */}
+      {/* Toggle */}
+      <div className="flex flex-col items-center gap-3 mb-8 sm:mb-12">
+        <div className="flex items-center gap-4">
+          <span className="font-medium text-sm sm:text-base">Monthly</span>
           <button
-            className={`w-full py-2 sm:py-3 rounded-full font-medium transition ${
-              plan.highlight
-                ? dark
-                  ? "bg-white text-black hover:bg-gray-200"
-                  : "bg-black text-white hover:bg-black/80"
-                : dark
-                ? "border border-gray-700 hover:bg-gray-900"
-                : "border border-gray-300 hover:bg-gray-100"
-            }`}
+            onClick={() => setYearly(!yearly)}
+            className={`w-10 h-6 rounded-full relative transition bg-secondary text-primary `}
           >
-            {plan.button}
+            <span
+              className={`absolute top-1 left-1 w-4 h-4 rounded-full transition  bg-primary text-primary
+         ${yearly ? "translate-x-4" : ""}`}
+            />
           </button>
+          <span className="font-medium text-sm sm:text-base">Yearly</span>
         </div>
-      );
-    })}
-  </div>
-</section>
+        <p className={`text-sm sm:text-base text-[--color-accent] text-center`}>
+          Save up to 15% with annual billing
+        </p>
+      </div>
+
+      {/* Plans */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {plans.map((plan, index) => {
+          const price =
+            plan.price !== null
+              ? yearly
+                ? Math.round(plan.price * 12 * 0.85)
+                : plan.price
+              : null;
+
+          return (
+            <div
+              key={index}
+              className={`p-4 sm:p-6 rounded-3xl flex flex-col border transition-colors duration-300 ${
+                plan.highlight
+                  ? "bg-bgray border-primary "
+                  : "bg-primary border-primary  "
+              }`}
+            >
+              {/* Header */}
+              <h3 className="text-sm sm:text-sm font-medium flex justify-between items-center gap-2 mb-2 sm:mb-3">
+                <div className="flex gap-2 items-center">
+                  {plan.icon}
+                  {plan.name}
+                </div>
+                {plan.text && (
+                  <div
+                    className={`text-white bg-green-700 rounded-2xl py-1 px-3 text-xs sm:text-sm`}
+                  >
+                    {plan.text}
+                  </div>
+                )}
+              </h3>
+
+              {/* Price */}
+              <div className="mb-4 sm:mb-6">
+                {price !== null ? (
+                  <h2 className="text-xl font-semibold">
+                    ${price}
+                    <span
+                      className={`text-sm sm:text-base font-normal text-gray-800`}
+                    >
+                      /{yearly ? "year" : "month"}
+                    </span>
+                  </h2>
+                ) : (
+                  <h2 className="text-xl sm:text-base md:text-xl font-semibold">
+                    Contact us
+                  </h2>
+                )}
+                <p className={`text-sm sm:text-base text-gray-500`}>
+                  {plan.description}
+                </p>
+              </div>
+
+              <hr className={`my-2 border border-primary `} />
+
+              {/* Features */}
+              <ul className="flex-1 space-y-2 sm:space-y-3 mt-3 mb-8 sm:mb-12 text-sm sm:text-base">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    {index !== 0 && i === 0 ? (
+                      plan.PlusIcon
+                    ) : (
+                      <span className={`text-gray-200`}>
+                        <svg
+                          viewBox="0 0 16 16"
+                          className="w-4 h-4"
+                          fill="currentColor"
+                        >
+                          <path d="M8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C12.411 16 16 12.411 16 8C16 3.589 12.411 0 8 0ZM11.843 5.708L7.593 11.208C7.457 11.384 7.25 11.491 7.028 11.499C7.018 11.499 7.009 11.499 7 11.499C6.788 11.499 6.585 11.409 6.442 11.251L4.192 8.751C3.915 8.443 3.94 7.969 4.248 7.691C4.557 7.415 5.029 7.439 5.308 7.747L6.956 9.579L10.657 4.79C10.91 4.462 11.382 4.402 11.709 4.655C12.037 4.908 12.097 5.379 11.844 5.707Z" />
+                        </svg>
+                      </span>
+                    )}
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Button */}
+              <button
+                className={`w-full py-2 sm:py-3 rounded-full font-medium transition ${
+                  plan.highlight
+                    ? "bg-secondary text-primary hover:opacity-90"
+                    : "border border-primary hover:bg-gray-100"
+                }`}
+              >
+                {plan.button}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

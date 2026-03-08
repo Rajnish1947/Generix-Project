@@ -19,14 +19,14 @@ const videos = [
 
 export default function VideoTestimonials() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-primary">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
-        <p className="uppercase font-mono text-xs tracking-[0.2em] text-gray-500 mb-3">
+        <p className="uppercase font-mono text-sm tracking-[0.2em] text-gray-500 mb-3">
           Video Testimonials
         </p>
-        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-12">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-12">
           Hear from our customers
         </h2>
 
