@@ -173,20 +173,10 @@ ${
             aria-label="Toggle menu"
             onClick={() => setOpen(!open)}
             className={`lg:hidden transition flex items-center justify-center
-             ${
-               blogpage
-                 ? dark
-                   ? " text-primary "
-                   : " text-secondary "
-                 : dark
-                   ? " text-primary "
-                   : scrolled
-                     ? " text-secondary"
-                     : "text-primary "
-             }`}
+           ${blogpage || scrolled ? "text-secondary" : "text-white"}`}
           >
             {/* {open ? <X size={28} /> : <Menu size={28} />} */}
-            {open ? <X size={28} /> : <Equal size={28} className="text-secondry"/>}
+            {open ? <X size={28} /> :<Equal size={28} className="text-current" />}
           </button>
         </div>
       </nav>

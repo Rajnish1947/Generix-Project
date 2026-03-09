@@ -125,7 +125,7 @@
   },
   {
     "name": "Cognition",
-    "featured": true,
+    
     "category": "AI",
     "description": "How Cognition scaled their documentation to mirror their product ethos.",
     "image": "https://www.mintlify.com/enterprise/anthropic.svg"

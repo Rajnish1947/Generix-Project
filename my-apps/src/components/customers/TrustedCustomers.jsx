@@ -80,7 +80,7 @@ export default function TrustedCustomers() {
                     </div>
 
                     <div className="py-3 w-full">
-                      <hr className="my-4" />
+                      <hr className="my-4 text-gray-800" />
                       <p className="text-gray-800 text-[16px] ">
                         {customer.description}
                       </p>

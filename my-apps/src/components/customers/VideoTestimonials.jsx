@@ -1,75 +1,225 @@
-"use client"
-import { Play } from "lucide-react"
+
+"use client";
+import { useState } from "react";
+import { Play, X } from "lucide-react";
 
 const videos = [
   {
     name: "Matt Palmer",
+    icons: (
+          <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="106"
+        height="26"
+        viewBox="0 0 106 26"
+        fill="none"
+        className="mb-4 text-white [&amp;_*]:fill-white w-28 h-fit"
+      >
+        <path
+          d="M105.207 9.08297V7.60255C105.207 7.34833 104.998 7.15392 104.729 7.15392H99.5395V4.28262C99.5395 4.0284 99.3302 3.83398 99.0607 3.83398H97.0875C96.8181 3.83398 96.6088 4.04333 96.6088 4.28262V7.15392H93.5433C93.2738 7.15392 93.0645 7.36326 93.0645 7.60255V9.08297C93.0645 9.33718 93.2738 9.5316 93.5433 9.5316H96.6088V13.9283C96.6088 17.293 98.1933 18.8482 101.604 18.8482H104.384C104.654 18.8482 104.863 18.6389 104.863 18.3996V16.9192C104.863 16.665 104.654 16.4706 104.384 16.4706H102.052C100.198 16.4706 99.5395 15.7378 99.5395 13.9133V9.54663H104.729C104.998 9.5316 105.207 9.32226 105.207 9.08297Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M89.6098 2.63672H86.9179C86.6488 2.63672 86.4395 2.84606 86.4395 3.08535V4.98456C86.4395 5.23877 86.6488 5.43319 86.9179 5.43319H89.6098C89.879 5.43319 90.0883 5.22385 90.0883 4.98456V3.08535C90.0734 2.83114 89.8641 2.63672 89.6098 2.63672Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M89.9682 16.469V7.60098C89.9682 7.34676 89.7588 7.15234 89.4896 7.15234H83.463C83.1938 7.15234 82.9844 7.36168 82.9844 7.60098V9.0814C82.9844 9.33561 83.1938 9.53003 83.463 9.53003H87.0371V16.469H83.463C83.1938 16.469 82.9844 16.6783 82.9844 16.9176V18.398C82.9844 18.6523 83.1938 18.8467 83.463 18.8467H93.6317C93.9011 18.8467 94.1105 18.6373 94.1105 18.398V16.9176C94.1105 16.6634 93.9011 16.469 93.6317 16.469H89.9682Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M80.7279 16.4696H77.6772V3.08535C77.6772 2.83114 77.4679 2.63672 77.1987 2.63672H71.2169C70.9477 2.63672 70.7384 2.84606 70.7384 3.08535V4.56587C70.7384 4.82009 70.9477 5.01451 71.2169 5.01451H74.7461V16.4696H70.7833C70.514 16.4696 70.3047 16.679 70.3047 16.9183V18.3987C70.3047 18.6529 70.514 18.8473 70.7833 18.8473H80.7279C80.9972 18.8473 81.2065 18.638 81.2065 18.3987V16.9183C81.2065 16.6641 80.9972 16.4696 80.7279 16.4696Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M64.488 6.92969C63.4711 6.92969 62.7383 7.15406 62.1701 7.69233L61.4673 8.36534H60.8242L60.5849 7.49802C60.5251 7.3036 60.3456 7.15406 60.1214 7.15406H58.7755C58.5062 7.15406 58.2969 7.3634 58.2969 7.60269V22.916C58.2969 23.1703 58.5062 23.3647 58.7755 23.3647H60.7494C61.0186 23.3647 61.228 23.1553 61.228 22.916V19.5961L60.9738 17.8166L61.6317 17.6671L62.3346 18.34C62.8879 18.8484 63.5609 19.1026 64.5628 19.1026C67.464 19.1026 69.2136 17.0987 69.2136 13.0161C69.1987 8.93357 67.464 6.92969 64.488 6.92969ZM63.516 16.6501C62.0355 16.6501 61.2131 15.8874 61.2131 14.4369V11.5656C61.2131 10.115 62.0206 9.35235 63.516 9.35235C65.3255 9.35235 66.148 10.4889 66.148 12.9863C66.133 15.5135 65.3255 16.6501 63.516 16.6501Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M49.9358 6.92969C46.1673 6.92969 44.1484 8.93357 44.1484 13.0012C44.1484 17.0838 46.1523 19.0877 49.8611 19.0877C52.7323 19.0877 54.5867 17.8913 55.0802 15.8426C55.1549 15.5584 54.9156 15.2893 54.6166 15.2893H52.822C52.6276 15.2893 52.4482 15.4089 52.3734 15.5884C52.0594 16.4707 51.1621 16.8894 49.9508 16.8894C48.0665 16.8894 47.1693 15.8575 47.0496 13.4499H55.2298C55.6784 8.94859 53.809 6.92969 49.9358 6.92969ZM47.1393 11.6254C47.4235 9.86078 48.3058 9.03824 49.9209 9.03824C51.6407 9.03824 52.4482 9.95053 52.4931 11.6254H47.1393Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M38.3168 7.6769L37.6438 8.3499H36.9709L36.7615 7.49751C36.7166 7.28806 36.5222 7.15355 36.2979 7.15355H31.991C31.7219 7.15355 31.5124 7.36289 31.5124 7.60218V9.0826C31.5124 9.33681 31.7219 9.53123 31.991 9.53123H34.5333V16.4702H31.5723C31.3031 16.4702 31.0938 16.6795 31.0938 16.9188V18.3992C31.0938 18.6535 31.3031 18.8479 31.5723 18.8479H40.889C41.1581 18.8479 41.3675 18.6385 41.3675 18.3992V16.9188C41.3675 16.6646 41.1581 16.4702 40.889 16.4702H37.4644V11.5651C37.4644 10.1893 38.2719 9.47143 39.8571 9.47143H42.4293C42.6984 9.47143 42.9078 9.26209 42.9078 9.0228V7.39273C42.9078 7.13852 42.6984 6.9441 42.4293 6.9441H40.9039C39.7823 6.92918 38.9 7.13852 38.3168 7.6769Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M0.00390625 2.11897C0.00390625 1.26046 0.699916 0.564453 1.55842 0.564453H8.81284C9.67135 0.564453 10.3674 1.26046 10.3674 2.11897V8.85521H1.55842C0.699916 8.85521 0.00390625 8.1592 0.00390625 7.3007V2.11897Z"
+          fill="#F26207"
+        ></path>
+        <path
+          d="M10.3652 8.85547H19.1742C20.0327 8.85547 20.7287 9.55148 20.7287 10.41V15.5917C20.7287 16.4502 20.0327 17.1462 19.1742 17.1462H10.3652V8.85547Z"
+          fill="#F26207"
+        ></path>
+        <path
+          d="M0.00390625 18.701C0.00390625 17.8425 0.699916 17.1465 1.55842 17.1465H10.3674V23.8827C10.3674 24.7412 9.67135 25.4372 8.81284 25.4372H1.55842C0.699916 25.4372 0.00390625 24.7412 0.00390625 23.8827V18.701Z"
+          fill="#F26207"
+        ></path>
+      </svg>
+    ),
     role: "Developer Relations at Replit",
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0",
     quote:
       "Having this interface that feels like Notion or Google Docs, but is backed by version control...",
-    image: "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Freplit-thumbnail.jpeg&w=1080&q=75",
+    image:
+      "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Freplit-thumbnail.jpeg&w=1080&q=75",
   },
   {
     name: "Paul Klein",
+    icons: (
+      <svg
+        width="227"
+        height="57"
+        viewBox="0 0 227 57"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="mb-4 text-white [&amp;_*]:fill-white w-28 h-fit"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M56.7786 0H-0.0629883V56.8416H56.7786V0ZM20.4158 15.7893V41.0522H29.7991C33.4081 41.0522 36.2953 38.1651 36.2953 34.5561V33.1125C36.2953 31.0553 35.3569 29.2508 33.9134 28.0599C34.9599 26.9411 35.5735 25.3893 35.5735 23.7291V22.2855C35.5735 18.6765 32.6863 15.7893 29.0774 15.7893H20.4158ZM29.7991 37.4433H24.0248V30.2253H29.7991C31.4232 30.2253 32.6863 31.4884 32.6863 33.1125V34.5561C32.6863 36.1801 31.4232 37.4433 29.7991 37.4433ZM29.0774 26.6163H24.0248V19.3983H29.0774C30.7014 19.3983 31.9646 20.6615 31.9646 22.2855V23.7291C31.9646 25.3532 30.7014 26.6163 29.0774 26.6163Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M72.5679 37.8947V19.2144H78.9722C81.6409 19.2144 83.7759 21.3493 83.7759 24.0179V25.0853C83.7759 26.3129 83.3223 27.4604 82.5481 28.2877C83.6156 29.1683 84.3096 30.5026 84.3096 32.0237V33.0912C84.3096 35.7598 82.1747 37.8947 79.506 37.8947H72.5679ZM75.2366 35.2261H79.506C80.707 35.2261 81.6409 34.292 81.6409 33.0912V32.0237C81.6409 30.8228 80.707 29.8889 79.506 29.8889H75.2366V35.2261ZM75.2366 27.2202H78.9722C80.1733 27.2202 81.1072 26.2862 81.1072 25.0853V24.0179C81.1072 22.817 80.1733 21.883 78.9722 21.883H75.2366V27.2202Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M87.0835 37.8946V24.2847H89.7522V26.3395L92.7677 24.2847H93.5418C95.9968 24.2847 98.0249 26.4196 98.0249 29.0882V30.1556H95.3562V29.0882C95.3562 27.914 94.6093 26.9533 93.5418 26.9533H93.3014L89.7522 29.3283V37.8946H87.0835Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M104.516 37.8946C101.848 37.8946 99.7129 35.7864 99.7129 33.1178V29.0882C99.7129 26.4196 101.848 24.2847 104.516 24.2847H106.651C109.32 24.2847 111.455 26.4196 111.455 29.0882V33.1178C111.455 35.7864 109.32 37.8946 106.651 37.8946H104.516ZM102.382 33.1178C102.382 34.3187 103.316 35.1993 104.516 35.226H106.651C107.852 35.226 108.786 34.3187 108.786 33.1178V29.0882C108.786 27.8873 107.852 26.9533 106.651 26.9533H104.516C103.316 26.9533 102.382 27.8873 102.382 29.0882V33.1178Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M116.317 37.8946L113.782 30.4225V24.2847H116.451V29.6219L117.785 33.865L120.054 26.6865H122.242L124.51 33.865L125.845 29.6219V24.2847H128.513V30.4225L125.978 37.8946H123.71L121.148 31.5166L118.586 37.8946H116.317Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M135.099 37.8946C132.511 37.8946 130.589 36.2134 130.589 33.9451V33.4113H133.258V33.9451C133.258 34.7991 133.952 35.4128 135.099 35.4128H137.527C138.782 35.4128 139.396 34.9057 139.396 34.1318C139.396 31.1163 130.776 33.0644 130.776 27.8873C130.776 25.7257 132.511 24.2847 135.046 24.2847H137.341C139.743 24.2847 141.61 26.0192 141.61 28.2609V28.5011H138.942V28.2609C138.942 27.407 138.275 26.7665 137.341 26.7665H135.046C133.925 26.7665 133.445 27.2201 133.445 27.8873C133.445 30.0489 142.064 28.6879 142.064 34.1318C142.064 36.3735 140.223 37.8946 137.527 37.8946H135.099Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M149.002 37.8946C146.36 37.8946 144.198 35.7064 144.198 33.0644V29.0882C144.198 26.4196 146.36 24.2847 149.002 24.2847H151.137C153.725 24.2847 155.807 26.2861 155.941 28.8213V31.7034H146.867V33.0644C146.867 34.2386 147.828 35.1993 149.002 35.1993H151.137C152.311 35.1993 153.272 34.2386 153.272 33.0644V32.7975H155.941V33.0644C155.941 35.7064 153.806 37.8946 151.137 37.8946H149.002ZM146.867 29.5685H153.272V29.0882C153.272 27.8873 152.337 26.9533 151.137 26.9533H149.002C147.801 26.9533 146.867 27.914 146.867 29.0882V29.5685Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M158.83 37.8946V24.2847H161.498V26.3395L164.514 24.2847H165.287C167.742 24.2847 169.771 26.4196 169.771 29.0882V30.1556H167.102V29.0882C167.102 27.914 166.355 26.9533 165.287 26.9533H165.048L161.498 29.3283V37.8946H158.83Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M176.795 37.8945L174.58 36.4001V37.8945H171.912V18.9473H174.58V25.7789L176.795 24.2845H178.85C181.492 24.2845 183.654 26.4194 183.654 29.088V33.091C183.654 35.7329 181.492 37.8945 178.85 37.8945H176.795ZM174.58 33.171L177.622 35.2258H178.85C180.025 35.2258 180.985 34.2652 180.985 33.091V29.088C180.985 27.9139 180.025 26.9531 178.85 26.9531H177.622L174.58 29.008V33.171Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M190.908 37.8946C188.266 37.8946 186.104 35.733 186.104 33.0911V29.0882C186.104 26.4196 188.266 24.2847 190.908 24.2847H192.963L195.178 25.7791V24.2847H197.846V37.8946H195.178V36.4002L192.963 37.8946H190.908ZM188.773 33.0911C188.773 34.2653 189.734 35.226 190.908 35.226H192.135L195.178 33.1712V29.0081L192.135 26.9533H190.908C189.734 26.9533 188.773 27.914 188.773 29.0882V33.0911Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M205.02 37.8946C202.432 37.8946 200.51 36.2134 200.51 33.9451V33.4113H203.179V33.9451C203.179 34.7991 203.872 35.4128 205.02 35.4128H207.448C208.703 35.4128 209.317 34.9057 209.317 34.1318C209.317 31.1163 200.697 33.0644 200.697 27.8873C200.697 25.7257 202.431 24.2847 204.967 24.2847H207.262C209.663 24.2847 211.532 26.0192 211.532 28.2609V28.5011H208.863V28.2609C208.863 27.407 208.196 26.7665 207.262 26.7665H204.967C203.846 26.7665 203.365 27.2201 203.365 27.8873C203.365 30.0489 211.985 28.6879 211.985 34.1318C211.985 36.3735 210.144 37.8946 207.448 37.8946H205.02Z"
+          fill="var(--color-primary)"
+        ></path>
+        <path
+          d="M218.923 37.8946C216.281 37.8946 214.119 35.7064 214.119 33.0644V29.0882C214.119 26.4196 216.281 24.2847 218.923 24.2847H221.058C223.646 24.2847 225.728 26.2861 225.861 28.8213V31.7034H216.788V33.0644C216.788 34.2386 217.748 35.1993 218.923 35.1993H221.058C222.232 35.1993 223.193 34.2386 223.193 33.0644V32.7975H225.861V33.0644C225.861 35.7064 223.727 37.8946 221.058 37.8946H218.923ZM216.788 29.5685H223.193V29.0882C223.193 27.8873 222.259 26.9533 221.058 26.9533H218.923C217.722 26.9533 216.788 27.914 216.788 29.0882V29.5685Z"
+          fill="var(--color-primary)"
+        ></path>
+      </svg>
+    ),
     role: "CEO at Browserbase",
+    video: "https://www.youtube.com/embed/3fumBcKC6RE?autoplay=1&rel=0",
     quote: "At Browserbase, our docs are the product.",
-    image: "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fbrowserbase-thumbnail.jpeg&w=1080&q=75",
+    image:
+      "https://www.mintlify.com/_next/image?url=%2Fcustomers%2Fbrowserbase-thumbnail.jpeg&w=1080&q=75",
   },
-]
+];
 
 export default function VideoTestimonials() {
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  const closeVideo = () => {
+    setActiveVideo(null);
+  };
+
   return (
-    <section className="py-24 bg-primary">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        {/* Header */}
-        <p className="uppercase font-mono text-sm tracking-[0.2em] text-gray-500 mb-3">
-          Video Testimonials
-        </p>
-        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-12">
-          Hear from our customers
-        </h2>
+    <>
+      <section className="py-24 bg-primary">
+        <div className="max-w-6xl mx-auto px-6">
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {videos.map((video, index) => (
-            <div
-              key={index}
-              className="relative rounded-3xl overflow-hidden group cursor-pointer aspect-[4/3] bg-gray-100"
-            >
-              {/* Background Image */}
-              <img
-                src={video.image}
-                alt={video.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+          <p className="uppercase font-mono text-sm tracking-[0.2em] text-gray-500 mb-3">
+            Video Testimonials
+          </p>
 
-              {/* Dark Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-12">
+            Hear from our customers
+          </h2>
 
-              {/* Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-16 w-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Play className="text-white ml-1" size={28} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {videos.map((video, index) => (
+              <div
+                key={index}
+                className="relative rounded-3xl overflow-hidden group cursor-pointer aspect-[4/3] bg-gray-100"
+                onClick={() => setActiveVideo(video.video)}
+              >
+                <img
+                  src={video.image}
+                  alt={video.name}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-16 w-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Play className="text-white ml-1" size={28} />
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="text-white/90 mb-3 text-sm sm:text-base">
+                    {video.icons}
+                  </span>
+
+                  <p className="text-white/90 mb-3 line-clamp-2 text-sm sm:text-base">
+                    “{video.quote}”
+                  </p>
+
+                  <p className="text-white font-semibold text-sm">
+                    {video.name}
+                  </p>
+
+                  <p className="text-white/60 text-xs">{video.role}</p>
                 </div>
               </div>
-
-              {/* Bottom Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-white/90 mb-3 line-clamp-2 text-sm sm:text-base">
-                  “{video.quote}”
-                </p>
-                <p className="text-white font-semibold text-sm">
-                  {video.name}
-                </p>
-                <p className="text-white/60 text-xs">
-                  {video.role}
-                </p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+
+      {activeVideo && (
+  <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+    
+    {/* Close Button */}
+    <button
+      onClick={() => setActiveVideo(null)}
+      className="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur transition"
+    >
+      <X size={24} />
+    </button>
+
+    {/* Video Container */}
+    <div className="relative w-[69rem] max-w-6xl aspect-video">
+      <iframe
+        src={activeVideo}
+        className="w-full h-full rounded-2xl shadow-2xl"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+
+  </div>
+)}
+    </>
+  );
 }
