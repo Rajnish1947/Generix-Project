@@ -1,6 +1,7 @@
 [
   {
     "name": "Coinbase",
+    
     "category": "Finance",
     "featured": true,
     "title": "20min → 60s",
@@ -208,6 +209,7 @@
 },
 {
   "name": "Anaconda",
+ 
   "category": "Enterprise",
   "title": "99.99%",
   "subtitle": "Uptime since launch",
